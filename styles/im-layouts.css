@@ -1,0 +1,47 @@
+/* Body */
+        /* Provvisorio finchè non si definisce l'importazione delle parti html 
+        .header-wrap e .footer-wrap avranno flex: 0 0 fit-content; .main-wrap avrà flex: 1;*/
+body{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-wrap,
+.footer-wrap{
+    flex: 0 0 fit-content;
+}
+
+.main-wrap{
+    flex: 1;
+}
+
+/* Griglia giochi */
+
+.grid-games{
+
+}
+
+/* Giochi e Hover giochi */
+
+.game-zoom,
+.game-translate{
+    
+}
+
+.game-zoom:hover{
+
+}
+
+.game-translate:hover{
+
+}
+
+/* Griglia articoli */
+
+.grid-articles{
+
+}
+
+/* Articoli e hover articoli */

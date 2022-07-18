@@ -1,0 +1,25 @@
+/* === Reset === */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === Global body === */
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-wrap,
+.footer-wrap{
+    flex: 0 0 fit-content;
+}
+
+.main-wrap{
+    flex: 1;
+}

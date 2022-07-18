@@ -1,0 +1,93 @@
+/* == Header == */
+
+.user-space{    /* Contenitore zona utente */
+    height: 2.5rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #101010;
+
+
+    & > :nth-child(-n+3){ /* Dimensiona e distanzia i bottoni */
+        height: 2.5rem;
+        width: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1rem;
+    }
+    
+}
+
+.user-account-icon,
+.user-help-icon{
+
+    svg{
+        height: 1.125rem;
+        width: 1.125rem;
+        fill: #b1b1b1;
+        pointer-events: none;
+    }
+    
+    &:hover {
+        svg{
+            fill: #f3f3f3;
+        }
+    }
+
+}
+
+.ea-logo{
+    margin-right: 2rem;
+
+    svg{
+        height: 2rem;
+        width: 2rem;
+        fill: #797979;
+        pointer-events: none;
+    }
+
+    &:hover svg{
+        fill: #a3a3a3;
+    }
+}
+
+@keyframes open-user{ /* animazione apertura user board */
+    0%{height: 0;
+    padding: 0;}
+    100%{height: 25rem;}
+}
+
+.user-account-icon:hover~.user-board,
+.user-help-icon:hover~.user-board,
+.user-board:hover{  /* Condizioni apertura user board (temporanee) */
+    display: flex;
+    animation: open-user .25s  ease-in;
+}
+
+.user-board{
+    position: relative;
+    flex: 0 0  100vw;
+    display: none;
+    height: 25rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #101010;
+    
+    padding: 3.5rem 0;
+    justify-content: center;
+}
+
+.user-board-close{ /* bottone chiusura user board */
+    fill: #fff;
+    position: absolute;
+    top: 2.5rem;
+    right: 2rem;
+    height: .813rem;
+    width: .813rem;
+
+    svg{
+        transform: rotate(45deg);
+    }
+}

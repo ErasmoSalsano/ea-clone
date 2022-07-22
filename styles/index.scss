@@ -6,3 +6,42 @@
 @use 'footer';
 
 /* == Page == */
+
+
+
+.article-card{
+    @include layouts.article-card(100%);
+    @extend %shadow-start;
+        &:hover{
+            @extend %shadow-hover;
+    }
+    img{
+        display: none;
+    }
+    .article-text{
+        text-align: center;
+        @include layouts.article-text(center, none);
+    }
+}
+@media screen and (min-width:769px){
+    .article-card{
+        @include layouts.article-card(40%);
+        img{
+            display: block;
+        }
+        .article-text{
+            text-align: left;
+            @include layouts.article-text(start, block);
+        }
+    }
+}
+@media screen and (min-width:1025px){
+    .article-card{
+        @include layouts.article-card(30%);
+    }
+}
+@media screen and (min-width:1457px) {
+    .article-card{
+        @include layouts.article-card(30%);
+    }
+}

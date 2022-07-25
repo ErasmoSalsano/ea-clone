@@ -8,21 +8,72 @@
 /* == Page == */
 
 
-
-.article-card{
-    @include layouts.article-card(100%);
-    @extend %shadow-start;
-        &:hover{
-            @extend %shadow-hover;
-    }
-    img{
-        display: none;
-    }
-    .article-text{
-        text-align: center;
-        @include layouts.article-text(center, none);
+.nav{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    .navArticles{
+        display: flex;
+        width: 1120px;
+        overflow-y: hidden;
+        overflow-x: auto;
+        .linkTab{
+            display: flex;
+            align-items: center;
+            position: relative;
+            line-height: 27px;
+            color: #161616;
+            height: 60px;
+            .content{
+                padding: 0 15px;
+                font-size: 1.6rem;
+                border-left: 1px solid rgba(0, 0, 0, 0.08);
+                border-right: 1px solid rgba(0, 0, 0, 0.08);
+                width: 100%;
+                display: block;
+            }
+        }
+        .linkTab:first-child .content{
+            border-left: none;
+        }
+        .linkTab:last-child .content{
+            border-right: none;
+        }
+        & .linkTab:focus{
+            background-color: rgba(0, 0, 0, 0.08);
+            border-bottom: 2px solid red;
+            margin-bottom: 10px;
+        }
     }
 }
+.article-card{
+        @include layouts.article-card(100%);
+        @extend %shadow-start;
+            &:hover{
+                @extend %shadow-hover;
+        }
+        img{
+            display: none;
+        }
+        .article-text{
+            text-align: center;
+            @include layouts.article-text(center, none);
+        }
+    }
+.content-details{
+    display: flex;
+    align-items: center;
+    height: 111px;
+    .details{
+        border: 2px solid #161616;
+        line-height: 27px;
+        border-radius: 3px;
+        font-size: 1.8rem;
+        color: #161616;
+        @extend %start-scale-padding;
+        &:hover{
+            @extend %scale-padding;
+        }
+    }
+}    
 @media screen and (min-width:769px){
     .article-card{
         @include layouts.article-card(40%);

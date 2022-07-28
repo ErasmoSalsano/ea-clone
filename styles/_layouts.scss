@@ -1,5 +1,19 @@
 /* == Layouts == */
 
+/*scale padding button details*/
+
+//inserirlo sull'oggetto per la transizione slow alla rimozione del mouse
+%start-scale-padding{
+    padding: 12px 24px;
+    transition: 0.1s;
+}
+
+//inserirlo sull'hover
+%scale-padding{
+    padding: 16px 28px;
+    transition: 0.1s;
+}
+
 /* Griglia giochi */
 
 
@@ -9,7 +23,64 @@
 
 /* Griglia articoli */
 
+//Teoricamente tutti gli aricoli in card futuri dovrebbero essere settati.
+@mixin article-card ($width){
+    display: flex;
+    position: relative;
+    flex: 1 auto;
+    flex-direction: column;
+    width: $width;
+    background-color: white;
+    cursor: pointer;
+}
+@mixin article-text ($just-cont, $p-display){
+    display: flex;
+    flex-direction: column;
+    justify-content: $just-cont;
+    padding: 24px;
+    div{
+        span{
+            color: red;
+            font-family: var(--font-family-text-bold);
+            font-size: var(--font-size-h6);
+            margin-right: 16px;
+            font-weight: 600;
+            line-height: 27px;
+        }
+    }
+    h3{
+        font-family: var(--font-family-text-bold);
+        font-size: var(--font-size-cards-title);
+        margin-top: 6px;
+        line-height: 32.4px;
+        letter-spacing: -0.6px;
+        font-weight: 600;
+    }
+    p{
+        display: $p-display;
+        font-size: var(--font-size-cards-text);
+        font-family: var(--font-family-text-regular);
+        line-height: 27px;
+        margin-top: 6px;
+    }
+}
+
 
 
 /* Articoli e hover articoli */
 
+
+//inserirlo sull'oggetto per la transizione slow alla rimozione del mouse
+%shadow-start{ 
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+    transition: 0.5s;
+}
+
+//inserirlo sull'hover
+%shadow-hover{ 
+    transform: translateY(-12px);
+    z-index: 1;
+    transition: 0.5s;
+    box-shadow: 0 20px 25px 0px rgba(0, 0, 0, 0.4);
+}

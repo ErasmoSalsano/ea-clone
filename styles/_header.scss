@@ -1,4 +1,19 @@
-/* == Header == */
+/* #### HEADER #### */
+
+/* ==== UTILS ==== */
+
+@keyframes open-user{ /* animazione apertura user board */
+    0%{height: 0;
+    padding: 0;}
+    100%{height: 25rem;}
+}
+
+@keyframes slide-in-left { /* animazione apertura nav e giochi */
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0);}
+}
+
+/* ==== USER SPACE ==== */
 
 .user-space{    /* Contenitore zona utente */
     height: 2.5rem;
@@ -15,7 +30,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 1rem;
+        margin-left: 1.25rem;
     }
     
 }
@@ -28,6 +43,7 @@
         width: 1.125rem;
         fill: #b1b1b1;
         pointer-events: none;
+        
     }
     
     &:hover {
@@ -53,12 +69,6 @@
     }
 }
 
-@keyframes open-user{ /* animazione apertura user board */
-    0%{height: 0;
-    padding: 0;}
-    100%{height: 25rem;}
-}
-
 .user-account-icon:hover~.user-board,
 .user-help-icon:hover~.user-board,
 .user-board:hover{  /* Condizioni apertura user board (temporanee) */
@@ -77,6 +87,7 @@
     
     padding: 3.5rem 0;
     justify-content: center;
+    z-index: 2;
 }
 
 .user-board-close{ /* bottone chiusura user board */
@@ -89,5 +100,259 @@
 
     svg{
         transform: rotate(45deg);
+    }
+}
+
+/* ==== HEADER / NAVBAR ==== */
+
+body{
+    background: #202020 !important;
+}
+
+header{
+    height: 3.5rem;
+    background-color: #fff;
+
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: currentColor;
+    }
+}
+
+.upper-header{
+    height: inherit;
+    display: flex;
+    align-items: center;
+
+    /* & :nth-child(-n + 2){
+        margin-left: .875rem;
+    } */
+}
+
+.header-menu-icon-wrap{
+    width: 3rem;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+
+    margin-left: .2rem;
+}
+
+.header-menu-icon{
+    width: 20px;
+}
+
+.header-menu-icon-2{
+    display: none;
+    transform: rotate(90deg);
+    width: 1.25rem;
+    pointer-events: none;
+}
+
+.header-logo-esteso{
+    width: 5.625rem;
+}
+
+/* **** POPUP MENU **** */
+
+.popup-menu-wrap{
+    display: none;
+    height: calc(100vh - 2.5rem);
+    width: max(320px, 100vw);
+    background-color: rgba(#202020, .8); /* Deve diventare un'animazione */
+    position: absolute;
+    top: 2.5rem;
+}
+
+/* Popup Navbar */
+
+.popup-navbar-wrap{
+    width: 320px;
+    height: inherit;
+    background-color: #fff;
+    transform: translateX(-100%);
+    animation-name: slide-in-left;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+
+    .chevron{
+        height: 1rem;
+        width: 3.25rem;
+        fill: currentColor;
+        
+    }
+
+    .cross{
+        height: 1.563rem;
+        width: 3.25rem;
+        fill: currentColor;
+    }
+}
+
+.top-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.875rem;
+    height: 3.313rem;
+    background-color: #f3f3f3;
+}
+
+.header-logo-esteso-nav{
+    width: 9.063rem;
+}
+
+.popup-close-icon{
+    height: 2.25rem;
+}
+
+.popup-nav{
+    background-color: #fff;
+    padding: 0 1.75rem;
+
+    summary{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .813rem 0;
+    }
+
+    & > ul > li:first-of-type .inner-ul > li{
+        padding: 0;
+
+        &:nth-child(1) .details-2{
+            border-bottom: 1px solid currentColor;
+        }
+    }
+
+    .details-1{
+        summary{
+            .chevron{
+                transform: scaleY(1);
+                transition: .5s;
+            }
+        }
+
+        border-bottom: 1px solid currentColor;
+        
+        &[open]{
+            border-color: #fc4846;
+
+            & > summary{
+                color: #fc4846;
+                border-bottom: 1px solid currentColor;
+            }
+
+            .chevron{
+                transform: scaleY(-1);
+                transition: .5s;
+            }
+        }
+    }
+
+    .details-2{
+        summary{
+            padding: .875rem 0 .813rem .875rem;
+        }
+
+        .cross{
+            height: .77rem;
+            transform: rotate(0deg);
+            transition: .5s;
+        }
+
+        &[open]{
+            color: #000;
+            border-color: #000;
+            
+            summary svg.cross{
+                transform: rotate(45deg);
+                transition: .5s;
+            }
+        }
+
+        .end-ul li{
+            padding: 0 2.37rem;
+            a{
+                display: inline-block;
+                padding: .438rem 0;
+            }
+            &:last-of-type a{
+                padding-bottom: 1.25rem;
+            }
+        }
+    }
+
+    .inner-ul > li,
+    .inner-ul > a > li{
+        color: #a3a3a3;
+        padding: .875rem 0 .813rem .875rem;
+    }
+
+    & li:nth-child(n + 2) .inner-ul > a:nth-last-of-type(n + 2) > li{
+        border-bottom: 1px solid currentColor;
+    }
+}
+
+/* Popup games */
+
+/* .popup-games-wrap{
+
+} */
+
+/* ==== MEDIA QUERIES ==== */
+
+@media screen and (min-width: 321px){
+
+    .header-logo-esteso{
+        width: 6.25rem;
+    }
+
+    .popup-navbar-wrap{
+        width: min(86.5%, 23.438rem);
+    }
+}
+
+@media screen and (min-width: 376px) {
+    .header-logo-esteso{
+        width: 6.875rem;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .header-logo-esteso{
+        width: 11.11rem;
+    }
+}
+
+@media screen and (min-width: 1032px) {
+
+    .header-menu-icon{
+        display: none;
+    }
+
+    .header-menu-icon-2{
+        display: block;
+    }
+
+    .header-logo-esteso{
+        width: 12.5rem;
+        margin-left: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 1456px) {
+
+    header{
+        height: 3.75rem;
     }
 }

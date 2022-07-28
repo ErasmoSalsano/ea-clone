@@ -39,17 +39,18 @@
     justify-content: $just-cont;
     padding: 24px;
     div{
-        font-size: 1.4rem;
-        font-weight: 600;
         span{
             color: red;
-            font-size: 1.4rem;
+            font-family: var(--font-family-text-bold);
+            font-size: var(--font-size-h6);
             margin-right: 16px;
             font-weight: 600;
+            line-height: 27px;
         }
     }
     h3{
-        font-size: 2.4rem;
+        font-family: var(--font-family-text-bold);
+        font-size: var(--font-size-cards-title);
         margin-top: 6px;
         line-height: 32.4px;
         letter-spacing: -0.6px;
@@ -57,7 +58,8 @@
     }
     p{
         display: $p-display;
-        font-size: 1.8rem;
+        font-size: var(--font-size-cards-text);
+        font-family: var(--font-family-text-regular);
         line-height: 27px;
         margin-top: 6px;
     }

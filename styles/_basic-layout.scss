@@ -4,8 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
 }
 
@@ -40,9 +38,18 @@ body{
     background-color: transparent;
     padding: 10px;
 }
+.title{
+    height: 100%;
+    margin-bottom: 25px;
+    font-family: var(--font-family-display-bold);
+    h1{  
+        font-size: var(--font-size-section-title);
+    }
+}
 @media screen and (min-width:769px){
     .main-content-wrap{
         width: 85vw;
+        gap: 18px;
         .navArticles{
             overflow-y: hidden;
             overflow-x: hidden;
@@ -52,6 +59,7 @@ body{
 @media  screen and(min-width:1024px) {
     .main-content-wrap{
         width: 85vw;
+        gap: 16px;
         .navArticles{
             overflow-y: hidden;
             overflow-x: hidden;

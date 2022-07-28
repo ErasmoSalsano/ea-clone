@@ -24,11 +24,14 @@
             height: 60px;
             .content{
                 padding: 0 15px;
-                font-size: 1.6rem;
+                font-family: var(--font-family-display-regular);
+                font-size:var(--font-size-span);
+                letter-spacing: 0.4px;
                 border-left: 1px solid rgba(0, 0, 0, 0.08);
                 border-right: 1px solid rgba(0, 0, 0, 0.08);
                 width: 100%;
                 display: block;
+                white-space: nowrap;
             }
         }
         .linkTab:first-child .content{
@@ -66,8 +69,12 @@
         border: 2px solid #161616;
         line-height: 27px;
         border-radius: 3px;
-        font-size: 1.8rem;
         color: #161616;
+        font-size: var(--font-size-span);
+        p{
+            margin: 0 6px;
+            font-family: var(--font-family-display-regular);
+        }
         @extend %start-scale-padding;
         &:hover{
             @extend %scale-padding;

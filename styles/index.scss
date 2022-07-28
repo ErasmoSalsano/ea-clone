@@ -8,45 +8,7 @@
 /* == Page == */
 
 
-.nav{
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-    .navArticles{
-        display: flex;
-        width: 1120px;
-        overflow-y: hidden;
-        overflow-x: auto;
-        .linkTab{
-            display: flex;
-            align-items: center;
-            position: relative;
-            line-height: 27px;
-            color: #161616;
-            height: 60px;
-            .content{
-                padding: 0 15px;
-                font-family: var(--font-family-display-regular);
-                font-size:var(--font-size-span);
-                letter-spacing: 0.4px;
-                border-left: 1px solid rgba(0, 0, 0, 0.08);
-                border-right: 1px solid rgba(0, 0, 0, 0.08);
-                width: 100%;
-                display: block;
-                white-space: nowrap;
-            }
-        }
-        .linkTab:first-child .content{
-            border-left: none;
-        }
-        .linkTab:last-child .content{
-            border-right: none;
-        }
-        & .linkTab:focus{
-            background-color: rgba(0, 0, 0, 0.08);
-            border-bottom: 2px solid red;
-            margin-bottom: -2px;
-        }
-    }
-}
+
 .article-card{
         @include layouts.article-card(100%);
         @extend %shadow-start;

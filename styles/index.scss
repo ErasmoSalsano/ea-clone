@@ -7,4 +7,461 @@
 
 /* == Page == */
 
+// INIZIO -->   Sezione Giochi --Giuseppe Filannino
 
+
+body,
+html {
+    // height: 100%;
+    // width: 100%;
+    background-color: #f3f3f3;
+}
+
+
+
+%flexcenter {       
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+%filter_image {      //extend da applicare al div::before
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: brightness(65%);
+
+}
+
+
+.main-content-wrap {    //main div
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6";
+
+
+}
+
+
+h3 {                 //titolo della sezione
+    @extend %flexcenter;
+    font-family: var(--font-family-display-bold);
+    font-size: var(--font-size-section-title);
+
+    padding: 10px;
+}
+
+.card_games {               //gestione generale del comportamento delle card
+    @extend %flexcenter;
+
+    flex-direction: column;
+    background-size: cover;
+
+    height: 60vh;
+    width: 80vw;
+    position: relative;
+
+
+    font-size: var(--font-size-span);
+    font-family: var(--font-family-display-regular);
+    letter-spacing: 0.5px;
+
+
+    span {                  //scritta nella card che scompare in hover
+        display: flex;
+        justify-content: center;
+        color: white;
+        display: none;
+
+
+    }
+
+    &:hover {
+        transition-duration: 2s;
+        
+        span {
+            display: unset;
+        }
+
+        .card_svgs {
+
+            transform: translateY(-100%);
+            transition-duration: 0.5s;
+
+        }
+
+        .card_svgs_smaller {
+            transform: translateY(-140%);
+            transition-duration: 0.5s;
+        }
+
+        
+    }
+
+
+
+}
+
+
+
+
+
+.card_svgs {                //svg interne alle card
+    position: absolute;
+    height: 90px;
+    transition-duration: 0.5s;
+
+}
+
+.card_svgs_smaller {    //svg interne alle card(battlefield, the sims) da rimpicciolire ulteriormente
+    position: absolute;                                          //e con un altro scaling in translateY
+    height: 70px;
+    transition-duration: 0.5s;
+}
+
+.card1 {                //FIFA 23
+
+
+    grid-area: "card1";
+
+
+    &:hover {
+
+        background-image: linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7)),
+            url(../assets/images/game/eas-fifa22-gen5-ue-keyart-horz-f23logo-1x1.jpg.adapt.crop1x1.767p.jpg);
+    }
+
+
+}
+
+.filter_card1 {         // div utilizzato per il filtro delle cards
+
+    position: relative;
+
+
+    &:before {
+        @extend %filter_image;
+        background-image: url(../assets/images/game/eas-fifa22-gen5-ue-keyart-horz-f23logo-1x1.jpg.adapt.crop1x1.767p.jpg);
+
+    }
+}
+
+
+
+.card2 {                //APEX Mobile
+
+
+    grid-area: "card2";
+
+    &:hover {
+        background-image: linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7)),
+            url(../assets/images/game/apex-mobile-keyart-1x1.jpg.adapt.crop1x1.767p.jpg);
+    }
+
+
+}
+
+.filter_card2 {     // div utilizzato per il filtro delle cards
+
+    position: relative;
+
+
+    &:before {
+        @extend %filter_image;
+        background-image: url(../assets/images/game/apex-mobile-keyart-1x1.jpg.adapt.crop1x1.767p.jpg);
+    }
+}
+
+
+
+
+.card3 {                //FORMULA 1 2022
+
+    grid-area: "card3";
+
+    &:hover {
+        background-image: linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7)),
+            url(../assets/images/game/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png);
+    }
+}
+
+
+.filter_card3 {     // div utilizzato per il filtro delle cards
+
+    position: relative;
+
+
+    &:before {
+        @extend %filter_image;
+        background-image: url(../assets/images/game/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png);
+    }
+}
+
+.card4 {            // BATTLEFIELD
+
+
+    grid-area: "card4";
+
+    &:hover {
+        background-image: linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7)),
+            url(../assets/images/game/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg);
+    }
+
+}
+
+.filter_card4 {    // div utilizzato per il filtro delle cards
+
+    position: relative;
+
+
+    &:before {
+        @extend %filter_image;
+        background-image: url(../assets/images/game/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg);
+    }
+}
+
+.card5 {            //APEX LEGENDS
+
+
+    grid-area: "card5";
+
+    &:hover {
+        background-image: linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7)),
+            url(../assets/images/game/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg);
+    }
+
+}
+
+.filter_card5 {     // div utilizzato per il filtro delle cards
+
+    position: relative;
+
+
+    &:before {
+        @extend %filter_image;
+        background-image: url(../assets/images/game/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg);
+    }
+}
+
+
+
+.card6 {      //THE SIMS
+
+
+    grid-area: "card6";
+
+    &:hover {
+        background-image: linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7)),
+            url(../assets/images/game/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg);
+    }
+}
+
+.filter_card6 {      // div utilizzato per il filtro delle cards
+
+    position: relative;
+
+
+    &:before {
+        @extend %filter_image;
+        background-image: url(../assets/images/game/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg);
+    }
+}
+
+
+
+
+.wrap_button_games {          //div del button sezione giochi
+    @extend %flexcenter;
+    height: 50px;
+    margin: 20px;
+
+
+    .button_games {             //button sezione giochi
+        @extend %flexcenter;
+        text-decoration: none;
+        color: #161616;
+
+        border: 2px solid #161616;
+        line-height: 27px;
+        border-radius: 3px;
+        font-family: var(--font-family-text-regular);
+        font-size: var(--font-size-span);
+        color: #161616;
+        width: 80vw;
+        @extend %start-scale-padding;
+
+        &:hover {
+            @extend %scale-padding;
+        }
+    }
+}
+
+
+
+
+
+
+@media all and (min-width:768px) {          //query tablet verticale
+
+    .main-content-wrap {
+
+        gap: 20px;
+        display: grid;
+        justify-content: center;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6";
+    }
+
+    .card_games {
+
+        height: 42vh;
+        width: 40vw;
+
+        &:hover {
+            transition-duration: 2s;
+
+            .card_svgs {
+
+                transform: translateY(-100%);
+                transition-duration: 0.5s;
+
+            }
+
+            .card_svgs_smaller {
+                transform: translateY(-140%);
+                transition-duration: 0.5s;
+            }
+        }
+    }
+
+    .card_svgs {
+        height: 60px;
+    }
+
+    .card_svgs_smaller {
+        height: 40px;
+    }
+
+    .wrap_button_games {
+
+
+        .button_games {
+
+            width: 200px;
+
+        }
+    }
+}
+
+@media all and (min-width:1024px) {             //query tablet orizzontale
+
+    .main-content-wrap {
+
+
+        gap: 20px;
+        display: grid;
+        justify-content: center;
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6";
+    }
+
+    .card_games {
+
+        height: 40vh;
+        width: 25vw;
+
+        &:hover {
+            transition-duration: 2s;
+
+            .card_svgs {
+
+                transform: translateY(-100%);
+                transition-duration: 0.5s;
+
+            }
+
+            .card_svgs_smaller {
+                transform: translateY(-140%);
+                transition-duration: 0.5s;
+            }
+        }
+
+    }
+
+    .card_svgs {
+        height: 60px;
+    }
+
+    .card_svgs_smaller {
+        height: 40px;
+    }
+
+
+
+    .wrap_button_games {
+
+
+        .button_games {
+
+            width: 200px;
+
+        }
+    }
+
+
+}
+
+@media all and (min-width: 1456px) {            //query desktop
+
+    .main-content-wrap {
+
+
+        gap: 20px;
+        display: grid;
+        justify-content: center;
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6";
+    }
+
+
+    .card_games {
+
+        height: 47vh;
+        width: 23.5vw;
+
+        &:hover {
+            transition-duration: 2s;
+
+            .card_svgs {
+
+                transform: translateY(-110%);
+                transition-duration: 0.5s;
+
+            }
+
+            .card_svgs_smaller {
+                transform: translateY(-150%);
+                transition-duration: 0.5s;
+            }
+        }
+    }
+
+}
+
+// FINE --> Sezione Giochi --Giuseppe Filannino

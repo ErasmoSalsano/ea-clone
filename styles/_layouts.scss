@@ -1,5 +1,15 @@
 /* == Layouts == */
 
+%start-scale-padding{
+    padding: 12px 24px;
+    transition: 0.1s;
+}
+
+//inserirlo sull'hover
+%scale-padding{
+    padding: 16px 28px;
+    transition: 0.1s;
+}
 /* Griglia giochi */
 
 

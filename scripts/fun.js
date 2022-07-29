@@ -23,3 +23,18 @@ function importHtml(id, filename){
         return;
     }
 }
+
+function openTab(azione, div) {
+    let i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabContent");
+    for(i= 0;  i < tabcontent.length; i++ ) tabcontent[i].style.display = "none";
+
+    tablinks = document.getElementsByClassName("linkTab");
+    for(i = 0; i < tablinks.length; i++) tablinks[i].className = tablinks[i].className.replace(" active", "");
+
+    document.getElementById(div).style.display = "flex";
+    azione.currentTarget.className += " active";
+  }
+  
+document.getElementById("Open").click();

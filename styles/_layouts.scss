@@ -39,13 +39,21 @@
     justify-content: $just-cont;
     padding: 24px;
     div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: calc(100% + 1em);
         span{
             color: red;
             font-family: var(--font-family-text-bold);
             font-size: var(--font-size-h6);
-            margin-right: 16px;
+            margin: 0 8px 0 0; 
             font-weight: 600;
             line-height: 27px;
+        }
+        .normal{
+            color: #161616;
+            margin: 0 8px;
         }
     }
     h3{
@@ -55,6 +63,7 @@
         line-height: 32.4px;
         letter-spacing: -0.6px;
         font-weight: 600;
+        color: #161616;
     }
     p{
         display: $p-display;
@@ -62,6 +71,7 @@
         font-family: var(--font-family-text-regular);
         line-height: 27px;
         margin-top: 6px;
+        color: #161616;
     }
 }
 

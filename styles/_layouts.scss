@@ -1,6 +1,11 @@
 /* == Layouts == */
 
-/*scale padding button details*/
+//Estensione destinata alla navTAB dove presente
+%bottom-line{
+    box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.08);
+}
+
+/* scale padding button details */
 
 //inserirlo sull'oggetto per la transizione slow alla rimozione del mouse
 %start-scale-padding{
@@ -24,10 +29,11 @@
 /* Griglia articoli */
 
 //Teoricamente tutti gli aricoli in card futuri dovrebbero essere settati.
+//dovete impostare voi se vi serve il "flex" sulla dove andrete a lavorare
+//flex:1 auto; non va bene per tutte le card (riferito ai casi in cui vi sia una riga con una sola)
 @mixin article-card ($width){
     display: flex;
     position: relative;
-    flex: 1 auto;
     flex-direction: column;
     width: $width;
     background-color: white;
@@ -50,6 +56,7 @@
             margin: 0 8px 0 0; 
             font-weight: 600;
             line-height: 27px;
+            white-space: nowrap;
         }
         .normal{
             color: #161616;

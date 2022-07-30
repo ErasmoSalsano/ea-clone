@@ -23,6 +23,36 @@ function importHtml(id, filename){
         return;
     }
 }
+/*Funzione per navTab, funziona su live server.
+Per utilizzarla:
+NAV:
+-assegnate ad ogni bottone la classe linkTab
+-assegnate al bottone che resta in focus l'id Open (serve per tenerlo attivo anche se non è stato clickato)
+-assegnate subito dopo onclick(event, 'nome dell'id che avete assegnato')
+CONTENUTI: 
+-assegnate ad ogni div che deve switchare la classe tabContent.
+-assegnate un id da associare all'onclick 
+
+====ESEMPIO====
+
+-parte della navTab
+
+<button class="linkTab" onclick="openTab(event, 'Notizie Ea')" id="Open">
+<button class="linkTab" onclick="openTab(event, 'EA Play')">
+
+-parte del contenuto
+
+<div class="main-content-wrap tabContent" id="Notizie Ea">
+    <article>1</article>
+    <article>2</article>
+    <article>3</article>
+</div>
+<div class="main-content-wrap tabContent" id="EA Play">
+    <article>1</article>
+    <article>2</article>
+    <article>3</article>
+</div>
+*/
 
 function openTab(azione, div) {
     let i, tabcontent, tablinks;

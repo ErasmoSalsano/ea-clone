@@ -7,10 +7,12 @@
 
 /* == Page == */
 
-
-
+.navTab{
+    @extend %bottom-line;
+}
 .article-card{
         @include layouts.article-card(100%);
+        flex: 1 auto;
         @extend %shadow-start;
             &:hover{
                 @extend %shadow-hover;
@@ -26,8 +28,12 @@
 .content-details{
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
     height: 111px;
     .details{
+        display: flex;
+        justify-content: center;
         border: 2px solid #161616;
         line-height: 27px;
         border-radius: 3px;
@@ -42,31 +48,42 @@
             @extend %scale-padding;
         }
     }
-}    
+}
+@media screen and(max-width:639px){
+    .content-details{
+        width: 100%;
+        .details{
+            width: 100%;
+        }
+    }
+}
 @media screen and (min-width:769px){
     .article-card{
-        @include layouts.article-card(40%);
+        width: 40%;
         img{
             display: block;
         }
         .article-text{
             text-align: left;
-            @include layouts.article-text(start, block);
+            justify-content: flex-start;
             div{
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
+            }
+            p{
+                display: block;
             }
         }
     }
 }
 @media screen and (min-width:1025px){
     .article-card{
-        @include layouts.article-card(30%);
+        width: 30%;
     }
 }
-@media screen and (min-width:1457px) {
+@media screen and (min-width:1457px){
     .article-card{
-        @include layouts.article-card(30%);
+        width: 30%;
     }
 }

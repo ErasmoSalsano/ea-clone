@@ -1,26 +1,109 @@
 /* == Layouts == */
 
-%start-scale-padding{
+%start-scale-padding {
     padding: 12px 24px;
     transition: 0.1s;
 }
 
 //inserirlo sull'hover
-%scale-padding{
+%scale-padding {
     padding: 16px 28px;
     transition: 0.1s;
 }
-/* Griglia giochi */
+
+/* Griglia giochi e hover */
+
+%flexcenter {           //extend per l'accentramento degli oggetti
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {         //variabili che regolano altezza e larghezza delle card
+    
+    --heigth-homepage-cardgames: 60vh;
+    --width-homepage-cardgames: 80vw;
+}
 
 
-/* Giochi e Hover giochi */
+.background_cards_img {         //div che contiene l'immagine di background e applica il filtro
+
+    height: var(--heigth-homepage-cardgames);
+    width: var(--width-homepage-cardgames);
+    position: absolute;
+    filter: brightness(65%);
+
+}
+
+.card_games {       //gestione generale del comportamento delle card
+
+
+    @extend %flexcenter;
+    flex-direction: column;
+    background-size: cover;
+
+    height: var(--heigth-homepage-cardgames);
+    width: var(--width-homepage-cardgames);
+    position: relative;
+
+
+    font-size: var(--font-size-span);
+    font-family: var(--font-family-display-regular);
+    letter-spacing: 0.5px;
+
+
+    .span_games {     //classe della scritta nella card che scompare in hover
+
+
+        display: flex;
+        justify-content: center;
+        color: white;
+        display: none;
+
+
+    }
+
+    &:hover {
+
+
+        background-image: linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7));
+
+
+
+
+        .span_games {
+            display: unset;
+        }
+
+        .card_svgs {             //svg interne alle cards  
+
+            transform: translateY(-100%);
+            transition-duration: 0.5s;
+
+        }
+
+        .card_svgs_smaller {            //svg di THE SIMS e BATTLEFIELD con un' altra dimensione
+
+
+            transform: translateY(-140%);
+            transition-duration: 0.5s;
+        }
+
+
+    }
+
+
+
+}
+
 
 
 
 /* Griglia articoli */
 
 //Teoricamente tutti gli aricoli in card futuri dovrebbero essere settati.
-@mixin article-card ($width){
+@mixin article-card ($width) {
     display: flex;
     position: relative;
     flex: 1 auto;
@@ -29,13 +112,15 @@
     background-color: white;
     cursor: pointer;
 }
-@mixin article-text ($just-cont, $p-display){
+
+@mixin article-text ($just-cont, $p-display) {
     display: flex;
     flex-direction: column;
     justify-content: $just-cont;
     padding: 24px;
-    div{
-        span{
+
+    div {
+        span {
             color: red;
             font-family: var(--font-family-text-bold);
             font-size: var(--font-size-h6);
@@ -44,7 +129,8 @@
             line-height: 27px;
         }
     }
-    h3{
+
+    h3 {
         font-family: var(--font-family-text-bold);
         font-size: var(--font-size-cards-title);
         margin-top: 6px;
@@ -52,7 +138,8 @@
         letter-spacing: -0.6px;
         font-weight: 600;
     }
-    p{
+
+    p {
         display: $p-display;
         font-size: var(--font-size-cards-text);
         font-family: var(--font-family-text-regular);
@@ -67,14 +154,14 @@
 
 
 //inserirlo sull'oggetto per la transizione slow alla rimozione del mouse
-%shadow-start{ 
+%shadow-start {
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
     transform: translateY(0);
     transition: 0.5s;
 }
 
 //inserirlo sull'hover
-%shadow-hover{ 
+%shadow-hover {
     transform: translateY(-12px);
     z-index: 1;
     transition: 0.5s;

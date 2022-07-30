@@ -9,32 +9,17 @@
 
 // INIZIO -->   Sezione Giochi --Giuseppe Filannino
 
-
 body,
 html {
-    // height: 100%;
-    // width: 100%;
+
     background-color: #f3f3f3;
 }
 
 
 
-%flexcenter {       
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 
-%filter_image {      //extend da applicare al div::before
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    filter: brightness(65%);
 
-}
 
 
 .grid-games-wrap {    //main div
@@ -63,56 +48,6 @@ h3 {                 //titolo della sezione
     padding: 10px;
 }
 
-.card_games {               //gestione generale del comportamento delle card
-    @extend %flexcenter;
-
-    flex-direction: column;
-    background-size: cover;
-
-    height: 60vh;
-    width: 80vw;
-    position: relative;
-
-
-    font-size: var(--font-size-span);
-    font-family: var(--font-family-display-regular);
-    letter-spacing: 0.5px;
-
-
-    span {                  //scritta nella card che scompare in hover
-        display: flex;
-        justify-content: center;
-        color: white;
-        display: none;
-
-
-    }
-
-    &:hover {
-        transition-duration: 2s;
-        
-        span {
-            display: unset;
-        }
-
-        .card_svgs {
-
-            transform: translateY(-100%);
-            transition-duration: 0.5s;
-
-        }
-
-        .card_svgs_smaller {
-            transform: translateY(-140%);
-            transition-duration: 0.5s;
-        }
-
-        
-    }
-
-
-
-}
 
 
 
@@ -132,32 +67,12 @@ h3 {                 //titolo della sezione
 }
 
 .card1 {                //FIFA 23
-
+   
 
     grid-area: "card1";
-
-
-    &:hover {
-
-        background-image: linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7)),
-            url(../assets/images/game/eas-fifa22-gen5-ue-keyart-horz-f23logo-1x1.jpg.adapt.crop1x1.767p.jpg);
-    }
-
+    
 
 }
-
-.filter_card1 {         // div utilizzato per il filtro delle cards
-
-    position: relative;
-
-
-    &:before {
-        @extend %filter_image;
-        background-image: url(../assets/images/game/eas-fifa22-gen5-ue-keyart-horz-f23logo-1x1.jpg.adapt.crop1x1.767p.jpg);
-
-    }
-}
-
 
 
 .card2 {                //APEX Mobile
@@ -165,24 +80,8 @@ h3 {                 //titolo della sezione
 
     grid-area: "card2";
 
-    &:hover {
-        background-image: linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7)),
-            url(../assets/images/game/apex-mobile-keyart-1x1.jpg.adapt.crop1x1.767p.jpg);
-    }
-
-
 }
 
-.filter_card2 {     // div utilizzato per il filtro delle cards
-
-    position: relative;
-
-
-    &:before {
-        @extend %filter_image;
-        background-image: url(../assets/images/game/apex-mobile-keyart-1x1.jpg.adapt.crop1x1.767p.jpg);
-    }
-}
 
 
 
@@ -191,69 +90,25 @@ h3 {                 //titolo della sezione
 
     grid-area: "card3";
 
-    &:hover {
-        background-image: linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7)),
-            url(../assets/images/game/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png);
-    }
 }
 
 
-.filter_card3 {     // div utilizzato per il filtro delle cards
-
-    position: relative;
-
-
-    &:before {
-        @extend %filter_image;
-        background-image: url(../assets/images/game/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png);
-    }
-}
 
 .card4 {            // BATTLEFIELD
 
-
     grid-area: "card4";
-
-    &:hover {
-        background-image: linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7)),
-            url(../assets/images/game/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg);
-    }
-
 }
 
-.filter_card4 {    // div utilizzato per il filtro delle cards
 
-    position: relative;
-
-
-    &:before {
-        @extend %filter_image;
-        background-image: url(../assets/images/game/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg);
-    }
-}
 
 .card5 {            //APEX LEGENDS
 
 
     grid-area: "card5";
 
-    &:hover {
-        background-image: linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7)),
-            url(../assets/images/game/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg);
-    }
-
 }
 
-.filter_card5 {     // div utilizzato per il filtro delle cards
 
-    position: relative;
-
-
-    &:before {
-        @extend %filter_image;
-        background-image: url(../assets/images/game/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg);
-    }
-}
 
 
 
@@ -262,23 +117,7 @@ h3 {                 //titolo della sezione
 
     grid-area: "card6";
 
-    &:hover {
-        background-image: linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7)),
-            url(../assets/images/game/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg);
-    }
 }
-
-.filter_card6 {      // div utilizzato per il filtro delle cards
-
-    position: relative;
-
-
-    &:before {
-        @extend %filter_image;
-        background-image: url(../assets/images/game/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg);
-    }
-}
-
 
 
 
@@ -315,6 +154,11 @@ h3 {                 //titolo della sezione
 
 @media all and (min-width:768px) {          //query tablet verticale
 
+    :root{
+        --heigth-homepage-cardgames: 42vh;
+        --width-homepage-cardgames: 40vw;
+        }
+
     .grid-games-wrap {
 
         gap: 20px;
@@ -328,11 +172,10 @@ h3 {                 //titolo della sezione
 
     .card_games {
 
-        height: 42vh;
-        width: 40vw;
+        
 
         &:hover {
-            transition-duration: 2s;
+           
 
             .card_svgs {
 
@@ -369,6 +212,11 @@ h3 {                 //titolo della sezione
 
 @media all and (min-width:1024px) {             //query tablet orizzontale
 
+    :root{
+        --heigth-homepage-cardgames: 40vh;
+        --width-homepage-cardgames: 25vw;
+        }
+
     .grid-games-wrap {
 
 
@@ -382,11 +230,10 @@ h3 {                 //titolo della sezione
 
     .card_games {
 
-        height: 40vh;
-        width: 25vw;
+       
 
         &:hover {
-            transition-duration: 2s;
+           
 
             .card_svgs {
 
@@ -428,6 +275,11 @@ h3 {                 //titolo della sezione
 
 @media all and (min-width: 1456px) {            //query desktop
 
+    :root{
+        --heigth-homepage-cardgames: 47vh;
+        --width-homepage-cardgames: 23.5vw;
+        }
+
     .grid-games-wrap {
 
 
@@ -446,7 +298,7 @@ h3 {                 //titolo della sezione
         width: 23.5vw;
 
         &:hover {
-            transition-duration: 2s;
+           
 
             .card_svgs {
 

@@ -21,11 +21,10 @@ body{
     flex: 0 0 fit-content;
 }
 
-.main-wrap{
+.main-wrap{ //Non inserisco il background-color visto che non è ovunque, ho utilizzato il seguente: rgba(0, 0, 0, 0.08);
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.08);
     padding: 0px calc((100vw - 1120px)/2);
 }
 .main-content-wrap{

@@ -7,6 +7,16 @@
     text-decoration: none;
 }
 
+ul{
+    list-style: none;
+}
+a,
+a:hover,
+a:active{
+    text-decoration: none;
+    color: currentColor;
+}
+
 /* === Global body === */
 
 body{

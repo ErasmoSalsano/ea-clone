@@ -1,0 +1,20 @@
+{
+  "name": "ea-clone",
+  "version": "1.0.0",
+  "description": "**immagini** Come nominarle:",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch styles:styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErasmoSalsano/ea-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErasmoSalsano/ea-clone/issues"
+  },
+  "homepage": "https://github.com/ErasmoSalsano/ea-clone#readme"
+}

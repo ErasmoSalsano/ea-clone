@@ -11,93 +11,82 @@
     transition: 0.1s;
 }
 
-/* Griglia giochi e hover */
-
 %flexcenter {           //extend per l'accentramento degli oggetti
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-:root {         //variabili che regolano altezza e larghezza delle card
-    
-    --heigth-homepage-cardgames: 60vh;
-    --width-homepage-cardgames: 80vw;
-}
+/* Griglia giochi */
 
-
-.background_cards_img {         //div che contiene l'immagine di background e applica il filtro
-
-    height: var(--heigth-homepage-cardgames);
-    width: var(--width-homepage-cardgames);
-    position: absolute;
-    filter: brightness(65%);
-
-}
-
-.card_games {       //gestione generale del comportamento delle card
-
-
-    @extend %flexcenter;
-    flex-direction: column;
-    background-size: cover;
-
-    height: var(--heigth-homepage-cardgames);
-    width: var(--width-homepage-cardgames);
-    position: relative;
-
-
+ .grid-games{              
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;   
+    gap:1.25rem;
     font-size: var(--font-size-span);
     font-family: var(--font-family-display-regular);
     letter-spacing: 0.5px;
 
+    .game-box{              // card 
+    width:100%;
+    position:relative; 
+    cursor: pointer;
+    }
 
-    .span_games {     //classe della scritta nella card che scompare in hover
+    .game-image{     
+        height:100%;       
+        width:100%;
+        filter:brightness(65%);
+        }
+    }
 
+/* hover giochi */
 
-        display: flex;
+    .image_overlay{               
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        display:flex;
+        flex-direction:column;
         justify-content: center;
-        color: white;
-        display: none;
+        align-items: center;
 
-
+        .span_games {            
+            display:none;
+            color: white; 
+            }
+    
+        .logo{
+            position:absolute;
+            max-height: 20%;
+            }
+        
+        .big-logo{                  // svg SIMS & Battlefield
+            max-height: 15%;
+            }
+        
+        &:hover{     
+            .span_games{
+                display: unset;
+            }
+        }
     }
-
-    &:hover {
-
-
-        background-image: linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7));
-
-
-
-
-        .span_games {
-            display: unset;
+    
+    .image_overlay:hover{
+        background:linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7));
+        .logo{
+            transform:translateY(-75px);
         }
-
-        .card_svgs {             //svg interne alle cards  
-
-            transform: translateY(-100%);
-            transition-duration: 0.5s;
-
-        }
-
-        .card_svgs_smaller {            //svg di THE SIMS e BATTLEFIELD con un' altra dimensione
-
-
-            transform: translateY(-140%);
-            transition-duration: 0.5s;
-        }
-
-
     }
-
-
-
-}
-
-
+    
+    .image_overlay >* {
+        transition: transform 0.50s;
+    }
+    
 
 
 /* Griglia articoli */

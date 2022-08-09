@@ -41,6 +41,7 @@
     width:100%;
     position:relative; 
     cursor: pointer;
+
     }
 
     .game-image{     
@@ -52,7 +53,11 @@
 
 /* hover giochi */
 
-    .image_overlay{               
+
+
+
+    .image_overlay{    
+       
         position:absolute;
         top:0;
         left:0;
@@ -62,15 +67,21 @@
         flex-direction:column;
         justify-content: center;
         align-items: center;
+        
+        
 
         .span_games {            
             display:none;
             color: white; 
+            
+
             }
     
         .logo{
             position:absolute;
             max-height: 20%;
+           z-index: 1;
+            
             }
         
         .big-logo{                  // svg SIMS & Battlefield
@@ -79,21 +90,44 @@
         
         &:hover{     
             .span_games{
+                z-index: 1;
                 display: unset;
             }
         }
     }
     
-    .image_overlay:hover{
-        background:linear-gradient(-83deg, rgb(170, 33, 33, 0.9), rgba(21, 29, 105, 0.7));
+    .game-box:hover  .image_overlay{
+    
+     
         .logo{
             transform:translateY(-75px);
+            
         }
+
+        
     }
     
     .image_overlay >* {
         transition: transform 0.50s;
     }
+    
+
+    .image_overlay::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(-83deg,#ff4747,#0d1042);
+        z-index: 1;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      
+      .image_overlay:hover::before {
+        opacity:0.9;
+      }
     
 
 

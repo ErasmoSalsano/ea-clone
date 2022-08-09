@@ -8,7 +8,7 @@
 
 /* == Page == */
 
-// INIZIO -->   Sezione Giochi --Giuseppe Filannino
+// INIZIO -->   Sezione Giochi 
 
 body,
 html {
@@ -36,7 +36,7 @@ h3 {                          //titolo della sezione
 .wrap_button_games {          //div del button sezione giochi
     @extend %flexcenter;
     height: 50px;
-    margin: 20px;
+    margin-top: 20px;
 
 
     .button_games {             //button sezione giochi
@@ -49,7 +49,7 @@ h3 {                          //titolo della sezione
         font-family: var(--font-family-text-regular);
         font-size: var(--font-size-span);
         color: #161616;
-        width: 80vw;
+        width: 100%;
         @extend %start-scale-padding;
 
         &:hover {
@@ -97,7 +97,7 @@ h3 {                          //titolo della sezione
     }
 }
 
-// FINE --> Sezione Giochi --Giuseppe Filannino
+// FINE --> Sezione Giochi 
 
 .main-wrap{
     background-color: rgba(0, 0, 0, 0.08);

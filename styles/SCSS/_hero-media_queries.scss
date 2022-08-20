@@ -4,79 +4,11 @@ $xs:320px;
     $lg:1320px;
     $xl:1456px;
     $xxl:1457px;
-
-@mixin xs {
-    @media screen and (max-width:$xs) {
-        .hero-media video, .hero-media img{
-            width: 100%;
-        } 
-        .hero-media video{
-            display:none;
-        }
-        
-    }
     
-}
-@mixin sm { 
-    @media screen and (max-width:$sm) {
-        .hero-media video, .hero-media img{
-            width: 100%;
-        } 
-        .hero-media video{
-            display:none;
-        }
-        
-    }
-}
 @mixin md { 
     @media screen and (max-width:$md) {
-        .hero-media video, .hero-media img{
-            width: 100%;
-        } 
         .hero-media video{
             display:none;
         }
-        
     }
-
-
-}
-@mixin lg { 
-    @media screen and (max-width:$lg) {
-        .hero-media video, .hero-media img{
-            width: 100%;
-        } 
-        .hero-media video{
-            display:block;
-        }
-        
-    }
-
-
-}
-@mixin xl { 
-    @media screen and (max-width:$xl) {
-        .hero-media video, .hero-media img{
-            width: 100%;
-        } 
-        .hero-media video{
-            display:block;
-        }
-        
-    }
-
-
-}
-@mixin xxl { 
-    @media screen and (min-width:$xxl) {
-        .hero-media video, .hero-media img{
-            width: 100%;
-        } 
-        .hero-media video{
-            display:block;
-        }
-        
-    }
-
-
 }

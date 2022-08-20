@@ -4,7 +4,7 @@ $xs:320px;
     $lg:1320px;
     $xl:1456px;
     $xxl:1457px;
-    
+ //media queries   
 @mixin md { 
     @media screen and (max-width:$md) {
         .hero-media video{

@@ -10,7 +10,6 @@ $xs:320px;
         display:none;
         position: absolute;
     }
-
 }      
  //media queries   
 @mixin md { 
@@ -18,7 +17,6 @@ $xs:320px;
         .hero-media video{
             position: absolute;
             display:block;
-
         }
     }
 }

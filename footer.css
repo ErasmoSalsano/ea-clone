@@ -9,6 +9,7 @@
   height: 17vh;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 }
 .upperFooter .upperFooterContainer {
   width: 44%;
@@ -19,7 +20,7 @@
 .upperFooter .upperFooterContainer .upperFooterGroup1 {
   display: flex;
   flex-flow: wrap;
-  height: 60px;
+  height: 5vh;
   justify-content: start;
   width: 78%;
 }
@@ -28,7 +29,7 @@
   color: black;
   margin-right: 50px;
   margin-bottom: 15px;
-  height: 25px;
+  height: 2vh;
 }
 .upperFooter .upperFooterContainer .upperFooterGroup1 .upperFooterLink:hover {
   color: red;
@@ -78,7 +79,7 @@
   color: black;
   margin-right: 50px;
   margin-top: 13px;
-  height: 25px;
+  height: 2vh;
   font-size: 20px;
 }
 .lowerFooter .lowerFooterContainer .lowerFooterBlock .lowerFooterGroup1 .lowerFooterSelectors {
@@ -136,10 +137,9 @@
 .dropup-content {
   display: none;
   position: absolute;
-  bottom: 50px;
-  background-color: #f1f1f1;
+  bottom: 95px;
+  background-color: #f3f3f3;
   min-width: 800px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -149,7 +149,6 @@
   height: 540px;
   width: 700px;
   flex-direction: column;
-  border-bottom: 1px solid lightgray;
   justify-content: start;
   margin-left: 35px;
 }
@@ -221,4 +220,12 @@
 /* Show the dropup menu on hover */
 .dropup:hover .dropup-content2 {
   display: block;
-}/*# sourceMappingURL=eafooter.css.map */
+}
+
+/* 
+  @media only screen and (max-width: 480px){
+  .upperFooter{
+    height: 40vh;
+    width: 100vW;
+  }
+} *//*# sourceMappingURL=footer.css.map */

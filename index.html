@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/CSS/index.css">
+    <link rel="stylesheet" href="/styles/CSS/index.css">
 </head>
 
 <body>
 
+    <div id="header-wrap"></div>
+    
     <!-- HTML SEZIONE GIOCHI  -->
 
     <div class="main-wrap">
@@ -598,8 +600,16 @@
             </div>
         </div>
     </div>
+
     <!--FINE  HTML SEZIONE ARTICLE -->
-    <script src="scripts/fun.js"></script>
+
+    <div id="footer-wrap"></div>
+
+    <script src="scripts/fun.js";></script>
+    <script>
+        importHtml("header-wrap", "/partials/header.html");
+        importHtml("footer-wrap", "/partials/footer.html");
+    </script>
 </body>
 
 </html>

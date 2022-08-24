@@ -21,7 +21,7 @@
     justify-content: end;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #101010;
+    background-color: var(--color-ea-dark);
 
 
     & > :nth-child(-n+3){ /* Dimensiona e distanzia i bottoni */
@@ -77,10 +77,8 @@
 }
 
 .user-board{
-    display: none;
-
     font-family: var(--font-family-user-board);
-    color: #f3f3f3;
+    color: var(--color-light-gray);
 
     position: relative;
     flex: 0 0  100vw;
@@ -94,7 +92,7 @@
     min-height: 25rem;
     justify-content: center;
     align-items: center;
-    background-color: #101010;
+    background-color: var(--color-ea-dark);
     
     padding: 3.5rem 0;
     justify-content: center;
@@ -147,10 +145,6 @@
         display: none;
     }
 
-    .board-help{
-        /* display: none; */
-    }
-
     .board-content-wrap{
         width: 85%;
         margin: auto;
@@ -194,7 +188,7 @@
 
 header{
     height: 3.5rem;
-    background-color: #fff;
+    background-color: var(--color-white);
 }
 
 .upper-header{
@@ -233,6 +227,7 @@ header{
 
 summary{
     font-family: var(--font-family-display-regular);
+    cursor: pointer;
 }
 
 content{
@@ -304,7 +299,7 @@ content{
 
             &[open]{
                 & > summary{
-                    color: #fc4846;
+                    color: var(--color-ea-orange);
                 }
     
                 .chevron{
@@ -338,7 +333,7 @@ content{
         }
 
         a:hover{
-            color:#fc4846;
+            color:var(--color-ea-orange);
         }
     }
 }
@@ -360,7 +355,7 @@ content{
 .popup-navbar-wrap{
     width: 320px;
     height: inherit;
-    background-color: #fff;
+    background-color: var(--color-white);
     transform: translateX(-100%);
     animation-name: slide-in-left;
     animation-duration: .5s;
@@ -389,7 +384,7 @@ content{
     align-items: center;
     padding: 0 0.875rem;
     min-height: 3.313rem;
-    background-color: #f3f3f3;
+    background-color: var(--color-light-gray);
 }
 
 .header-logo-esteso-nav{
@@ -401,7 +396,7 @@ content{
 }
 
 .popup-nav{
-    background-color: #fff;
+    background-color: var(--color-white);
     padding: 0 1.75rem;
     overflow: auto;
 
@@ -432,10 +427,10 @@ content{
         border-bottom: 1px solid currentColor;
         
         &[open]{
-            border-color: #fc4846;
+            border-color: var(--color-ea-orange);
 
             & > summary{
-                color: #fc4846;
+                color: var(--color-ea-orange);
                 border-bottom: 1px solid currentColor;
             }
 
@@ -468,7 +463,7 @@ content{
 
         &[open]{
             color: #252525;
-            border-color: #000;
+            border-color: var(--color-black);
             
             summary svg.cross{
                 transform: rotate(45deg);
@@ -496,7 +491,7 @@ content{
 
     .inner-ul > li,
     .inner-ul > a > li{
-        color: #a3a3a3;
+        color: var(--color-ea-logo-gray);
         padding: .875rem 0 .813rem .875rem;
     }
 
@@ -594,3 +589,14 @@ content{
         margin-right: 1.875;
     }
 }
+
+/* display control (da togliere in futuro) */
+
+.user-board {
+    display: none;
+  }
+  
+.popup-menu-wrap{
+    display: none;
+}
+

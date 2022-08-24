@@ -4,7 +4,7 @@
   "description": "**immagini** Come nominarle:",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch styles:styles"
+    "sass": "sass --watch styles/SCSS:styles/CSS"
   },
   "repository": {
     "type": "git",

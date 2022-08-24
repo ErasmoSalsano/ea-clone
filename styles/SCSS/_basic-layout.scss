@@ -31,18 +31,15 @@ body{
     flex: 0 0 fit-content;
 }
 
-.main-wrap{
+.main-wrap{ //Non inserisco il background-color visto che non è ovunque, ho utilizzato il seguente: rgba(0, 0, 0, 0.08);
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.08);
     padding: 0px calc((100vw - 1120px)/2);
 }
 .main-content-wrap{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
     height: auto;
     width: 90vw;
     background-color: transparent;
@@ -56,13 +53,32 @@ body{
         font-size: var(--font-size-section-title);
     }
 }
+.articles-standard{  //classe estensione: se avete degli article come nella home aggiungete la classe al suo div main-content-wrap sull'html
+    gap: 20px;
+    flex-wrap: wrap;
+}
 .navTab{
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     .navTabArticles{
         display: flex;
         width: 1120px;
         overflow-y: hidden;
         overflow-x: auto;
+        button{
+            border: transparent;
+            background-color: transparent;
+            cursor: pointer;
+            .animation{
+                height: 2.4px;
+                width: 0%;
+                background-color: red;
+                position: absolute;
+                z-index: 1;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: 0.1s;
+            }
+        }
         .linkTab{
             display: flex;
             align-items: center;
@@ -70,6 +86,7 @@ body{
             line-height: 27px;
             color: #161616;
             height: 60px;
+            border: transparent;
             .content{
                 padding: 0 15px;
                 font-family: var(--font-family-display-regular);
@@ -88,35 +105,51 @@ body{
         .linkTab:last-child .content{
             border-right: none;
         }
-        & .linkTab:focus{
+        button:hover{
             background-color: rgba(0, 0, 0, 0.08);
-            border-bottom: 2px solid red;
-            margin-bottom: -2px;
+        }
+        & .linkTab.active{
+            background-color: rgba(0, 0, 0, 0.08);
+            .animation{
+                width: 75%;
+                transition: 0.1s;
+            }
         }
     }
+}
+.tabcontent {
+    display: none;
 }
 @media screen and (min-width:769px){
     .main-content-wrap{
-        width: 85vw;
-        gap: 18px;
-        .navArticles{
-            overflow-y: hidden;
-            overflow-x: hidden;
+        width: 90vw;
+    }
+    .main-wrap{
+        .articles-standard{
+            gap: 18px;
+            width: 90vw;
         }
     }
 }
-@media  screen and(min-width:1024px) {
+@media  screen and(min-width:1024px){
     .main-content-wrap{
-        width: 85vw;
-        gap: 16px;
-        .navArticles{
-            overflow-y: hidden;
-            overflow-x: hidden;
+        width: 87vw;
+    }
+    .main-wrap{
+        .articles-standard{
+            gap: 16px;
+            width: 90vw;
         }
     }
 }
 @media screen and(min-width: 1457px){
     .main-content-wrap{
         width: 1120px;
+    }
+    .main-wrap{
+        .articles-standard{
+            gap: 16px;
+            width: 87vw;
+        }
     }
 }

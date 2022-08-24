@@ -1,0 +1,248 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.upperFooter{
+    background-color:#eaeaea;
+    display: flex;
+    height: 17vh;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+
+    .upperFooterContainer{
+        width: 44%;
+        padding-bottom: 5vh;
+        display: flex;
+        justify-content:space-between;
+    
+        .upperFooterGroup1{
+            display: flex;
+            flex-flow: wrap;
+            height: 5vh;
+            justify-content: start;
+            width: 78%;
+        
+        
+            .upperFooterLink{
+                text-decoration: none;
+                color:black;
+                margin-right: 50px;
+            margin-bottom: 15px;
+                height: 2vh;
+            }
+
+            .upperFooterLink:hover{
+                color: red;
+            }
+        }  
+        
+        .upperFooterGroup2{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 22%;
+
+        
+        .socialLinks {
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+        .joinConv{
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        }
+    }
+}
+
+.lowerFooter{
+    display: flex;
+    justify-content:center;
+    background-color: #f3f3f3;
+
+
+    .lowerFooterContainer{
+        padding-top: 25px;
+        width: 44%;
+        height: 25vh;
+        display: flex;
+        justify-content:space-between;
+      
+        .lowerFooterBlock{
+            margin-left: 32px;
+
+        
+           .lowerFooterGroup1{
+                display: flex;
+
+                height: 8vh;
+                justify-content: space-between;
+            
+                .linksGroup1{
+                    display: flex;
+                
+                    width: 58%;
+                    flex-flow: wrap;
+                
+                    .lowerFooterLink{
+                        text-decoration: none;
+                        color:black;
+                        margin-right: 50px;
+                    margin-top: 13px; 
+                    height: 2vh;
+                        font-size: 20px;
+                    }
+                }   
+                .lowerFooterSelectors{
+                    display: flex;
+                    width: 45%;
+                    justify-content: space-between
+                }
+           }
+            .lowerFooterGroup2{
+                display: flex;
+            padding-top: 10px;
+                height: 10vh;
+                justify-content: space-between;
+            }
+.linksGroup2{
+    display: flex;
+   
+    width: 60%;
+    flex-flow: wrap;
+    height: 10vh;
+}
+.lowerFooterLink2{
+    text-decoration: none;
+    color:black;
+    margin-right: 50px;
+    font-size: 18px;
+    
+}
+.electronicArts{
+    padding-top: 10px;
+}
+.trustELogo{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+    }
+}
+}
+
+/* Dropup Button */
+.dropbtn {
+    background-color: #f3f3f3;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 190px;
+    height: 61px;
+    line-height: 20px;
+    border: 2px lightgray solid;
+   
+  }
+  
+  /* The container <div> - needed to position the dropup content */
+  .dropup {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropup content (Hidden by Default) */
+  .dropup-content {
+    display: none;
+    position: absolute;
+    bottom: 95px;
+    background-color: #f3f3f3;
+    min-width: 800px;
+    z-index: 1;
+  
+  }
+  .dropupInsider{
+    display: flex;
+    flex-wrap: wrap;
+    height: 540px;
+    width: 700px;
+    flex-direction: column;
+
+    justify-content: start;
+    margin-left: 35px;
+  }
+  
+  /* Links inside the dropup */
+  .dropup-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  /* Change color of dropup links on hover */
+  .dropup-content a:hover {margin-left:px}
+  
+  /* Show the dropup menu on hover */
+  .dropup:hover .dropup-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropup button when the dropup content is shown */
+  .dropup:hover .dropbtn {
+    width: 193px;
+    height: 64px;
+  }
+  .content{
+    border-bottom: 2px lightgray solid;
+    width: 110px;
+  margin-top: 15px;
+  margin-left: 35px;
+
+  }
+  
+
+  .dropupInsider2{
+    display: flex;
+    flex-wrap: wrap;
+    height: 540px;
+    width: 100%;
+    flex-direction: column;
+    border-bottom: 1px solid lightgray;
+    justify-content: start;
+  }
+  .dropup-content2 {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    background-color: #f1f1f1;
+    min-width: 600px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  /* Links inside the dropup */
+  .dropup-content2 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  /* Change color of dropup links on hover */
+  .dropup-content2 a:hover {margin-left:px}
+  
+  /* Show the dropup menu on hover */
+  .dropup:hover .dropup-content2 {
+    display: block;
+  }
+/* 
+  @media only screen and (max-width: 480px){
+  .upperFooter{
+    height: 40vh;
+    width: 100vW;
+  }
+} */

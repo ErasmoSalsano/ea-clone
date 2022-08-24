@@ -232,6 +232,7 @@ summary{
 
 content{
     font-family: var(--font-family-text-light);
+    z-index: 2;
 }
 
 .header-navbar-wrap{
@@ -252,7 +253,6 @@ content{
         .details-1{
 
             margin-left: 1.5rem;
-            
             white-space: nowrap;
 
             summary{
@@ -599,4 +599,3 @@ content{
 .popup-menu-wrap{
     display: none;
 }
-

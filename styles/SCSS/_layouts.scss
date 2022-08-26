@@ -47,7 +47,7 @@
     .game-image{     
         height:100%;       
         width:100%;
-        filter:brightness(65%);
+       filter:brightness(65%);  
         }
     }
 
@@ -72,16 +72,13 @@
 
         .span_games {            
             display:none;
-            color: white; 
-            
-
+           // color: white;
             }
     
         .logo{
             position:absolute;
             max-height: 20%;
-           z-index: 1;
-            
+           z-index: 1; 
             }
         
         .big-logo{                  // svg SIMS & Battlefield
@@ -90,8 +87,8 @@
         
         &:hover{     
             .span_games{
-                z-index: 1;
-                display: unset;
+               z-index: 1;
+               display: unset;
             }
         }
     }
@@ -119,7 +116,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-image: linear-gradient(-83deg,#ff4747,#0d1042);
+       // background-image: linear-gradient(-83deg,#ff4747,#0d1042); index.scss
         z-index: 1;
         opacity: 0;
         transition: 0.5s;

@@ -1,0 +1,381 @@
+@use './SCSS/layouts';
+@use './SCSS/basic-layout';
+@use './SCSS/colors';
+@use './SCSS/tipography';
+@use './SCSS/header';
+@use './SCSS/footer';
+@use './SCSS/hero';
+
+  
+// .hero-container{
+//     position: relative;
+//     width: 100%;
+//     display: flex;
+//     .hero-wrapper{
+//         position: relative;
+//         display: flex;
+//         width: 100%;
+//         .hero-content{
+//             position: absolute;
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             justify-content: center;
+//             width: 100%;
+//             height: 100%;
+//             z-index: 2;
+//             top: 0;
+//             left: 0;
+//         }
+//     }
+// }
+
+//first div games//
+
+.content-wrap{      
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    flex-direction: column;
+    margin: 2rem 0;
+    row-gap: 1rem;
+    padding:10px;
+}
+
+.game-box{
+    .game-image-default{
+        height:100%;
+        width:100%;
+    }
+        
+    .image_overlay:hover{
+        background:rgba(13, 16, 66, 0.9);
+    }
+
+    span{
+        color:aliceblue;
+    }
+}
+
+
+//text+h2//
+
+h2 {                         
+    @extend %flexcenter;
+    font-family: var(--font-family-display-bold);
+    font-size:1.20rem;
+    padding: 5px;
+    text-align: center;
+}
+
+.content{
+    display:block;
+    text-align: center;
+    line-height: 1.70rem;
+    width:100%;
+    font-family: var(--font-family-text-regular);
+    font-size:0.95rem;
+    a{
+        color:rgb(255, 0, 0);
+    }
+}
+
+
+//second div games//
+
+.wrap_button_games{          //div del button sezione giochi
+    @extend %flexcenter;
+    height: 50px;
+    margin-top: 20px;  
+}
+    
+.first-button_games{             //button sezione giochi
+    @extend %flexcenter;
+    text-decoration: none;
+    color: #161616;
+    border: 2px solid #161616;
+    line-height: 27px;
+    border-radius: 3px;
+    font-family: var(--font-family-text-regular);
+    font-size: var(--font-size-span);
+    color: #161616;
+    width: 100%;
+    position: relative;
+    @extend %start-scale-padding;
+
+    &:hover {
+        @extend %scale-padding;
+    }
+    .material-icons{
+        position: absolute;
+        right:10%;
+    }
+}
+
+
+h3 {                          
+    @extend %flexcenter;
+    font-family: var(--font-family-display-bold);
+    font-size: var(--font-size-section-title);
+    text-align: center
+}
+
+
+// span mejorar//
+.block{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top:50%;
+    text-align: center;  
+    color: #a3a3a3;
+
+    :hover{
+    color:white;
+   }
+     a{
+    height:30px;
+   }
+}
+
+.game-box .image_overlay{ 
+    :hover{
+        .second{
+         transform: translateY(20px);
+         transition: .4s ease;
+        }
+        .third{
+         transform: translateY(40px);
+         transition: .4s ease;
+        }      
+    }    
+}
+
+a:not(:last-child){
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    }
+
+/////    
+
+
+.temporary-button_games{             //button sezione giochi
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    color: #161616;
+    border: 2px solid #161616;
+    line-height: 27px;
+    border-radius: 3px;
+    font-family: var(--font-family-text-regular);
+    font-size:14px;
+    color: #161616;
+    width: 100%;
+    height:45px;
+    a{
+        padding: 7px 0;
+    }
+    .left{
+        border-right: 2px solid rgb(0, 0, 0);
+        }
+    .right{
+        border-left: 2px solid rgb(0, 0, 0);;
+    }
+    .middle{
+        width:100%;
+        height:100%;
+        display:flex;
+        justify-content: center;
+        // position: relative;
+        border-style: none;
+    }
+    
+    // &:hover {
+       
+    // }
+    
+    // .material-icons{
+    //     position: absolute;
+    //     right:0;
+    //    }
+}
+
+
+////div playpro////
+
+.box-card{
+    position:relative;
+    width:100%;
+    height:100%;
+    .image-card{
+        width:100%;
+        height:100%;
+        display:block;
+    }
+}
+
+.text-card{
+    position:absolute;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    padding:32px 24px;
+    .logo-play{
+        max-width: 95%;
+        padding-bottom: 2rem;
+    }
+    p{
+        font-family: var(--font-family-text-regular);
+        font-size:0.95rem;
+        color:aliceblue;
+        text-align: center;
+        line-height: 1.70rem;
+    }
+
+    .wrap_button_games{
+        width:100%;
+        .button-play{
+        @extend %flexcenter;
+        text-decoration: none;
+        border:none;
+        border-radius: 3px;
+        font-family: var(--font-family-text-regular);
+        font-size: var(--font-size-span);
+        width: 100%;
+        padding:12px 24px;
+        background-color: rgb(233, 52, 52);
+        color:aliceblue;
+        font-size:0.95rem;
+        @extend %start-scale-padding;
+
+        &:hover {
+            @extend %scale-padding;
+        }     
+        }
+    }
+}
+
+////div pogo/////
+
+
+.text-card-pogo{
+    position:absolute;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    justify-content:center;
+    left: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    padding:32px 24px;
+    .logo-play{
+        max-width: 95%;
+        padding-bottom: 2rem;
+    }
+    p{
+        font-family: var(--font-family-text-regular);
+        font-size:1rem;
+        color:aliceblue;
+        text-align: center;
+        line-height: 2rem;
+    }
+    .wrap_button_games{
+        display:flex;
+        flex-direction: column;
+        height:150px;
+        width:100%;
+        justify-content: space-evenly;
+        .button-pogo{
+        @extend %flexcenter;
+        text-decoration: none;
+        border:none;
+        border-radius: 3px;
+        font-family: var(--font-family-text-regular);
+        font-size: var(--font-size-span);
+        width: 100%;
+        padding:12px 24px;
+        background-color: rgb(255, 255, 255);
+        color:rgb(0, 0, 0);
+        font-size:0.95rem;
+        @extend %start-scale-padding;
+    
+        &:hover {
+            @extend %scale-padding;
+        }     
+        }
+    }
+
+}
+
+
+
+//mq//
+
+@media all and (min-width:768px) {      
+    .content-wrap{
+        width:82vw;
+        .grid-games{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:1.55rem;
+        }
+    }
+    .wrap_button_games{
+        .first-button_games{
+            width: 250px;
+        }
+        .temporary-button_games{
+            width:400px;
+        }
+    }
+
+    .text-card{
+        padding:32px 120px;
+        .wrap_button_games{
+            width:140px;
+        }
+    }
+
+    .text-card-pogo{
+        padding:32px 120px;
+        .wrap_button_games{
+            display:flex;
+            flex-direction: row;
+            .button-pogo{
+                width:140px;
+            }
+        }
+    }
+}
+
+@media all and (min-width:1024px) {   
+    .content-wrap{
+        width:85vw;
+        .grid-games{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.75rem; 
+        }
+    }
+    .wrap_button_games{
+        .first-button_games{
+            width: 250px;
+       }
+    }
+}
+
+@media all and (min-width: 1456px) {     
+    .content-wrap{
+        width:75vw;
+    }
+}
+

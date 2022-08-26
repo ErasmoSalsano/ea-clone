@@ -189,12 +189,25 @@
 header{
     height: 3.5rem;
     background-color: var(--color-white);
+
+    summary{
+        font-family: var(--font-family-display-regular);
+        cursor: pointer;
+    }
+    
+    content{
+        font-family: var(--font-family-text-light);
+    }
 }
 
 .upper-header{
     height: inherit;
     display: flex;
     align-items: center;
+
+    content{
+        z-index: 2;
+    }
 }
 
 .header-menu-icon-wrap{
@@ -224,16 +237,6 @@ header{
 }
 
 /* navbar */
-
-summary{
-    font-family: var(--font-family-display-regular);
-    cursor: pointer;
-}
-
-content{
-    font-family: var(--font-family-text-light);
-    z-index: 2;
-}
 
 .header-navbar-wrap{
 

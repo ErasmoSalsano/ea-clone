@@ -1,7 +1,8 @@
-
-/* Funzione che importa parti di html. Valori: id del contenitore che ospiterà il codice, nome del file sul quale si trova il codice da importare
-Ci sono ancora aspetti da sistemare ma per ora sul live preview funziona.
-posizionarlo in fondo al body, nel suo tag script: <script>importHtml(".header-wrap", "header.html"); ecc ecc</script></body> */
+/* Funzione che importa parti di html. 
+Valori: 
+    -id del contenitore che ospiterà il codice, 
+    -nome del file sul quale si trova il codice da importare (comprensivo di percorso)
+posizionarlo in fondo al body, nel suo tag script: <script>importHtml(".header-wrap", "/partials/header.html"); ecc ecc</script></body> */
 
 function importHtml(id, filename){
     console.log(`div id: ${id}, filename: ${filename}`);
@@ -23,6 +24,7 @@ function importHtml(id, filename){
         return;
     }
 }
+
 /*Funzione per navTab, funziona su live server.
 Per utilizzarla:
 NAV:
@@ -65,6 +67,59 @@ function openTab(azione, div) {
 
     document.getElementById(div).style.display = "flex";
     azione.currentTarget.className += " active";
-  }
+}
   
 document.getElementById("Open").click();
+
+/* Comportamento user-space */
+
+var scrollBefore = 0;
+
+document.addEventListener('scroll',function(e){
+    const scrolled = window.scrollY;
+    let elem = document.querySelector("#header-wrap");
+
+    if(scrollBefore > scrolled){
+        if(elem.classList.contains("user-close")){
+            elem.classList.remove("user-close");
+        }
+    }else{
+        if(!elem.classList.contains("user-close")){
+            elem.classList.add("user-close");
+        }
+    }
+    scrollBefore = scrolled;
+})
+
+/* Apertura user board (Ancora da fare) */
+
+function toggleUserBoard(){
+    let elem = document.querySelector(".user-board");
+    /* Se è chiuso aprilo, fai l'animazione ecc
+    altrimenti chiudilo */
+}
+
+function toggleBoardAccount(){
+    let elem = document.querySelector(".board-account");
+    /* Se è già aperto si chiude tutto, quindi si richiama anche toggleUserBoard,
+    Se board-help è aperto si chiude e si apre questo,
+    altrimenti si apre sia user-board che questo */
+}
+
+function toggleBoardHelp(){
+    let elem = document.querySelector(".board-help")
+    /* Se è già aperto si chiude tutto, quindi si richiama anche toggleUserBoard,
+    Se board-account è aperto si chiude e si apre questo,
+    altrimenti si apre dia user-board che questo */
+}
+
+/* Apertura menù laterali */
+
+function togglePopupMenuWrap(){
+    /* Apri/chiudi popup-menu-wrap 
+    se si deve aprire: 
+        -controllare la larghezza dello schermo:
+        -aprire la nav o i giochi in base alla larghezza
+    se si deve chiudere: chiudere tutto
+        */
+}

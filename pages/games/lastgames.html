@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/lastgames.css">
+    <link rel="stylesheet" href="/styles/CSS/pages/games/lastgames.css">
     <title>Document</title>
 </head>
 
 <body>
+    <div id="header-wrap"></div>
 
     <div class="main-wrap">
         <div class="content-wrap">
@@ -19,7 +20,7 @@
             <div class="grid-games">
 
                 <div class="game-box">
-                    <img class="game-image" src="./assets/images/game/apex-mobile-keyart-1x1.jpg.adapt.crop1x1.767p.jpg"
+                    <img class="game-image" src="/assets/images/game/apex-mobile-keyart-1x1.jpg.adapt.crop1x1.767p.jpg"
                         alt="Apex Legends Mobile">
                     <div class="image_overlay">
                         <img class="logo" alt="Apex Legends Mobile logo"
@@ -33,7 +34,7 @@
                 </div>
                 <div class="game-box">
                     <img class="game-image"
-                        src="./assets/images/game/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png" alt="F1® 22">
+                        src="/assets/images/game/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png" alt="F1® 22">
                     <div class="image_overlay">
                         <img class="logo" alt="F1® 22 logo"
                             src="https://media.contentapi.ea.com/content/dam/gin/common/logos/f122-gamebox-logo.png">
@@ -51,7 +52,7 @@
 
                 <div class="game-box">
                     <img class="game-image"
-                        src="./assets/images/game/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg"
+                        src="/assets/images/game/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg"
                         alt="Battlefield 2042">
                     <div class="image_overlay">
                         <img class="logo big-logo" alt="Battlefield 2042 logo"
@@ -60,7 +61,7 @@
                     </div>
                 </div>
                 <div class="game-box">
-                    <img class="game-image" src="./assets/images/game/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg"
+                    <img class="game-image" src="/assets/images/game/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg"
                         alt="Apex Legends">
                     <div class="image_overlay">
                         <img class="logo" alt="Apex Legends logo"
@@ -69,7 +70,7 @@
                     </div>
                 </div>
                 <div class="game-box">
-                    <img class="game-image" src="./assets/images/game/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg"
+                    <img class="game-image" src="/assets/images/game/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg"
                         alt="The Sims 4">
                     <div class="image_overlay">
                         <img class="logo big-logo" alt="The Sims 4 logo"
@@ -83,6 +84,14 @@
             </div>
         </div>
     </div>
+
+    <div id="footer-wrap"></div>
+
+    <script src="/scripts/fun.js"></script>
+    <script>
+        importHtml("header-wrap", "/partials/header.html");
+        importHtml("footer-wrap", "/partials/footer.html");
+    </script>
 </body>
 
 </html>

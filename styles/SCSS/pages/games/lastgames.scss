@@ -36,7 +36,7 @@ h3 {
 }
 
 
-.image_overlay:hover {
+.image_overlay:hover::before{
     background: linear-gradient(0deg, rgb(11, 5, 52, 0.7), rgba(11, 5, 52, 0.7));
 }
 

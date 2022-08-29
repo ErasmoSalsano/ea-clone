@@ -1,10 +1,10 @@
-@use 'layouts';
-@use 'basic-layout';
-@use 'colors';
-@use 'tipography';
-@use 'header';
-@use 'footer';
-@use 'hero';
+@use '../../layouts';
+@use '../../basic-layout';
+@use '../../colors';
+@use '../../tipography';
+@use '../../header';
+@use '../../footer';
+@use '../../hero';
 
 
 
@@ -105,23 +105,10 @@ h4 {
 
 
 
-.game-box:hover .game-image {
-    filter: none;
-}
 
 
 
 
-
-.game-box:hover .image_overlay {
-
-
-    .logo {
-        transform: scale(1.1)
-    }
-
-
-}
 
 .image_overlay>* {
     transition: transform 0.40s;
@@ -329,10 +316,10 @@ h4 {
     flex-direction: column;
     height: 100%;
     // background-color: #eaeaea;
-   
 
 
-    h3{
+
+    h3 {
         color: black;
     }
 
@@ -365,7 +352,7 @@ h4 {
     background-color: white;
 
     h3 {
-    height: 20px;
+        height: 20px;
         color: #161616;
         font-size: 26px;
     }
@@ -389,13 +376,14 @@ h4 {
 }
 
 
-.article-text{
+.article-text {
 
-h3{
-    padding: 0;
-    text-align: left;
+    h3 {
+        padding: 0;
+        text-align: left;
 
-}}
+    }
+}
 
 
 
@@ -663,21 +651,22 @@ h3{
 
     .EASPORTS-insertion2 {
         height: 22vh;
-        
+
         h3 {
             margin: 0;
-            margin-left: 300px;}
-    
+            margin-left: 300px;
+        }
 
-    .wrap_button_games {
-        margin: 0;
 
-        .button_games {
+        .wrap_button_games {
             margin: 0;
-            margin-right: 300px;
+
+            .button_games {
+                margin: 0;
+                margin-right: 300px;
+            }
         }
     }
-}
 
 }
 

@@ -134,6 +134,26 @@
     opacity: 0.9;
 }
 
+ // Hover pagina EA-SPORTS
+
+ 
+.game-box:hover {
+
+    .game-image {
+        filter: none;
+    }
+
+    .image_overlay {
+
+
+        .logo {
+            transform: scale(1.1)
+        }
+
+
+    }
+}
+
 
 
 /* Griglia articoli */

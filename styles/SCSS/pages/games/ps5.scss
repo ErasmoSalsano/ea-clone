@@ -1,0 +1,115 @@
+@use '../../layouts';
+@use '../../basic-layout';
+@use '../../colors';
+@use '../../tipography';
+@use '../../header';
+@use '../../footer';
+@use '../../hero';
+
+//text//
+
+.content{
+    display:block;
+    text-align: center;
+    line-height: 1.70rem;
+    width:100%;
+    font-family: var(--font-family-text-regular);
+    font-size:1rem;
+    margin:16px 0;
+    }
+
+//games//
+
+.content-wrap{      
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    flex-direction: column;
+    margin: 2rem 0;
+    row-gap: 1rem;
+    padding:10px;
+}
+
+.game-box{
+    .game-image-default{
+        height:100%;
+        width:100%;
+    }
+        
+    .image_overlay:hover{
+        background:rgba(13, 16, 66, 0.9);
+    }
+
+    .bigger-logo{
+        max-height: 10%;
+    }
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top:50%;
+    text-align: center;  
+    color: #a3a3a3;
+
+    :hover{
+    color:white;
+   }
+     a{
+    height:30px;
+   }
+}
+
+.game-box .image_overlay{ 
+    :hover{
+        .second{
+         transform: translateY(20px);
+         transition: .4s ease;
+        }     
+    }    
+}
+
+a:not(:last-child){
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    }
+
+//mq//
+
+@media all and (min-width:768px) {      
+    .content-wrap{
+        width:82vw;
+        .grid-games{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:1.55rem;
+        }
+    }
+    .wrap_button_games {
+        .button_games {
+            width: 200px;
+        }
+    }
+}
+
+@media all and (min-width:1024px) {   
+    .content-wrap{
+        width:85vw;
+        .grid-games{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.75rem; 
+        }
+    }
+    .wrap_button_games {
+        .button_games {
+            width: 200px;
+       }
+    }
+}
+
+@media all and (min-width: 1456px) {     
+    .content-wrap{
+        width:75vw;
+    }
+}

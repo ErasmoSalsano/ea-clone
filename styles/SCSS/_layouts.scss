@@ -58,7 +58,7 @@
 /* hover giochi */
 
 
-
+//animazione per le cards con animazione translateY
 
 .image_overlay {
 
@@ -91,6 +91,11 @@
     .big-logo {
         // svg SIMS & Battlefield
         max-height: 15%;
+    }
+
+    .very-big-logo{
+        max-height: 10%;
+    
     }
 
     &:hover {
@@ -134,16 +139,20 @@
     opacity: 0.9;
 }
 
- // Hover pagina EA-SPORTS
 
- 
-.game-box:hover {
+//animazione per le cards con animazione scale zoom
 
-    .game-image {
+
+.zoom-animation-box:hover {
+    // classe da affiancare a game-box
+
+    .zoom-animation-image {
+        // classe da affiancare a game-image
         filter: none;
     }
 
-    .image_overlay {
+    .zoom-animation-overlay {
+        // classe da affiancare a image-overlay
 
 
         .logo {

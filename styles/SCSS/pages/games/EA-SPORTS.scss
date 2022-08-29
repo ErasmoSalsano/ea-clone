@@ -35,6 +35,10 @@ html {
 }
 
 
+// css della prima sezione (griglia cards con video in background)
+
+
+
 .EASPORTS-firstwrap {
 
     background-color: black;
@@ -42,6 +46,8 @@ html {
     display: flex;
     justify-content: center;
     padding: 0px calc((100vw - 1120px)/2);
+
+
 
     .content-wrap {
         // section-wrapper
@@ -55,11 +61,20 @@ html {
         margin-top: 20%;
         row-gap: 1rem;
         padding: 10px;
+
+        .content-details {
+
+            .details {
+
+                border-color: #f3f3f3;
+                color: #f3f3f3;
+
+            }
+
+        }
     }
 
-    .wrap_button_games {
-        margin-bottom: 20px;
-    }
+
 }
 
 .EASPORTS-video {
@@ -108,8 +123,6 @@ h4 {
 
 
 
-
-
 .image_overlay>* {
     transition: transform 0.40s;
 }
@@ -132,20 +145,36 @@ h4 {
     opacity: 0.9;
 }
 
+
+.content-details {
+
+    .details {
+
+        border-color: #f3f3f3;
+        color: #f3f3f3;
+
+    }
+
+}
+
+//css della prima inserzione "EA PLAY"
+
+
+
 .EASPORTS-insertion {
+
 
     background-image: url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-mobile.768w.jpg);
     background-size: cover;
 
     position: relative;
     z-index: 1;
-    height: 30vh;
+
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 
 
 
@@ -168,6 +197,7 @@ h4 {
         @extend %flexcenter;
         flex-direction: column;
         margin-bottom: 30px;
+        height: 20%;
 
     }
 
@@ -182,81 +212,31 @@ h4 {
         }
 
 
+
     }
 
+    .content-details {
 
+        .details {
 
-
-
-
-
-
-
-
-
-
-    .wrap_button_insertion {
-        //div del button sezione giochi
-        @extend %flexcenter;
-        height: 100px;
-        color: #f3f3f3;
-
-
-
-        .button_games {
-            //button sezione giochi
-            @extend %flexcenter;
-            text-decoration: none;
+            border-color: #f3f3f3;
             color: #f3f3f3;
-            border: 2px solid #f3f3f3;
-            line-height: 27px;
-            border-radius: 3px;
-            font-family: var(--font-family-text-regular);
-            font-size: var(--font-size-span);
-            width: 87vw;
 
-            @extend %start-scale-padding;
-
-            &:hover {
-                @extend %scale-padding;
-            }
         }
     }
+
+
+
+
+
+
 }
 
-
-
-
-
-.wrap_button_games {
-    //div del button sezione giochi
-    @extend %flexcenter;
-    height: 50px;
-    margin-top: 20px;
-    color: #f3f3f3;
-
-
-    .button_games {
-        //button sezione giochi
-        @extend %flexcenter;
-        text-decoration: none;
-        color: #f3f3f3;
-        border: 2px solid #f3f3f3;
-        line-height: 27px;
-        border-radius: 3px;
-        font-family: var(--font-family-text-regular);
-        font-size: var(--font-size-span);
-        width: 100%;
-        @extend %start-scale-padding;
-
-        &:hover {
-            @extend %scale-padding;
-        }
-    }
-}
-
+//seconda sezione, seconda griglia cards più grandi
 
 .EASPORTS-secondwrap {
+
+    background-color: white;
 
     .content-wrap {
         width: 90vw;
@@ -265,7 +245,7 @@ h4 {
     @extend %flexcenter;
     text-align: center;
     flex-direction: column;
-    background-color: #f3f3f3;
+
 
     z-index: 1;
 
@@ -311,44 +291,46 @@ h4 {
 
 }
 
+
+
+// terza sezione, griglia articles e navbar
+
+
+
 .EASPORTS-thirdwrap {
     @extend %flexcenter;
     flex-direction: column;
     height: 100%;
-    // background-color: #eaeaea;
 
 
 
-    h3 {
-        color: black;
-    }
+    .EASPORTS-thirdwrap-title {
+background-color: white;
+width: 100%;
 
-    .wrap_button_games {
-
-
-
-        .button_games {
+        h3 {
             color: black;
-            border: 2px solid black;
-            width: 87vw;
         }
-
     }
+
+
 
     .main-wrap {
         height: 100%;
-        background-color: rgb(0 0 0 / 0.08);
+
     }
 
 }
 
 // inserzione finale per lavorare con EA
-.EASPORTS-insertion2 {
-    height: 15vh;
-    @extend %flexcenter;
 
+
+
+.EASPORTS-insertion2 {
+    height: 20%;
+    @extend %flexcenter;
     flex-direction: column;
-    margin-top: 50px;
+   
     background-color: white;
 
     h3 {
@@ -357,17 +339,16 @@ h4 {
         font-size: 26px;
     }
 
-    .wrap_button_games {
 
-        height: 50px;
+    .main-content-wrap {
+        .content-details {
+            height: 50px;
 
-
-        .button_games {
-            width: 87vw;
-            margin-bottom: 60px;
-            border-radius: 5px;
-            background-color: #ff4747;
-            color: #f3f3f3;
+            .details {
+                color: #f3f3f3;
+                background-color: #ff4747;
+                border-color: #ff4747;
+            }
 
         }
     }
@@ -409,18 +390,14 @@ h4 {
         }
     }
 
-    .wrap_button_games {
-        .button_games {
-            width: 250px;
-        }
-    }
+
 
     .EASPORTS-insertion {
 
         background-image: url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-tablet.1024w.jpg);
 
         justify-content: center;
-        height: 20vh;
+        height: 10%;
 
         .insertion-text {
             justify-content: center;
@@ -429,23 +406,29 @@ h4 {
 
 
             h4 {
-                width: unset
+
+                width: unset;
             }
         }
 
+        .content-details {
+            width: 200px;
+
+        }
+
+
+
+
 
         .insertion-logo {
-            gap: 20px;
+            width: 100px;
+            height: 80px;
+          
             flex-direction: row;
 
         }
 
-        .wrap_button_insertion {
-            .button_games {
-                width: 180px;
 
-            }
-        }
     }
 
     .secondwrap-grid-games {
@@ -454,22 +437,11 @@ h4 {
         gap: 1.25rem;
     }
 
-    .EASPORTS-thirdwrap {
-
-        .wrap_button_games {
-
-            .button_games {
-                margin-top: 40px;
-                width: 180px;
-            }
-
-        }
-
-    }
+  
 
     .EASPORTS-insertion2 {
 
-        height: 18vh;
+        height: 20%;
 
 
         background-image: url(/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.tablet.1024w.png);
@@ -518,23 +490,15 @@ h4 {
 
 
 
-    .wrap_button_games {
-        padding: 40px;
 
-        .button_games {
-
-            width: 250px;
-        }
-    }
 
     .EASPORTS-insertion {
         width: 100%;
         display: flex;
 
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        height: 15vh;
 
 
 
@@ -547,6 +511,8 @@ h4 {
                 font-family: var(--font-family-display-bold);
                 font-size: 26px;
                 width: 500px;
+                text-align: left;
+                margin-left: 50px;
 
 
             }
@@ -555,6 +521,7 @@ h4 {
         .insertion-logo {
 
             margin: 0%;
+            margin-right: 200px;
             gap: 20px;
 
         }
@@ -572,36 +539,32 @@ h4 {
 
         }
 
+        .content-details {
+            width: 200px;
+        }
+
     }
 
     .EASPORTS-insertion2 {
-        height: 13vh;
+
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
 
 
         background-image: url(/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.tablet.1024w.png);
         background-size: cover;
 
         h3 {
+            // width: 800px;
             margin: 0;
-            margin-left: 100px;
+            margin-left: 120px;
             color: #161616;
             font-size: 26px;
         }
 
-        .wrap_button_games {
-            margin: 0;
-
-            .button_games {
-                margin: 0;
-                margin-right: 100px;
-                width: 300px;
-                border-radius: 5px;
-                background-color: #ff4747;
-                color: #f3f3f3;
-
-            }
+        .main-content-wrap {
+            margin-right: 120px;
+            width: 350px;
         }
 
 
@@ -613,27 +576,40 @@ h4 {
 @media all and (min-width: 1456px) {
 
     .EASPORTS-insertion {
+        display: flex;
         background-image: url(/assets/images/EASPORTSpage/ea-play-product-conversion-gradient-jpg-2020-xl.jpg.adapt.1920w.jpg);
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
 
         .insertion-text {
-            margin-left: 200px;
+            margin-left: 320px;
+
         }
 
-        h3 {
+        h4 {
             font-family: var(--font-family-display-bold);
             font-size: 26px;
             width: 500px;
+            text-align: left;
+            margin-left: 0px;
 
 
         }
 
         .insertion-logo {
-            margin-right: 220px;
 
+            margin-right: 510px;
             gap: 20px;
+        }
 
+        .main-content-wrap {
+            width: 550px;
+            display: unset;
+
+        }
+
+        .content-details {
+            width: 200px;
         }
 
 
@@ -650,32 +626,30 @@ h4 {
     }
 
     .EASPORTS-insertion2 {
-        height: 22vh;
+
 
         h3 {
             margin: 0;
-            margin-left: 300px;
+            margin-left: 400px;
         }
 
-
-        .wrap_button_games {
-            margin: 0;
-
-            .button_games {
-                margin: 0;
-                margin-right: 300px;
-            }
+        .main-content-wrap {
+            margin-right: 300px;
+            width: 550px;
         }
+
     }
+
+
 
 }
 
 
 //SCSS ARTICLES
 
-.main-wrap {
-    background-color: rgba(0, 0, 0, 0.08);
-}
+// .main-wrap {
+//     background-color: rgba(0, 0, 0, 0.08);
+// }
 
 .navTab {
     @extend %bottom-line;

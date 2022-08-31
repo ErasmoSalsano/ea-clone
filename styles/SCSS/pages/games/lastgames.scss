@@ -12,6 +12,7 @@
 
 body,
 html {
+    width: 100%;
     background-color: #f3f3f3;
 }
 
@@ -24,53 +25,59 @@ html {
     margin: 2rem 0;
     row-gap: 1rem;
     padding: 10px;
-}
 
-h3 {
-    //titolo della sezione
-    @extend %flexcenter;
-    font-family: var(--font-family-display-bold);
-    font-size: var(--font-size-section-title);
-    padding: 10px;
-    text-align: center
-}
+    .title-game {
+        h3 {
+            //titolo della sezione
+            @extend %flexcenter;
+            font-family: var(--font-family-display-bold);
+            font-size: var(--font-size-section-title);
+            padding: 10px;
+            text-align: center;
 
+        }
+    }
 
-.image_overlay:hover::before {
-    background: linear-gradient(0deg, rgb(11, 5, 52, 0.7), rgba(11, 5, 52, 0.7));
-}
-
-.ea-links {
-    position: absolute;
-    top: 50%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    .game-box {
+        transition: 1s;
+        
+        .image_overlay {
 
 
+            .block {
+             
+            }
+
+            .span_games {
+                color: #a3a3a3;
+
+                &:hover {
+                    color: white;
+                }
+            }
 
 
-}
-
-
-.image_overlay:hover {
-
-    .ea-links {
-
-
-        .span_translate_middle {
-
-
-
-            // transform: translateY(40px);
-            // transition-duration: 0.5s;
 
         }
 
-        .span_translate_lower {
 
-            // transform: translateY(80px);
-            // transition-duration: 6s;
+
+        .image_overlay:hover .block {
+            transition: 1s;
+
+
+
+
+
+            .second {
+                transform: translateY(20px);
+                transition: .4s ease;
+            }
+
+            .third {
+                transform: translateY(40px);
+                transition: .4s ease;
+            }
 
 
         }
@@ -79,27 +86,67 @@ h3 {
 }
 
 
+.image_overlay::before {
+
+    background: linear-gradient(0deg, rgb(11, 5, 52, 0.7), rgba(11, 5, 52, 0.7));
+
+}
 
 
-.wrap_button_games {
-    //div del button sezione giochi
-    @extend %flexcenter;
-    height: 50px;
-    margin: 20px;
 
 
-    .button_games {
-        //button sezione giochi
-        @extend %flexcenter;
-        text-decoration: none;
-        color: #161616;
+
+
+
+a:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+
+.block {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    color: #a3a3a3;
+
+    :hover {
+        color: white;
+    }
+
+    a {
+        height: 30px;
+    }
+}
+
+
+
+//css del button
+
+.content-details {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 111px;
+
+    .details {
+
+        display: flex;
+        justify-content: center;
         border: 2px solid #161616;
         line-height: 27px;
         border-radius: 3px;
-        font-family: var(--font-family-text-regular);
-        font-size: var(--font-size-span);
         color: #161616;
-        width: 80vw;
+        font-size: var(--font-size-span);
+
+        p {
+            margin: 0 6px;
+            font-family: var(--font-family-display-regular);
+        }
+
         @extend %start-scale-padding;
 
         &:hover {
@@ -107,6 +154,31 @@ h3 {
         }
     }
 }
+
+
+@media screen and(max-width:639px) {
+    .content-details {
+        width: 100%;
+
+        .details {
+            width: 100%;
+        }
+    }
+}
+
+.navTab {
+    @extend %bottom-line;
+
+    .navTabArticles {
+
+        .linkTab {
+            .content {
+                letter-spacing: 0px;
+            }
+        }
+    }
+}
+
 
 
 @media all and (min-width:768px) {
@@ -120,12 +192,11 @@ h3 {
         }
     }
 
-    .wrap_button_games {
-        .button_games {
-            width: 200px;
-        }
-    }
+
 }
+
+
+
 
 @media all and (min-width:1024px) {
     .content-wrap {
@@ -138,11 +209,6 @@ h3 {
         }
     }
 
-    .wrap_button_games {
-        .button_games {
-            width: 200px;
-        }
-    }
 }
 
 @media all and (min-width: 1456px) {

@@ -1,34 +1,11 @@
-@use './SCSS/layouts';
-@use './SCSS/basic-layout';
-@use './SCSS/colors';
-@use './SCSS/tipography';
-@use './SCSS/header';
-@use './SCSS/footer';
-@use './SCSS/hero';
+@use '../../layouts';
+@use '../../basic-layout';
+@use '../../colors';
+@use '../../tipography';
+@use '../../header';
+@use '../../footer';
+@use '../../hero';
 
-  
-// .hero-container{
-//     position: relative;
-//     width: 100%;
-//     display: flex;
-//     .hero-wrapper{
-//         position: relative;
-//         display: flex;
-//         width: 100%;
-//         .hero-content{
-//             position: absolute;
-//             display: flex;
-//             flex-direction: column;
-//             align-items: center;
-//             justify-content: center;
-//             width: 100%;
-//             height: 100%;
-//             z-index: 2;
-//             top: 0;
-//             left: 0;
-//         }
-//     }
-// }
 
 //first div games//
 
@@ -63,18 +40,20 @@
 h2 {                         
     @extend %flexcenter;
     font-family: var(--font-family-display-bold);
-    font-size:1.20rem;
+    font-size: var(--font-size-cards-title);
+    // font-size:1.20rem;
     padding: 5px;
     text-align: center;
 }
 
-.content{
+.text-p{
     display:block;
     text-align: center;
     line-height: 1.70rem;
     width:100%;
     font-family: var(--font-family-text-regular);
-    font-size:0.95rem;
+    // font-size:0.95rem;
+    font-size: var(--font-size-span);
     a{
         color:rgb(255, 0, 0);
     }
@@ -83,35 +62,65 @@ h2 {
 
 //second div games//
 
-.wrap_button_games{          //div del button sezione giochi
-    @extend %flexcenter;
-    height: 50px;
-    margin-top: 20px;  
-}
+// .wrap_button_games{          //div del button sezione giochi
+//     @extend %flexcenter;
+//     height: 50px;
+//     margin-top: 20px;  
+// }
     
-.first-button_games{             //button sezione giochi
-    @extend %flexcenter;
-    text-decoration: none;
-    color: #161616;
-    border: 2px solid #161616;
-    line-height: 27px;
-    border-radius: 3px;
-    font-family: var(--font-family-text-regular);
-    font-size: var(--font-size-span);
-    color: #161616;
-    width: 100%;
-    position: relative;
-    @extend %start-scale-padding;
+// .first-button_games{             //button sezione giochi
+//     @extend %flexcenter;
+//     text-decoration: none;
+//     color: #161616;
+//     border: 2px solid #161616;
+//     line-height: 27px;
+//     border-radius: 3px;
+//     font-family: var(--font-family-text-regular);
+//     font-size: var(--font-size-span);
+//     color: #161616;
+//     width: 100%;
+//     position: relative;
+//     @extend %start-scale-padding;
 
-    &:hover {
-        @extend %scale-padding;
-    }
-    .material-icons{
-        position: absolute;
-        right:10%;
+//     &:hover {
+//         @extend %scale-padding;
+//     }
+//     .material-icons{
+//         position: absolute;
+//         right:10%;
+//     }
+// }
+.main-wrap{
+.content-details-first{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 111px;
+    .details{
+        display: flex;
+        justify-content: center;
+        border: 2px solid #161616;
+        line-height: 27px;
+        border-radius: 3px;
+        color: #000000;
+        font-size: var(--font-size-span);
+        p{
+            position:relative;
+            margin: 0 6px;
+            font-family: var(--font-family-display-regular);
+        }
+        .material-icons{
+                    position: absolute;
+                    right:10%;
+                }
+        @extend %start-scale-padding;
+        &:hover{
+            @extend %scale-padding;
+        }
     }
 }
-
+}
 
 h3 {                          
     @extend %flexcenter;
@@ -157,8 +166,10 @@ a:not(:last-child){
 
 /////    
 
-
-.temporary-button_games{             //button sezione giochi
+.wrap_button_games{
+    display: flex;
+    justify-content: center;
+.temporary-button_games{            
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,7 +180,8 @@ a:not(:last-child){
     line-height: 27px;
     border-radius: 3px;
     font-family: var(--font-family-text-regular);
-    font-size:14px;
+    font-size: var(--font-size-h6);
+    // font-size:14px;
     color: #161616;
     width: 100%;
     height:45px;
@@ -199,6 +211,7 @@ a:not(:last-child){
     //     position: absolute;
     //     right:0;
     //    }
+}
 }
 
 
@@ -233,31 +246,36 @@ a:not(:last-child){
     }
     p{
         font-family: var(--font-family-text-regular);
-        font-size:0.95rem;
+        // font-size:0.95rem;
+        font-size: var(--font-size-span);
         color:aliceblue;
         text-align: center;
         line-height: 1.70rem;
     }
 
-    .wrap_button_games{
-        width:100%;
-        .button-play{
-        @extend %flexcenter;
-        text-decoration: none;
-        border:none;
-        border-radius: 3px;
-        font-family: var(--font-family-text-regular);
-        font-size: var(--font-size-span);
+    .content-details{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        padding:12px 24px;
-        background-color: rgb(233, 52, 52);
-        color:aliceblue;
-        font-size:0.95rem;
-        @extend %start-scale-padding;
-
-        &:hover {
-            @extend %scale-padding;
-        }     
+        height: 80px;
+        .details{
+            background-color: #fb0202;
+            display: flex;
+            justify-content: center;
+            // border: 2px solid #161616;
+            line-height: 27px;
+            border-radius: 3px;
+            color: #ffffff;
+            font-size: var(--font-size-span);
+            p{
+                margin: 0 6px;
+                font-family: var(--font-family-display-regular);
+            }
+            @extend %start-scale-padding;
+            &:hover{
+                @extend %scale-padding;
+            }
         }
     }
 }
@@ -283,38 +301,69 @@ a:not(:last-child){
     }
     p{
         font-family: var(--font-family-text-regular);
-        font-size:1rem;
+        // font-size:1rem;
+        font-size: var(--font-size-span);
         color:aliceblue;
         text-align: center;
         line-height: 2rem;
     }
-    .wrap_button_games{
-        display:flex;
-        flex-direction: column;
-        height:150px;
-        width:100%;
-        justify-content: space-evenly;
-        .button-pogo{
-        @extend %flexcenter;
-        text-decoration: none;
-        border:none;
-        border-radius: 3px;
-        font-family: var(--font-family-text-regular);
-        font-size: var(--font-size-span);
-        width: 100%;
-        padding:12px 24px;
-        background-color: rgb(255, 255, 255);
-        color:rgb(0, 0, 0);
-        font-size:0.95rem;
-        @extend %start-scale-padding;
+    // .wrap_button_games{
+    //     display:flex;
+    //     flex-direction: column;
+    //     height:150px;
+    //     width:100%;
+    //     justify-content: space-evenly;
+    //     .button-pogo{
+    //     @extend %flexcenter;
+    //     text-decoration: none;
+    //     border:none;
+    //     border-radius: 3px;
+    //     font-family: var(--font-family-text-regular);
+    //     font-size: var(--font-size-span);
+    //     width: 100%;
+    //     padding:12px 24px;
+    //     background-color: rgb(255, 255, 255);
+    //     color:rgb(0, 0, 0);
+    //     font-size:0.95rem;
+    //     @extend %start-scale-padding;
     
-        &:hover {
-            @extend %scale-padding;
-        }     
+    //     &:hover {
+    //         @extend %scale-padding;
+    //     }     
+    //     }
+    // }
+    .main-wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    .content-details{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        .details{
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            // border: 2px solid #161616;
+            line-height: 27px;
+            border-radius: 3px;
+            font-size: var(--font-size-span);
+            p{
+                color: #161616;
+                margin: 0 6px;
+                font-family: var(--font-family-display-regular);
+            }
+            @extend %start-scale-padding;
+            &:hover{
+                @extend %scale-padding;
+            }
         }
     }
-
 }
+}
+
 
 
 
@@ -347,12 +396,16 @@ a:not(:last-child){
 
     .text-card-pogo{
         padding:32px 120px;
-        .wrap_button_games{
+        // .wrap_button_games{
+        //     display:flex;
+        //     flex-direction: row;
+        //     .button-pogo{
+        //         width:140px;
+        //     }
+        // }
+        .main-wrap{
             display:flex;
             flex-direction: row;
-            .button-pogo{
-                width:140px;
-            }
         }
     }
 }

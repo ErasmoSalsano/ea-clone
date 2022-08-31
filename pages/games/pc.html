@@ -10,26 +10,25 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 </head>
 <body>
-        
-        <!-- <div class="hero-container">
-            <div class="hero-wrapper">
-                <div class="hero-content">Giochi PC</div>
-                <div class="hero-media">
-                    <img src="./assets/images/hero/home/h1/h1-320.jpg" 
-                         srcset="./assets/images/hero/home/h1/h1-320.jpg 320w,
-                         ./assets/images/hero/home/h1/h1-768.jpg 768w,
-                         ./assets/images/hero/home/h1/h1-1456.jpg 1025w,
-                         ./assets/images/hero/home/h1/h1-2910-2000.jpg 1456w" 
-                         sizes="
-                            (min-width:320px),
-                            (min-width:768px),
-                            (min-width:1025px),
-                            (min-width:1458px)
-                               "
-                         alt="hero-image ">
+        <main>
+            <div class="hero-container">
+                <picture>
+                    <source media="(max-width: 766px)" srcset="/assets/images/hero/home/h1/h1-768.jpg">
+                    <source media="(min-width: 767px)" srcset="/assets/images/hero/home/h1/h1-1456.jpg">
+                    <img src="/assets/images/hero/home/h1/h1-768.jpg" alt="">
+                </picture>
+                <!-- <video autoplay loop muted plays-inline src="/assets/images/hero/videos/h2-video-ultimi-giochi.mp4"></video> -->
+                <div class="hero-wrapper">
+                    <div class="hero-text">
+                        <h3>Giochi PC</h3>
+                        <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, ab quam. Architecto cupiditate doloribus beatae?</p> -->
+                    </div>
+                    <!-- <div class="hero-content">
+                        <img class="pegi" src="/assets/images/hero/home/h1/pegi-16.webp" alt="hero-image" />
+                    </div>              -->
                 </div>
             </div>
-        </div> -->
+        </main>
 
 <!--1st div games-->
 
@@ -41,7 +40,7 @@
             <div class="grid-games">
                 <div class="game-box">
                     <img class="game-image-default"
-                        src="./assets/images/game/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg"
+                        src="/assets/images/game/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg"
                         alt="Battlefield 2042">
                     <div class="image_overlay">
                         <img class="logo big-logo" alt="Battlefield 2042 logo"
@@ -51,7 +50,7 @@
                 </div>
                 <div class="game-box">
                     <img class="game-image-default"
-                        src="./assets/images/game/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png" alt="F1® 22">
+                        src="/assets/images/game/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png" alt="F1® 22">
                     <div class="image_overlay">
                         <img class="logo" alt="F1® 22 logo"
                             src="https://media.contentapi.ea.com/content/dam/gin/common/logos/f122-gamebox-logo.png">
@@ -60,11 +59,11 @@
                 </div>
                 <div class="game-box">
                     <img class="game-image-default"
-                        src="./assets/images/game/fifa-22.jpg"
-                        alt="FIFA 23">
+                        src="/assets/images/game/fifa-22.jpg"
+                        alt="FIFA 22">
                     <div class="image_overlay">
                         <img class="logo"
-                            src="./assets/images/game/fifa-22-logo.svg"
+                            src="/assets/images/game/fifa-22-logo.svg"
                             alt="FIFA 22 logo">
                         <span class="span_games">FIFA 22</span>
                     </div>
@@ -85,7 +84,7 @@
 </div>
 <div class="main-wrap">
     <div class="main-content-wrap">
-        <div class="content">
+        <div class="text-p">
             <p>Qualsiasi tipo di gioco per PC tu stia
                 cercando, EA ha ciò che fa per te! Immergiti in 
                 un'epica <a href="#">battle royale</a> dove
@@ -164,13 +163,22 @@
         <div class="title-game">
             <h3>Ultimi Giochi</h3>
         </div>
-        <div class="wrap_button_games">
+        <!-- <div class="wrap_button_games">
             <a class="first-button_games" href="#">Filter games<i class="material-icons">tune</i></a>
+        </div> -->
+        <div class="main-wrap">
+            <div class="main-content-wrap">
+                <div class="content-details-first">
+                    <a class="details" href="#">
+                        <p>Filter games<i class="material-icons">tune</i></p>
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="grid-games tabContent" id="Ultimi giochi">
             <div class="game-box">
                 <img class="game-image"
-                    src="./assets/images/game/eas-fifa22-gen5-ue-keyart-horz-f23logo-1x1.jpg.adapt.crop1x1.767p.jpg"
+                    src="/assets/images/game/eas-fifa22-gen5-ue-keyart-horz-f23logo-1x1.jpg.adapt.crop1x1.767p.jpg"
                     alt="FIFA 23">
                 <div class="image_overlay">
                     <img class="logo"
@@ -184,11 +192,11 @@
                 </div>
             </div>
             <div class="game-box">
-                <img class="game-image" src="./assets/images/game/madden-23.jpg"
+                <img class="game-image" src="/assets/images/game/madden-23.jpg"
                     alt="Madden 23">
                 <div class="image_overlay">
                     <img class="logo" alt="Madden 23 logo"
-                        src="./assets/images/game/madden-23-logo.svg">
+                        src="/assets/images/game/madden-23-logo.svg">
                     <div class="block">   
                         <a href="#" class="span_games">Sito Ufficiale</a>
                         <a href="#" class="span_games  second">Aiuto</a>
@@ -198,10 +206,10 @@
             </div>
             <div class="game-box">
                 <img class="game-image"
-                    src="./assets/images/game/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png" alt="F1® 22">
+                    src="/assets/images/game/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png" alt="F1® 22">
                 <div class="image_overlay">
                     <img class="logo" alt="F1® 22 logo"
-                        src="https://media.contentapi.ea.com/content/dam/gin/common/logos/f122-gamebox-logo.png">
+                        src="/assets/images/game/f122-logo.png">
                     <div class="block">   
                         <a href="#" class="span_games">Sito Ufficiale</a>
                         <a href="#" class="span_games  second">Aiuto</a>
@@ -210,11 +218,11 @@
                 </div>
             </div>
             <div class="game-box">
-                <img class="game-image" src="./assets/images/game/grid-legends.jpg"
+                <img class="game-image" src="/assets/images/game/grid-legends.jpg"
                     alt="Grid Legends">
                 <div class="image_overlay">
                     <img class="logo" alt="Grid Legends logo"
-                        src="./assets/images/game/grid-legends-logo.png">
+                        src="/assets/images/game/grid-legends-logo.png">
                     <div class="block">   
                         <a href="#" class="span_games">Sito Ufficiale</a>
                         <a href="#" class="span_games  second">Aiuto</a>
@@ -224,7 +232,7 @@
             </div>
             <div class="game-box">
                 <img class="game-image"
-                    src="./assets/images/game/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg"
+                    src="/assets/images/game/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg"
                     alt="Battlefield 2042">
                 <div class="image_overlay">
                     <img class="logo big-logo" alt="Battlefield 2042 logo"
@@ -237,11 +245,11 @@
                 </div>
             </div>
             <div class="game-box">
-                <img class="game-image" src="./assets/images/game/crysis-remastered.jpg"
+                <img class="game-image" src="/assets/images/game/crysis-remastered.jpg"
                     alt="Crysis remastered">
                 <div class="image_overlay">
                     <img class="logo big-logo" alt="Crysis remastered logo"
-                        src="./assets/images/game/crysis-remastered-logo.png">
+                        src="/assets/images/game/crysis-remastered-logo.png">
                     <div class="block">   
                         <a href="#" class="span_games">Sito Ufficiale</a>
                         <a href="#" class="span_games  second">Aiuto</a>
@@ -250,11 +258,11 @@
                 </div>
             </div>
             <div class="game-box">
-                <img class="game-image" src="./assets/images/game/fifa-22.jpg"
+                <img class="game-image" src="/assets/images/game/fifa-22.jpg"
                     alt="FIFA 22">
                 <div class="image_overlay">
                     <img class="logo" alt="FIFA 22 logo"
-                        src="./assets/images/game/fifa-22-logo.svg">
+                        src="/assets/images/game/fifa-22-logo.svg">
                     <div class="block">   
                         <a href="#" class="span_games">Sito Ufficiale</a>
                         <a href="#" class="span_games  second">Aiuto</a>
@@ -263,11 +271,11 @@
                 </div>
             </div>
             <div class="game-box">
-                <img class="game-image" src="./assets/images/game/lost-in-random.jpg"
+                <img class="game-image" src="/assets/images/game/lost-in-random.jpg"
                     alt="Lost in Random">
                 <div class="image_overlay">
                     <img class="logo" alt="Lost in Random logo"
-                        src="./assets/images/game/lost-in-random-logo.png">
+                        src="/assets/images/game/lost-in-random-logo.png">
                     <div class="block">   
                         <a href="#" class="span_games">Sito Ufficiale</a>
                         <a href="#" class="span_games  second">Aiuto</a>
@@ -276,11 +284,11 @@
                 </div>
             </div>
             <div class="game-box">
-                <img class="game-image" src="./assets/images/game/madden-nfl-22.jpg"
+                <img class="game-image" src="/assets/images/game/madden-nfl-22.jpg"
                     alt="Madden NFL 22">
                 <div class="image_overlay">
                     <img class="logo" alt="Madden NFL 22 logo"
-                        src="./assets/images/game/madden-nfl-22-logo.svg">
+                        src="/assets/images/game/madden-nfl-22-logo.svg">
                     <div class="block">   
                         <a href="#" class="span_games">Sito Ufficiale</a>
                         <a href="#" class="span_games  second">Aiuto</a>
@@ -293,7 +301,7 @@
         <!-- <div class="grid-games tabContent" id="EA SPORTS">
             <div class="game-box">
                 <img class="game-image"
-                    src="./assets/images/game/eas-fifa22-gen5-ue-keyart-horz-f23logo-1x1.jpg.adapt.crop1x1.767p.jpg"
+                    src="/assets/images/game/eas-fifa22-gen5-ue-keyart-horz-f23logo-1x1.jpg.adapt.crop1x1.767p.jpg"
                     alt="FIFA 23">
                 <div class="image_overlay">
                     <img class="logo"
@@ -311,7 +319,7 @@
                     alt="Madden 23">
                 <div class="image_overlay">
                     <img class="logo" alt="Madden 23 logo"
-                        src="./assets/images/game/madden-23-logo.svg">
+                        src="/assets/images/game/madden-23-logo.svg">
                     <div class="block">   
                         <a href="#" class="span_games">Sito Ufficiale</a>
                         <a href="#" class="span_games  second">Aiuto</a>
@@ -321,7 +329,7 @@
             </div>
             <div class="game-box">
                 <img class="game-image"
-                    src="./assets/images/game/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png" alt="F1® 22">
+                    src="/assets/images/game/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png" alt="F1® 22">
                 <div class="image_overlay">
                     <img class="logo" alt="F1® 22 logo"
                         src="https://media.contentapi.ea.com/content/dam/gin/common/logos/f122-gamebox-logo.png">
@@ -337,7 +345,7 @@
                     alt="Grid Legends">
                 <div class="image_overlay">
                     <img class="logo" alt="Grid Legends logo"
-                        src="./assets/images/game/grid-legends-logo.png">
+                        src="/assets/images/game/grid-legends-logo.png">
                     <div class="block">   
                         <a href="#" class="span_games">Sito Ufficiale</a>
                         <a href="#" class="span_games  second">Aiuto</a>
@@ -347,11 +355,11 @@
             </div>
             <div class="game-box">
                 <img class="game-image"
-                    src="./assets/images/game/fifa-22.jpg"
+                    src="/assets/images/game/fifa-22.jpg"
                     alt="FIFA 22">
                 <div class="image_overlay">
                     <img class="logo" alt="FIFA 22 logo"
-                        src="./assets/images/game/fifa-22-logo.svg">
+                        src="/assets/images/game/fifa-22-logo.svg">
                     <div class="block">   
                         <a href="#" class="span_games">Sito Ufficiale</a>
                         <a href="#" class="span_games  second">Aiuto</a>
@@ -360,11 +368,11 @@
                 </div>
             </div>
             <div class="game-box">
-                <img class="game-image" src="./assets/images/game/madden-nfl-22.jpg"
+                <img class="game-image" src="/assets/images/game/madden-nfl-22.jpg"
                     alt="Madden NFL 22">
                 <div class="image_overlay">
                     <img class="logo" alt="Madden NFL 22 logo"
-                        src="./assets/images/game/madden-nfl-22-logo.svg">
+                        src="/assets/images/game/madden-nfl-22-logo.svg">
                     <div class="block">   
                         <a href="#" class="span_games">Sito Ufficiale</a>
                         <a href="#" class="span_games  second">Aiuto</a>
@@ -373,11 +381,11 @@
                 </div>
             </div>
             <div class="game-box">
-                <img class="game-image" src="./assets/images/game/f1-2021.jpg"
+                <img class="game-image" src="/assets/images/game/f1-2021.jpg"
                     alt="F1® 2021">
                 <div class="image_overlay">
                     <img class="logo big-logo" alt="F1® 2021 logo"
-                        src="./assets/images/game/f1-2021-logo.svg">
+                        src="/assets/images/game/f1-2021-logo.svg">
                     <div class="block">   
                         <a href="#" class="span_games">Sito Ufficiale</a>
                         <a href="#" class="span_games  second">Aiuto</a>
@@ -386,11 +394,11 @@
                 </div>
             </div>
             <div class="game-box">
-                <img class="game-image" src="./assets/images/game/fifa-21.png"
+                <img class="game-image" src="/assets/images/game/fifa-21.png"
                     alt="FIFA 21">
                 <div class="image_overlay">
                     <img class="logo" alt="FIFA 21 logo"
-                        src="./assets/images/game/fifa-21-logo.svg">
+                        src="/assets/images/game/fifa-21-logo.svg">
                     <div class="block">   
                         <a href="#" class="span_games">Sito Ufficiale</a>
                         <a href="#" class="span_games  second">Aiuto</a>
@@ -399,11 +407,11 @@
                 </div>
             </div>
             <div class="game-box">
-                <img class="game-image" src="./assets/images/game/madden-21.png"
+                <img class="game-image" src="/assets/images/game/madden-21.png"
                     alt="Madden NFL 21">
                 <div class="image_overlay">
                     <img class="logo big-logo" alt="Madden NFL 21 logo"
-                        src="./assets/images/game/madden-21-logo.svg">
+                        src="/assets/images/game/madden-21-logo.svg">
                     <div class="block">   
                         <a href="#" class="span_games">Sito Ufficiale</a>
                         <a href="#" class="span_games  second">Aiuto</a>
@@ -453,7 +461,7 @@
                 <!-- <img class="image-card"
                     src="https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/ea-play-heromed-xl-7x2.jpg.adapt.crop3x5.767w.jpg"
                     alt="img"> -->
-                    <img class="image-card" src="./assets/images/banners/ea-play-320.jpg" 
+                    <img class="image-card" src="/assets/images/banners/ea-play-320.jpg" 
                     alt="play-background-card"
                      srcset="https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/ea-play-heromed-xl-7x2.jpg.adapt.crop3x5.320w.jpg 320w,
                       https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/ea-play-heromed-xl-7x2.jpg.adapt.crop3x5.767w.jpg 768w,
@@ -462,11 +470,15 @@
                          https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/ea-play-heromed-xl-7x2.jpg.adapt.crop7x2.1920w.jpg 1456w"
                          sizes="(max-width:320px),(max-width:768px),(max-width:1025px),(max-width:1458px)">
                     <div class="text-card">
-                        <img class="logo-play" src="./assets/images/banners/ea-playpro-logo.svg">
-                        <p>Non limitarti al gioco. Gioca al massimo.Sblocca ricompense esclusive,contenuti per i soli membri e una libreria dei migliori titoli.</p>
-                        <div class="wrap_button_games">
-                            <div class="button-play">
-                                <a href="">Unisciti ora</a>
+                        <img class="logo-play" src="/assets/images/banners/ea-playpro-logo.svg">
+                        <p>Non limitarti al gioco. Gioca al massimo. Sblocca ricompense esclusive,contenuti per i soli membri e una libreria dei migliori titoli.</p>
+                        <div class="main-wrap">
+                            <div class="main-content-wrap">
+                                <div class="content-details">
+                                    <a class="details" href="#">
+                                        <p>Unisciti ora</p>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -482,22 +494,30 @@
                 <!-- <img class="image-card"
                     src="https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/pogo-heromed-xl-7x2.jpg.adapt.crop16x9.320w.jpg"
                     alt="img"> -->
-                      <img  class="image-card" src="./assets/images/banners/pogo-320.jpg" alt 
+                      <img  class="image-card" src="/assets/images/banners/pogo-320.jpg" alt 
                     srcset="https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/pogo-heromed-xl-7x2.jpg.adapt.crop16x9.320w.jpg 320w, 
                     https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/pogo-heromed-xl-7x2.jpg.adapt.crop16x9.767w.jpg 768w,
                      https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/pogo-heromed-xl-7x2.jpg.adapt.crop2x1.1023w.jpg 1024w,
                       https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/pogo-heromed-xl-7x2.jpg.adapt.crop5x2.1455w.jpg 1320w, 
                       https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/pogo-heromed-xl-7x2.jpg.adapt.crop7x2.1920w.jpg 1456w"
-                      sizes="(max-width:320px),(max-width:768px),(max-width:1025px),(max-width:1458px)">
+                      sizes="(max-width:320px),(max-width:780px),(max-width:1025px),(max-width:1458px)">
             <div class="text-card-pogo">
-                <img class="logo-play" src="./assets/images/banners/pogo-logo.svg">
+                <img class="logo-play" src="/assets/images/banners/pogo-logo.svg">
                 <p>Pogo è dove nascono i migliori giochi casual gratutiti online</p>
-                <div class="wrap_button_games">
-                    <div class="button-pogo">
-                        <a href="#">Scopri di più</a>
+                <div class="main-wrap">
+                    <div class="main-content-wrap">
+                        <div class="content-details">
+                            <a class="details" href="#">
+                                <p>Scopri di più</p>
+                            </a>
+                        </div>
                     </div>
-                    <div class="button-pogo">
-                        <a href="#">Gioca ora</a>
+                    <div class="main-content-wrap">
+                        <div class="content-details">
+                            <a class="details" href="#">
+                                <p>Gioca ora</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

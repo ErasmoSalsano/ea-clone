@@ -1,0 +1,124 @@
+@use '../../layouts';
+@use '../../basic-layout';
+@use '../../colors';
+@use '../../tipography';
+@use '../../header';
+@use '../../footer';
+@use '../../hero';
+
+.bg{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(#4E78D9, #24217E);
+    .img{
+        width: 250%;
+        transform: translateY(-100px);
+        transform: translatex(-100px);
+        position: absolute;
+    }
+    .void{
+        height: 80px;
+    }
+    .main-wrap{
+        padding: 0px calc((100vw - 1600px) / 2);
+        .sorry{
+            display: flex;
+            flex-direction: column;
+            .title{
+                transform: scale(125%);
+                h1,
+                h3{
+                    text-shadow: #24217E 0 10px 10px;
+                    color: white;
+                    text-align: center
+                }
+            }
+            h1{
+                z-index: 1;
+                margin: 10px 0 20px;
+                text-align: center;
+                font-family: var(--font-family-display-bold)
+            }
+        }
+    }
+}
+.article-card{
+    @include layouts.article-card(100%);
+    @extend %shadow-start;
+        &:hover{
+            @extend %shadow-hover;
+    }
+    img{
+        display: none;
+    }
+    .article-text{
+        text-align: center;
+        @include layouts.article-text(center, none);
+    }
+}
+
+@media screen and (min-width:769px){
+    .bg{
+        .img{
+        width: 200%;
+        transform: translateY(-100px);
+        transform: translatex(-80px);
+        position: absolute;
+    }
+        .void{
+            height: 110px;
+        }
+        .main-wrap{
+            .sorry{
+                transform: scale(1.4);
+                margin: 21px 0;
+                .title{
+                    transform: scale(150%);
+                }
+            }
+        }
+    }
+    .article-card{
+        width: 40%;
+        img{
+            display: block;
+        }
+        .article-text{
+            padding: 10px;
+            text-align: center;
+            h3{
+                margin: 0;
+                line-height: 32.4px;
+            }
+        }
+    }
+}
+@media screen and (min-width:1025px){
+    .bg{
+        .img{
+        width: 160%;
+        transform: translateY(-110px);
+        transform: translatex(-20px);
+    }
+        .void{
+            height: 140px;
+        }
+    }
+    .article-card{
+        width: 33%;
+    }
+}
+@media screen and (min-width:1457px){
+    .bg{
+        .img{
+        width: 100%;
+    }
+        .void{
+            height: 170px;
+        }
+    }
+    .article-card{
+        width: 20%;
+    }
+}

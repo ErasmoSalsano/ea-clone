@@ -8,6 +8,624 @@
 
 /* == Page == */
 
+//CSS PRIMA HERO HOMEPAGE
+
+.hero_wrap {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+
+
+
+
+    .upper-hero1 {
+        position: relative;
+        @extend %flexcenter;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+
+        picture {
+
+            width: 100%;
+
+            source {
+                width: 100%;
+            }
+
+            img {
+                height: 83vh;
+                width: 100%;
+            }
+        }
+
+
+
+
+
+
+        span {
+            font-family: var(--font-family-display-regular);
+            font-size: var(--font-size-span);
+            width: 85vw;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+
+
+        .hero1-buttons {
+            width: 90vw;
+            position: absolute;
+            top: 46%;
+            @extend %flexcenter;
+            flex-direction: column;
+
+            .hero-buttons_wrap {
+                width: 100%;
+            }
+
+            .upper-hero1-logo {
+
+
+
+                width: 450px;
+
+            }
+
+            .hero1-button_playNow {
+
+
+                height: 50px;
+
+                .hero1-button_playNow_content {
+
+
+                    border-color: white;
+                    background-color: white;
+                }
+            }
+
+            .hero1-button_trailer {
+
+                .hero1-button_trailer_content {
+                    color: white;
+                    border-color: white;
+
+                }
+            }
+        }
+
+    }
+
+
+
+    .lower-hero1 {
+
+        background-image: url(/assets/images/hero/home/hero1/nhl23-mobile-section-bg-buy-now-product-conversion-xl.jpg.adapt.768w.jpg);
+        background-size: cover;
+        position: relative;
+        @extend %flexcenter;
+
+        // width: 100%;
+        overflow: hidden;
+
+
+        .main-content-wrap {
+            flex-direction: column;
+
+            span {
+                padding-top: 20px;
+                font-family: var(--font-family-display-bold);
+                font-size: var(--font-size-hero-title);
+                text-align: center;
+                color: #f3f3f3;
+            }
+
+            .hero1-button_trailer {
+
+                .hero1-button_trailer_content {
+                    background-color: white;
+
+                    border-color: white;
+                }
+            }
+
+
+
+
+            .lower-hero1_image {
+
+                width: 100%;
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    //CSS SECONDA HERO HOMEPAGE
+
+
+    .second-hero_wrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        flex-direction: column;
+
+        .upper-hero2 {
+            position: relative;
+            @extend %flexcenter;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+
+            picture {
+
+                width: 100%;
+
+                source {
+                    width: 100%;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+
+
+
+
+
+            span {
+                font-family: var(--font-family-display-regular);
+                font-size: var(--font-size-span);
+                width: 79vw;
+                color: white;
+                // padding: 20px;
+                text-align: left;
+            }
+
+
+
+
+            .hero2-buttons {
+                width: 90vw;
+                position: absolute;
+                top: 30%;
+                @extend %flexcenter;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+
+
+
+                .upper-hero2-logo {
+
+
+
+                    width: 250px;
+
+                }
+
+                .hero2-button_subscribe {
+
+
+                    // width: 200px;
+
+
+                    .hero2-button_subscribe_content {
+
+
+                        border-color: white;
+                        color: white;
+                    }
+                }
+
+
+            }
+
+        }
+
+
+
+        .lower-hero2 {
+
+            background-image: url(/assets/images/hero/home/hero2/ea-section-sfondo\ blu-bg-esrb-parents-blue-xl.jpg.adapt.1920w.jpg);
+            background-size: cover;
+            position: relative;
+            @extend %flexcenter;
+
+            // width: 100%;
+            overflow: hidden;
+
+
+            .main-content-wrap {
+                flex-direction: column;
+
+                span {
+                    padding-top: 20px;
+                    font-family: var(--font-family-display-bold);
+                    font-size: var(--font-size-hero-title);
+                    text-align: center;
+                    color: black;
+                }
+
+
+
+
+
+
+
+
+            }
+
+        }
+
+    }
+
+}
+
+
+//INIZIO --> MQ HERO HOMEPAGE
+
+@media screen and(min-width:639px) {
+
+    .hero_wrap {
+        .second-hero_wrap {
+            .upper-hero2 {
+                .hero2-buttons {
+                    .hero2-button_subscribe {
+                        width: 200px;
+                        justify-content: flex-start;
+
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 768px) {
+    .hero_wrap {
+        .upper-hero1 {
+
+            picture {
+                img {
+                    height: 100%;
+                }
+            }
+
+
+
+            span {
+                width: 40vw;
+
+            }
+
+            .hero1-buttons {
+                height: 100%;
+                width: 100%;
+                // align-items: flex-start;
+                top: 0;
+                right: 25vw;
+
+                .content-details {}
+
+
+                .upper-hero1-logo {
+
+
+
+                    width: 300px;
+
+                }
+            }
+        }
+
+
+
+
+
+
+        .second-hero_wrap {
+            .upper-hero2 {
+
+
+                span {
+
+                    width: 33vw;
+
+                }
+
+                .hero2-buttons {
+                    top: 5vh;
+                }
+            }
+        }
+    }
+
+
+
+
+
+}
+
+@media all and (min-width: 1024px) {
+
+
+
+
+
+
+    .hero_wrap {
+
+        .upper-hero1 {
+
+            .hero1-buttons {
+                right: 22vw;
+                width: 100vw;
+
+                .hero-buttons_wrap {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+
+
+                    .hero1-button_playNow {
+
+                        width: 180px;
+
+                        .hero1-button_playNow_content {}
+
+                    }
+
+                    .hero1-button_trailer {
+
+                        width: 300px;
+
+                        .hero1-button_trailer_content {}
+                    }
+
+
+
+                }
+
+                .upper-hero1-logo {
+
+
+
+                    width: 420px;
+
+                }
+
+
+            }
+
+        }
+
+
+        .lower-hero1 {
+
+            background-image: url(/assets/images/hero/home/hero1/nhl23-tabletsection-bg-buy-now-product-conversion-xl.jpg.adapt.1024w.jpg);
+
+
+
+
+            .main-content-wrap {
+
+                flex-direction: row;
+                justify-content: space-between;
+
+                span {
+                    width: 40vw;
+                    text-align: left;
+                    margin-left: 20px;
+
+
+                }
+
+                .hero1-button_trailer {
+                    width: 200px;
+
+
+                    .hero1-button_trailer_content {}
+
+                }
+
+
+            }
+
+
+        }
+
+
+
+
+        .second-hero_wrap {
+            .upper-hero2 {
+
+
+
+                .hero2-buttons {
+                    width: 85vw;
+                    top: 10vh;
+                    // left: 6vh;
+                }
+
+                picture {
+                    height: 55vh;
+                }
+            }
+
+            .lower-hero2 {
+
+
+
+
+
+
+                .main-content-wrap {
+                    width: 85vw;
+
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    span {
+                        left: 6vh;
+                        width: 40vw;
+                        text-align: left;
+                        // margin-left: 20px;
+
+
+                    }
+
+                    .hero2-button_discover {
+                        width: 200px;
+
+
+
+                        .hero2-button_discover_content {}
+
+                    }
+
+
+                }
+
+
+            }
+        }
+    }
+
+
+
+
+
+
+
+}
+
+@media all and (min-width: 1456px) {
+
+    .hero_wrap {
+        .upper-hero1 {
+
+            .hero1-buttons {
+                right: 13vw;
+
+                .upper-hero1-logo {
+                    width: 500px;
+                }
+
+
+            }
+
+
+            span {
+                // width: 30vw;
+                max-width: 27.7vw;
+
+
+            }
+
+            picture {
+                height: 60vh;
+
+
+
+            }
+        }
+
+
+        .lower-hero1 {
+
+            background-image: url(/assets/images/hero/home/hero1/nhl23-desktop-section-bg-buy-now-product-conversion-xl.jpg.adapt.1456w.jpg);
+
+            .main-content-wrap {
+
+                span {
+                    width: 25vw;
+
+                }
+
+            }
+        }
+
+        .second-hero_wrap {
+            .upper-hero2 {
+
+                .hero2-buttons {
+                    width: 80vw;
+                    // left: 13vw;
+
+                }
+
+                picture {
+                    height: 50vh;
+                }
+            }
+
+            .lower-hero2 {
+                .main-content-wrap {
+                    width: 80vw;
+
+
+                    span {
+                        width: 35vw;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+//FINE  --> MQ  HERO HOMEPAGE
+
+
+
+
+
+
+
+
+
+
+
+
+
 // INIZIO -->   Sezione Giochi 
 
 body,
@@ -36,32 +654,7 @@ html {
     }
 }
 
-.wrap_button_games {
-    //div del button sezione giochi
-    @extend %flexcenter;
-    height: 50px;
-    margin-top: 20px;
 
-
-    .button_games {
-        //button sezione giochi
-        @extend %flexcenter;
-        text-decoration: none;
-        color: #161616;
-        border: 2px solid #161616;
-        line-height: 27px;
-        border-radius: 3px;
-        font-family: var(--font-family-text-regular);
-        font-size: var(--font-size-span);
-        color: #161616;
-        width: 100%;
-        @extend %start-scale-padding;
-
-        &:hover {
-            @extend %scale-padding;
-        }
-    }
-}
 
 
 .image_overlay::before {
@@ -80,11 +673,7 @@ html {
         }
     }
 
-    .wrap_button_games {
-        .button_games {
-            width: 200px;
-        }
-    }
+   
 }
 
 @media all and (min-width:1024px) {
@@ -98,11 +687,7 @@ html {
         }
     }
 
-    .wrap_button_games {
-        .button_games {
-            width: 200px;
-        }
-    }
+    
 }
 
 @media all and (min-width: 1456px) {
@@ -223,9 +808,3 @@ html {
         width: 30%;
     }
 }
-
-
-
-
-
-

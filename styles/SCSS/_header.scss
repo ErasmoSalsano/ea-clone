@@ -181,10 +181,6 @@
         height: 2.25rem;
     }
 
-    .board-account{
-        display: none;
-    }
-
     .board-content-wrap{
         width: 85%;
         margin: auto;
@@ -728,6 +724,14 @@ header{
 /* .user-board {
     display: none;
 } */
+
+/* .board-account{
+    display: none;
+} */
+
+.board-help{
+    display: none;
+}
   
 .popup-menu-wrap{
     display: none;

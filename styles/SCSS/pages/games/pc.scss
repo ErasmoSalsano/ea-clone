@@ -7,6 +7,27 @@
 @use '../../hero';
 
 
+            // <picture>
+            //     <source media="(max-width: 768px)" srcset="/assets/images/hero/news/h3-1534-696-notizie.jpg">
+            //     <source media="(max-width: 1024px)" srcset="/assets/images/hero/news/h3-2046-560notizie.jpg.jpg">
+            //     <source media="(max-width: 1456px)" srcset="/assets/images/hero/news/h3-2910-600notizie.jpg.jpg">
+            //     <source media="(max-width: 1920px)" srcset="/assets/images/hero/news/h3-3840-600-notiziee.jpg">
+            //     <img class="img-text" src="/assets/images/hero/news/h3-3840-600-notiziee.jpg" alt="">
+            // </picture>
+
+.hero-container{
+    height:290px;
+    overflow: hidden;
+    .hero-text{
+        font-family: var(--font-family-display-bold);
+        font-size: var(--font-size-hero-title);
+        color:rgb(251, 254, 255);
+    }
+    picture{
+        height:inherit;
+    }
+}
+
 //first div games//
 
 .content-wrap{      
@@ -23,12 +44,10 @@
     .game-image-default{
         height:100%;
         width:100%;
-    }
-        
-    .image_overlay:hover{
+    } 
+    .image_overlay::before{
         background:rgba(13, 16, 66, 0.9);
     }
-
     span{
         color:aliceblue;
     }
@@ -52,7 +71,6 @@ h2 {
     line-height: 1.70rem;
     width:100%;
     font-family: var(--font-family-text-regular);
-    // font-size:0.95rem;
     font-size: var(--font-size-span);
     a{
         color:rgb(255, 0, 0);
@@ -111,8 +129,8 @@ h2 {
             font-family: var(--font-family-display-regular);
         }
         .material-icons{
-                    position: absolute;
-                    right:10%;
+                position: absolute;
+                left:100%;
                 }
         @extend %start-scale-padding;
         &:hover{
@@ -130,7 +148,7 @@ h3 {
 }
 
 
-// span mejorar//
+// span //
 .block{
     display: flex;
     flex-direction: column;
@@ -181,7 +199,6 @@ a:not(:last-child){
     border-radius: 3px;
     font-family: var(--font-family-text-regular);
     font-size: var(--font-size-h6);
-    // font-size:14px;
     color: #161616;
     width: 100%;
     height:45px;
@@ -263,7 +280,6 @@ a:not(:last-child){
             background-color: #fb0202;
             display: flex;
             justify-content: center;
-            // border: 2px solid #161616;
             line-height: 27px;
             border-radius: 3px;
             color: #ffffff;
@@ -281,7 +297,6 @@ a:not(:last-child){
 }
 
 ////div pogo/////
-
 
 .text-card-pogo{
     position:absolute;
@@ -301,7 +316,6 @@ a:not(:last-child){
     }
     p{
         font-family: var(--font-family-text-regular);
-        // font-size:1rem;
         font-size: var(--font-size-span);
         color:aliceblue;
         text-align: center;
@@ -346,7 +360,6 @@ a:not(:last-child){
             background-color: #ffffff;
             display: flex;
             justify-content: center;
-            // border: 2px solid #161616;
             line-height: 27px;
             border-radius: 3px;
             font-size: var(--font-size-span);
@@ -396,13 +409,6 @@ a:not(:last-child){
 
     .text-card-pogo{
         padding:32px 120px;
-        // .wrap_button_games{
-        //     display:flex;
-        //     flex-direction: row;
-        //     .button-pogo{
-        //         width:140px;
-        //     }
-        // }
         .main-wrap{
             display:flex;
             flex-direction: row;

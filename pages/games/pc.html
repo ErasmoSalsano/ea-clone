@@ -15,17 +15,12 @@
                 <picture>
                     <source media="(max-width: 766px)" srcset="/assets/images/hero/home/h1/h1-768.jpg">
                     <source media="(min-width: 767px)" srcset="/assets/images/hero/home/h1/h1-1456.jpg">
-                    <img src="/assets/images/hero/home/h1/h1-768.jpg" alt="">
+                    <img src="/assets/images/hero/home/h1/h1-320.jpg" alt="3 geometric shapes">
                 </picture>
-                <!-- <video autoplay loop muted plays-inline src="/assets/images/hero/videos/h2-video-ultimi-giochi.mp4"></video> -->
                 <div class="hero-wrapper">
                     <div class="hero-text">
                         <h3>Giochi PC</h3>
-                        <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, ab quam. Architecto cupiditate doloribus beatae?</p> -->
                     </div>
-                    <!-- <div class="hero-content">
-                        <img class="pegi" src="/assets/images/hero/home/h1/pegi-16.webp" alt="hero-image" />
-                    </div>              -->
                 </div>
             </div>
         </main>
@@ -180,14 +175,14 @@
                 <img class="game-image"
                     src="/assets/images/game/eas-fifa22-gen5-ue-keyart-horz-f23logo-1x1.jpg.adapt.crop1x1.767p.jpg"
                     alt="FIFA 23">
-                <div class="image_overlay">
+                <div class="image_overlay" id="overlay">
                     <img class="logo"
-                        src="https://media.contentapi.ea.com/content/dam/gin/common/logos/f23-logo-white-stacked.svg"
+                        src="/assets/images/game/fifa-23-logo.svg"
                         alt="FIFA 23 logo"> 
                     <div class="block">   
                        <a href="#" class="span_games">Sito Ufficiale</a>
-                       <a href="#" class="span_games  second">Aiuto</a>
-                       <a href="#" class="span_games third">Forum</a>
+                       <a href="#" class="span_games  second" id="second2">Aiuto</a>
+                       <a href="#" class="span_games third" id="third3">Forum</a>
                     </div>
                 </div>
             </div>
@@ -458,17 +453,14 @@
 <div class="main-wrap">
     <div class="content-wrap">
             <div class="box-card">
-                <!-- <img class="image-card"
-                    src="https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/ea-play-heromed-xl-7x2.jpg.adapt.crop3x5.767w.jpg"
-                    alt="img"> -->
-                    <img class="image-card" src="/assets/images/banners/ea-play-320.jpg" 
-                    alt="play-background-card"
-                     srcset="https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/ea-play-heromed-xl-7x2.jpg.adapt.crop3x5.320w.jpg 320w,
-                      https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/ea-play-heromed-xl-7x2.jpg.adapt.crop3x5.767w.jpg 768w,
-                       https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/ea-play-heromed-xl-7x2.jpg.adapt.crop2x1.1023w.jpg 1024w,
-                        https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/ea-play-heromed-xl-7x2.jpg.adapt.crop5x2.1455w.jpg 1320w,
-                         https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/ea-play-heromed-xl-7x2.jpg.adapt.crop7x2.1920w.jpg 1456w"
-                         sizes="(max-width:320px),(max-width:768px),(max-width:1025px),(max-width:1458px)">
+                    <img class="image-card"
+                        srcset="/assets/images/banners/ea-play-320.jpg 320w,
+                        /assets/images/banners/ea-play-767.jpg 767w,
+                        /assets/images/banners/ea-play-1023.jpg 1024w,
+                        /assets/images/banners/ea-play-1455.jpg 1320w,
+                        /assets/images/banners/ea-play-1920.jpg 1456w"
+                        sizes="(max-width: 320px),(max-width: 768px),(max-width: 1024px),(max-width: 1456px),(max-width: 1920px)"
+                        src="/assets/images/banners/ea-play-320.jpg" alt="bg-play">
                     <div class="text-card">
                         <img class="logo-play" src="/assets/images/banners/ea-playpro-logo.svg">
                         <p>Non limitarti al gioco. Gioca al massimo. Sblocca ricompense esclusive,contenuti per i soli membri e una libreria dei migliori titoli.</p>
@@ -491,16 +483,13 @@
 <div class="main-wrap">
     <div class="content-wrap">
             <div class="box-card">
-                <!-- <img class="image-card"
-                    src="https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/pogo-heromed-xl-7x2.jpg.adapt.crop16x9.320w.jpg"
-                    alt="img"> -->
-                      <img  class="image-card" src="/assets/images/banners/pogo-320.jpg" alt 
-                    srcset="https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/pogo-heromed-xl-7x2.jpg.adapt.crop16x9.320w.jpg 320w, 
-                    https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/pogo-heromed-xl-7x2.jpg.adapt.crop16x9.767w.jpg 768w,
-                     https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/pogo-heromed-xl-7x2.jpg.adapt.crop2x1.1023w.jpg 1024w,
-                      https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/pogo-heromed-xl-7x2.jpg.adapt.crop5x2.1455w.jpg 1320w, 
-                      https://media.contentapi.ea.com/content/dam/eacom/images/2022/07/pogo-heromed-xl-7x2.jpg.adapt.crop7x2.1920w.jpg 1456w"
-                      sizes="(max-width:320px),(max-width:780px),(max-width:1025px),(max-width:1458px)">
+                    <img class="image-card"
+                        srcset="/assets/images/banners/pogo-767.jpg 767w,
+                        /assets/images/banners/pogo-1023.jpg 1024w,
+                        /assets/images/banners/pogo-1455.jpg 1320w,
+                        /assets/images/banners/pogo-1920.jpg 1456w"
+                        sizes="(max-width: 768px),(max-width: 1024px),(max-width: 1456px),(max-width: 1920px)"
+                        src="/assets/images/banners/pogo-320.jpg 320w" alt="bg-pogo">
             <div class="text-card-pogo">
                 <img class="logo-play" src="/assets/images/banners/pogo-logo.svg">
                 <p>Pogo è dove nascono i migliori giochi casual gratutiti online</p>
@@ -531,6 +520,7 @@
 <script src="scripts/fun.js">
     
 </script> -->
+
 
 </body>
 </html>

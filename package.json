@@ -4,6 +4,7 @@
   "description": "**immagini** Come nominarle:",
   "main": "index.js",
   "scripts": {
+    "liveServer.settings.host": "localhost",
     "sass": "sass --watch styles/SCSS:styles/CSS"
   },
   "repository": {

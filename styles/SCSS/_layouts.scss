@@ -226,8 +226,13 @@
         color: #161616;
     }
 }
-
-
+//card 
+@mixin card ($width){
+    display: flex;
+    flex-direction: column;
+    width: $width;
+    box-shadow: 0 14px 20px 0 rgb(80, 80, 80, 2%);
+}
 
 /* Articoli e hover articoli */
 

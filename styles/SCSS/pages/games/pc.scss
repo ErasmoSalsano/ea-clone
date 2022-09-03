@@ -6,25 +6,44 @@
 @use '../../footer';
 @use '../../hero';
 
-
-            // <picture>
-            //     <source media="(max-width: 768px)" srcset="/assets/images/hero/news/h3-1534-696-notizie.jpg">
-            //     <source media="(max-width: 1024px)" srcset="/assets/images/hero/news/h3-2046-560notizie.jpg.jpg">
-            //     <source media="(max-width: 1456px)" srcset="/assets/images/hero/news/h3-2910-600notizie.jpg.jpg">
-            //     <source media="(max-width: 1920px)" srcset="/assets/images/hero/news/h3-3840-600-notiziee.jpg">
-            //     <img class="img-text" src="/assets/images/hero/news/h3-3840-600-notiziee.jpg" alt="">
-            // </picture>
-
-.hero-container{
-    height:290px;
-    overflow: hidden;
-    .hero-text{
-        font-family: var(--font-family-display-bold);
-        font-size: var(--font-size-hero-title);
-        color:rgb(251, 254, 255);
+.hero-container-pc{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height:260px;
+    margin-bottom: 1.5rem;
+    & > img{
+        width: 100%;
     }
-    picture{
-        height:inherit;
+    & > picture{
+        width: 100%; 
+        height:inherit; 
+        z-index: -1;   
+        source{
+            width: 100%;
+        }
+        img{
+            width: 100%;
+        }
+    }
+
+    .hero-wrapper{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        .hero-text{
+            width: 50%;
+            text-align: center;
+            font-family: var(--font-family-display-bold);
+            font-size: var(--font-size-cards-title);
+            color:aliceblue;
+        }
     }
 }
 
@@ -60,7 +79,6 @@ h2 {
     @extend %flexcenter;
     font-family: var(--font-family-display-bold);
     font-size: var(--font-size-cards-title);
-    // font-size:1.20rem;
     padding: 5px;
     text-align: center;
 }
@@ -130,7 +148,8 @@ h2 {
         }
         .material-icons{
                 position: absolute;
-                left:100%;
+                top:0;
+                bottom:0;
                 }
         @extend %start-scale-padding;
         &:hover{
@@ -381,8 +400,17 @@ a:not(:last-child){
 
 
 //mq//
+@media all and (min-width:500px){
+   .hero-container-pc{
+    height: 400px;
+   }
+}
 
-@media all and (min-width:768px) {      
+
+@media all and (min-width:768px) {  
+    .hero-container-pc{
+        height:250px;
+    }    
     .content-wrap{
         width:82vw;
         .grid-games{
@@ -416,7 +444,10 @@ a:not(:last-child){
     }
 }
 
-@media all and (min-width:1024px) {   
+@media all and (min-width:1024px) { 
+    .hero-container-pc{
+        height:270px;
+    }  
     .content-wrap{
         width:85vw;
         .grid-games{
@@ -432,7 +463,10 @@ a:not(:last-child){
     }
 }
 
-@media all and (min-width: 1456px) {     
+@media all and (min-width: 1456px) { 
+    .hero-container-pc{
+        height:330px;
+    }    
     .content-wrap{
         width:75vw;
     }

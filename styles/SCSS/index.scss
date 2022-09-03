@@ -38,11 +38,13 @@
             }
 
             img {
-                height: 83vh;
+           max-height: 98vh;
                 width: 100%;
+                
             }
         }
 
+     
 
 
 
@@ -61,6 +63,7 @@
 
 
         .hero1-buttons {
+          
             width: 90vw;
             position: absolute;
             top: 46%;
@@ -74,8 +77,8 @@
             .upper-hero1-logo {
 
 
-
-                width: 450px;
+                
+                max-width: 80vw;
 
             }
 
@@ -92,9 +95,14 @@
                 }
             }
 
+           
+
             .hero1-button_trailer {
 
                 .hero1-button_trailer_content {
+
+                    display: flex;
+                    flex-direction: row;
                     color: white;
                     border-color: white;
 
@@ -259,6 +267,7 @@
 
 
             .main-content-wrap {
+                width: 90vw;
                 flex-direction: column;
 
                 span {
@@ -599,8 +608,12 @@
                 .main-content-wrap {
                     width: 80vw;
 
+                    align-items: center;
+
+
 
                     span {
+
                         width: 35vw;
                     }
                 }
@@ -673,7 +686,7 @@ html {
         }
     }
 
-   
+
 }
 
 @media all and (min-width:1024px) {
@@ -687,7 +700,7 @@ html {
         }
     }
 
-    
+
 }
 
 @media all and (min-width: 1456px) {

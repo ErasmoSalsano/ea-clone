@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/styles/CSS/pages/games/pc.css">
+    <link rel="stylesheet" href="/styles/CSS/pc.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 </head>
 <body>
+    <div id="header-wrap"></div>
         <main>
             <div class="hero-container-pc">
                 <picture>
@@ -515,7 +516,7 @@
             </div>
     </div>
 </div>
-
+<div id="footer-wrap"></div>
 <!-- footer -->
 
 <!-- 
@@ -523,6 +524,9 @@
     
 </script> -->
 
-
+<script>
+    importHtml("header-wrap", "/partials/header.html");
+    importHtml("footer-wrap", "/partials/footer.html");
+</script>
 </body>
 </html>

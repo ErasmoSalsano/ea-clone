@@ -186,7 +186,7 @@ h4 {
         h4 {
 
             font-family: var(--font-family-display-bold);
-            font-size: 26px;
+            font-size: 3.5vh;
             width: 500px;
 
         }
@@ -546,7 +546,7 @@ width: 100%;
     }
 
     .EASPORTS-insertion2 {
-
+            width: 100%;
         flex-direction: row;
         justify-content: space-between;
 
@@ -557,13 +557,13 @@ width: 100%;
         h3 {
             // width: 800px;
             margin: 0;
-            margin-left: 120px;
+            margin-left: 9rem;
             color: #161616;
             font-size: 26px;
         }
 
         .main-content-wrap {
-            margin-right: 120px;
+            margin-right: 10rem;
             width: 350px;
         }
 
@@ -582,7 +582,7 @@ width: 100%;
         justify-content: space-between;
 
         .insertion-text {
-            margin-left: 320px;
+            margin-left: 13rem;
 
         }
 
@@ -598,7 +598,7 @@ width: 100%;
 
         .insertion-logo {
 
-            margin-right: 510px;
+            margin-right: 21rem;
             gap: 20px;
         }
 
@@ -630,11 +630,11 @@ width: 100%;
 
         h3 {
             margin: 0;
-            margin-left: 400px;
+            margin-left: 15vw;
         }
 
         .main-content-wrap {
-            margin-right: 300px;
+            margin-right: 8vw;
             width: 550px;
         }
 

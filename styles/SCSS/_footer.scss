@@ -8,8 +8,6 @@
   justify-content: center;
   align-items: center;
   height: fit fit-content;
-  
-  
 
   .upperFooterContainer {
     width: 100%;
@@ -19,7 +17,6 @@
     align-items: center;
 
     padding: .625rem 0 4.688rem;
-
 
     .upperFooterGroup1,
     .upperFooterGroup2 {
@@ -100,8 +97,8 @@
     }
 
     .lowerFooterBlock {
-
       .lowerFooterGroup1 {
+        width: min(100%, 47.813rem);
         display: flex;
         flex-direction: column;
         margin-bottom: 1.7rem;;
@@ -115,11 +112,14 @@
           .lowerFooterLink {
             margin: .625rem 2rem 0 0;
           }
+          .lowerFooterLink:last-of-type{
+            margin-right: 0;
+          }
         }
 
         .lowerFooterSelectors {
           display: flex;
-          gap: 1.5rem;
+          gap: 2.563rem;
           flex-direction: column;
           .dropup{
             .dropbtn{
@@ -177,13 +177,12 @@
           flex-wrap: wrap;
         }
 
-        .lowerFooterLink2,
-        .electronicArts{
+        .lowerFooterLink2{
           margin: .563rem 2rem .25rem 0;
         }
-
-        .trustELogo {
-        
+        .electronicArts{
+          margin: .563rem 0 .25rem;
+          width: 100%;
         }
       }
     }
@@ -344,9 +343,6 @@
           .lowerFooterLink2{
             margin: .203rem 2rem .203rem 0;
           }
-          /* .electronicArts{
-            margin: .563rem 2rem .25rem 0;
-          } */
         }
       }
     }
@@ -405,6 +401,7 @@
         flex: 1 0 47.313rem;
         margin-left: 2rem;
         .lowerFooterGroup1 {
+          width: 100%;
           flex-direction: row;
           gap: .625rem;
           .linksGroup1 {
@@ -440,13 +437,6 @@
       }
     }
   }
-}
-
-/* Disabilitare contenuti bottoni */
-
-.dropup-content,
-.dropup-content2{
-  display: none;
 }
 
 @media screen and (min-width: 1456px) {
@@ -486,4 +476,11 @@
       }
     }
   }
+}
+
+/* DISABILITA CONTENUTI BOTTONI */
+
+.dropup-content,
+.dropup-content2{
+  display: none;
 }

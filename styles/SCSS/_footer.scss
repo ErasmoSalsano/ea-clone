@@ -5,23 +5,24 @@
 .upperFooter{
     background-color:#eaeaea;
     display: flex;
-    height: 17vh;
     justify-content:center;
     align-items: center;
-    width: 100%;
+    height: 18vh;
 
     .upperFooterContainer{
-        width: 44%;
+      width: 100%;
         padding-bottom: 5vh;
         display: flex;
-        justify-content:space-between;
+        justify-content:center;
+        align-items: center;
+        
     
         .upperFooterGroup1{
             display: flex;
             flex-flow: wrap;
-            height: 5vh;
+            height: 100%;
             justify-content: start;
-            width: 78%;
+            width: 80%;
         
         
             .upperFooterLink{
@@ -40,19 +41,31 @@
         .upperFooterGroup2{
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            width: 22%;
+            
+            width: 45%;
+         
+       
+            align-items: flex-end;
+          
 
         
         .socialLinks {
             display: flex;
             justify-content: space-between;
+            width: 50%;
+          padding-left: 40px;
+            
+            
 
 
         }
-        .joinConv{
+        .joinConvFoot{
             display: flex;
-            justify-content: flex-end;
+            justify-content:flex-end;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            
+          
         }
 
         }
@@ -63,14 +76,21 @@
     display: flex;
     justify-content:center;
     background-color: #f3f3f3;
+   height: 30vh;
+    
+  
+    
+    
 
 
     .lowerFooterContainer{
         padding-top: 25px;
-        width: 44%;
-        height: 25vh;
+        padding-left: 10px;
         display: flex;
-        justify-content:space-between;
+        
+      
+       
+       
       
         .lowerFooterBlock{
             margin-left: 32px;
@@ -79,13 +99,13 @@
            .lowerFooterGroup1{
                 display: flex;
 
-                height: 8vh;
+            
                 justify-content: space-between;
             
                 .linksGroup1{
                     display: flex;
                 
-                    width: 58%;
+                    width: 100%;
                     flex-flow: wrap;
                 
                     .lowerFooterLink{
@@ -93,7 +113,7 @@
                         color:black;
                         margin-right: 50px;
                     margin-top: 13px; 
-                    height: 2vh;
+                    height: 25px;
                         font-size: 20px;
                     }
                 }   
@@ -111,16 +131,17 @@
             }
 .linksGroup2{
     display: flex;
-   
-    width: 60%;
+   justify-content: space-between;
+    width: 50%;
     flex-flow: wrap;
-    height: 10vh;
+    
 }
 .lowerFooterLink2{
     text-decoration: none;
     color:black;
     margin-right: 50px;
     font-size: 18px;
+    padding-top: 5px;
     
 }
 .electronicArts{
@@ -128,14 +149,14 @@
 }
 .trustELogo{
     display: flex;
-    justify-content: flex-end;
+    padding-top: 50px;
     flex-direction: column;
 }
     }
 }
 }
 
-/* Dropup Button */
+/* -------------------------------------------Bottoni DropUp---------------------------------------*/
 .dropbtn {
     background-color: #f3f3f3;
     color: black;
@@ -148,22 +169,18 @@
     border: 2px lightgray solid;
    
   }
-  
-  /* The container <div> - needed to position the dropup content */
   .dropup {
     position: relative;
     display: inline-block;
   }
-  
-  /* Dropup content (Hidden by Default) */
   .dropup-content {
     display: none;
     position: absolute;
-    bottom: 95px;
-    background-color: #f3f3f3;
+    bottom: 50px;
+    background-color: #f1f1f1;
     min-width: 800px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-  
   }
   .dropupInsider{
     display: flex;
@@ -171,28 +188,20 @@
     height: 540px;
     width: 700px;
     flex-direction: column;
-
+    border-bottom: 1px solid lightgray;
     justify-content: start;
     margin-left: 35px;
   }
-  
-  /* Links inside the dropup */
   .dropup-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: flex;
   }
-  
-  /* Change color of dropup links on hover */
   .dropup-content a:hover {margin-left:px}
-  
-  /* Show the dropup menu on hover */
   .dropup:hover .dropup-content {
     display: block;
   }
-  
-  /* Change the background color of the dropup button when the dropup content is shown */
   .dropup:hover .dropbtn {
     width: 193px;
     height: 64px;
@@ -202,10 +211,7 @@
     width: 110px;
   margin-top: 15px;
   margin-left: 35px;
-
   }
-  
-
   .dropupInsider2{
     display: flex;
     flex-wrap: wrap;
@@ -224,25 +230,147 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  /* Links inside the dropup */
   .dropup-content2 a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: flex;
   }
-  
-  /* Change color of dropup links on hover */
   .dropup-content2 a:hover {margin-left:px}
-  
-  /* Show the dropup menu on hover */
   .dropup:hover .dropup-content2 {
     display: block;
   }
-/* 
-  @media only screen and (max-width: 480px){
+/* -------------------------------------------Media Queries---------------------------------------*/
+@media screen and (max-width:768px){
   .upperFooter{
-    height: 40vh;
-    width: 100vW;
+    height: fit-content;
+    padding-top: 10px;
   }
-} */
+  
+    .upperFooterContainer{
+      flex-direction: column;
+    }
+    .upperFooterGroup1{
+      padding-left:0px;
+    }
+    .upperFooterGroup2{
+     
+      padding-right:180px ;
+      align-items: flex-start;
+     
+    }
+    .joinConvFoot{
+      padding-right: 20px;
+    }
+    .socialLinks{
+      padding-right: 20px;
+     
+    }
+    
+    .lowerFooter{
+      height: 65vh;
+      padding-left: 30px;
+    }
+    
+      .lowerFooterContainer{
+        flex-direction: column;
+        height: 65vh;
+        padding-left: 100px;
+      }
+      .lowerFooterGroup1{
+        flex-direction: column;
+      }
+      .lowerFooterGroup2{
+        flex-direction: column;
+        height: 50vh
+      }
+      .linksGroup2{
+        width: 100%;
+      }
+      .upperFooterLink{
+        width: 12vh;
+      }
+      .upperFooterGroup2{
+        display: flex;
+        flex-direction: column;
+        
+        width: 100%;
+        justify-content: flex-start;
+  }
+  .eaLogo{
+  padding-left: 25px;
+  }
+  .lowerFooterSelectors{
+    flex-direction: column;
+  
+  }
+  .dropbtn{
+    width: 70vw;
+    height: 5vh;
+    padding: 0 0 0 0;
+  }
+}
+@media screen and (min-width:769px){
+    .upperFooter{
+     height: fit-content;
+     padding: 12px 60px 12px; 
+     
+    }
+
+  
+      
+     
+     .lowerFooterContainer{
+    
+     
+      padding-left: 100px;
+ 
+     }
+    }
+  
+  
+
+  @media screen and (min-width:769px) and (max-width:1024px){
+    .lowerFooterGroup1{
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .dropbtn{
+      width: 40vw;
+      height: 5vh;
+      padding: 0 0 0 0;
+      
+    
+    }
+    .lowerFooter{
+      height: 40vh
+  
+  }
+}
+    
+  
+  @media screen and (min-width:1025px)
+  {
+    .upperFooter{
+      padding: 12px 76px 12px;
+    
+  }
+  .lowerFooter{
+    padding: 12px 76px 12px;
+  
+}
+  }
+  @media screen and (max-width:1456px) and (min-width:1025px){
+  
+  }
+  @media screen and (min-width:1456px){
+         
+        .upperFooter{
+         padding:  19px 168px 16px;
+         }
+         .lowerFooter{
+          padding:  19px 168px 16px;
+          }
+      }
+   
+  

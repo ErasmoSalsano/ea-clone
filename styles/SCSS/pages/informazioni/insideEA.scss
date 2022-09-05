@@ -8,7 +8,7 @@
 
 .main-wrap-hero{
     width: 100%;
-    height: 25vh;
+    height: 250px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -83,7 +83,7 @@
 
 @media screen and (min-width:769px){
     .main-wrap-hero{
-        height: 35vh;
+        height: 300px;
     }
     .article-card{
         width: 40%;
@@ -112,7 +112,7 @@
 }
 @media screen and (min-width:1025px){
     .main-wrap-hero{
-        height: 50vh;
+        height: 350px;
 }
     
     .article-card{
@@ -121,8 +121,14 @@
 }
 @media screen and (min-width:1457px){
     .main-wrap-hero{
-        height: 70vh;
+        height: 400px;
 }
+    .main-wrap{
+        flex-direction: column;
+        .container{
+            width: 1120px;
+        }
+    }
     .article-card{
         width: 30%;
     }

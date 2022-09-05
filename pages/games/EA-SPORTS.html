@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/SCSS/pages/games/EA-SPORTS.css">
+    <link rel="stylesheet" href="/styles/CSS/pages/games/EA-SPORTS.css">
     <title>Document</title>
 
 
@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <div id="header-wrap"></div>
 
 
     <div class="EASPORTS-big-wrap">
@@ -962,7 +963,15 @@
         </div>
     </div>
 
+    <div id="footer-wrap"></div>
+
     <script src="/scripts/fun.js" ;></script>
+    <script>
+        importHtml("header-wrap", "/partials/header.html");
+        importHtml("footer-wrap", "/partials/footer.html");
+    </script>
+
+
 </body>
 
 </html>

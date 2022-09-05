@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/SCSS/pages/games/EA-SPORTS.css">
+    <link rel="stylesheet" href="/styles/CSS/pages/games/EA-SPORTS.css">
     <title>Document</title>
 
 
@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <div id="header-wrap"></div>
 
 
     <div class="EASPORTS-big-wrap">
@@ -54,7 +55,7 @@
                             alt="FIFA 23">
                         <div class="image_overlay zoom-animation-overlay ">
                             <img class="logo zoom-animation-logo"
-                                src="https://media.contentapi.ea.com/content/dam/gin/common/logos/f23-logo-white-stacked.svg"
+                                src="/assets/images/game/fifa23-logo-white-stacked (1).svg"
                                 alt="FIFA 23 logo">
 
                         </div>
@@ -93,7 +94,7 @@
                         <img class="game-image zoom-animation-image"
                             src="/assets/images/game/nhl22-gin-16x9.jpg.adapt.crop1x1.767w.jpg" alt="NHL 22  ">
                         <div class="image_overlay zoom-animation-overlay">
-                            <img class="big-logo logo " alt="FIFA 22 logo" alt="NHL 22 logo"
+                            <img class="big-logo logo "  alt="NHL 22 logo"
                                 src="https://media.contentapi.ea.com/content/dam/gin/common/logos/nhl22-mono-logo.png">
 
 
@@ -135,11 +136,11 @@
                     <div class="game-box zoom-animation-box">
                         <img class="game-image zoom-animation-image"
                             src="/assets/images/game/madden-nfl-22-keyart.jpg.adapt.crop1x1.767w.jpg"
-                            alt="EA SPORTS PGA TOUR ">
+                            alt="MADDEN NFL 22  ">
                         <div class="image_overlay zoom-animation-overlay">
                             <img class="logo"
                                 src="https://media.contentapi.ea.com/content/dam/eacom/images/2021/06/madden-nfl-22-mono-logo.svg"
-                                alt="Madden NFL 22">
+                                alt="Madden NFL 22 logo">
 
                         </div>
                     </div>
@@ -962,7 +963,15 @@
         </div>
     </div>
 
+    <div id="footer-wrap"></div>
+
     <script src="/scripts/fun.js" ;></script>
+    <script>
+        importHtml("header-wrap", "/partials/header.html");
+        importHtml("footer-wrap", "/partials/footer.html");
+    </script>
+
+
 </body>
 
 </html>

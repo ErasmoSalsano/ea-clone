@@ -181,10 +181,6 @@
         height: 2.25rem;
     }
 
-    .board-account{
-        display: none;
-    }
-
     .board-content-wrap{
         width: 85%;
         margin: auto;
@@ -285,7 +281,7 @@ header{
     transition-duration: .4s;
 }
 
-.header-logo-esteso{
+.header-logo-esteso img{
     width: 5.625rem;
 }
 
@@ -631,7 +627,7 @@ header{
 
 @media screen and (min-width: 321px){
 
-    .header-logo-esteso{
+    .header-logo-esteso img{
         width: 6.25rem;
     }
 
@@ -641,7 +637,7 @@ header{
 }
 
 @media screen and (min-width: 376px) {
-    .header-logo-esteso{
+    .header-logo-esteso img{
         width: 6.875rem;
     }
 }
@@ -655,7 +651,7 @@ header{
 }
 
 @media screen and (min-width: 768px){
-    .header-logo-esteso{
+    .header-logo-esteso img{
         width: 11.11rem;
     }
 
@@ -688,7 +684,7 @@ header{
         display: block;
     }
 
-    .header-logo-esteso{
+    .header-logo-esteso img{
         width: 12.5rem;
         margin-left: 1.188rem;
         margin-right: 2rem;
@@ -714,7 +710,7 @@ header{
         height: 3.75rem;
     }
 
-    .header-logo-esteso{
+    .header-logo-esteso img{
         margin-right: 1.875rem;
     }
 
@@ -725,11 +721,19 @@ header{
 
 /* display control (da togliere in futuro) */
 
-/* .user-board {
+.user-board {
+    display: none;
+}
+
+/* .board-account{
     display: none;
 } */
+
+div.board-help {
+    display: none;
+}
   
-.popup-menu-wrap{
+.popup-menu-wrap {
     display: none;
 }
 

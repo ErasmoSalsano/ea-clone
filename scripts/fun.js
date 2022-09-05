@@ -56,7 +56,7 @@ CONTENUTI:
 </div>
 */
 
-function openTab(azione, div) {
+function openTab(azione, topic) {
     let i, tabcontent, tablinks;
 
     tabcontent = document.getElementsByClassName("tabContent");
@@ -65,11 +65,14 @@ function openTab(azione, div) {
     tablinks = document.getElementsByClassName("linkTab");
     for(i = 0; i < tablinks.length; i++) tablinks[i].className = tablinks[i].className.replace(" active", "");
 
-    document.getElementById(div).style.display = "flex";
+    document.getElementById(topic).style.display = "flex";
     azione.currentTarget.className += " active";
 }
-  
-document.getElementById("Open").click();
+try {
+    document.getElementById("Open").click();
+} catch (error) {
+    error;
+}
 
 /* Comportamento user-space */
 

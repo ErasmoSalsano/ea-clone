@@ -148,7 +148,7 @@
         overflow: hidden;
 
         .hero-wrapper {
-            
+           
 
             .hero-text {
                 max-width: 800px;
@@ -225,6 +225,7 @@
     .image_overlay {
 
 
+
         .block {
 
             display: flex;
@@ -244,9 +245,17 @@
             a {
                 height: 30px;
             }
+
+
         }
 
         .span_games {
+            justify-content: center;
+            position: relative;
+            opacity:0;
+            transition:0.4s;
+            transform:translateY(20px);
+            display:flex;
             color: #a3a3a3;
 
             &:hover {
@@ -259,27 +268,21 @@
     }
 
 
-
-    .image_overlay:hover .block {
-
-
-
-        .first {
-            transform: translateY(20px);
-            transition: .4s ease;
-
-        }
-
-
-        .second {
-            transform: translateY(40px);
-            transition: .4s ease;
-        }
-
-
-
-
+    .image_overlay:hover .span_games{
+        z-index:1;
+        display:unset;
+        transition:0.4s;
+        opacity:1;
     }
+    .image_overlay:hover .second{
+        transform: translateY(40px);
+        transition:0.5s;
+        opacity:1;
+    }
+
+
+
+    
 }
 
 

@@ -87,6 +87,7 @@
     }
     .image_overlay{
         .span_games{
+            color: #a3a3a3; 
             position: relative;
             opacity:0;
             transition:0.4s;
@@ -119,11 +120,10 @@
     flex-direction: column;
     position:absolute;
     top:45%;
-    text-align: center;  
-    color: #a3a3a3;
-    :hover{
-    color:white;
-    }
+    text-align: center; 
+    .span_games:hover{
+        color: aliceblue;
+    } 
     a{
     height:30px;
     }

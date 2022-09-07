@@ -34,11 +34,26 @@
 
 .user-space{    /* Contenitore zona utente */
     height: 2.5rem;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    flex-wrap: wrap;
     background-color: var(--color-ea-dark);
+
+    .user-bar-wrap{
+        height: 2.5rem;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        background-color: inherit;
+        position: relative;
+        z-index: 2;
+
+        & > :nth-child(-n+3){ /* Dimensiona e distanzia i bottoni */
+            height: 2.5rem;
+            width: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 1.25rem;
+        }
+    }
 
     /* Da usare quando ci sarà javascript per questa sezione */
     /* .user-bar{
@@ -59,14 +74,7 @@
     } */
 
 
-    & > :nth-child(-n+3){ /* Dimensiona e distanzia i bottoni */
-        height: 2.5rem;
-        width: 2.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 1.25rem;
-    }
+    
     
 }
 
@@ -134,7 +142,7 @@
     padding: 3.5rem 0;
     justify-content: center;
 
-    z-index: 2;
+    z-index: 1;
 
     a{
         color: #ff1e3c;

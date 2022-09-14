@@ -1,7 +1,12 @@
-*{
-    padding: 0;
-    margin: 0;
-}
+@use '../../layouts';
+@use '../../basic-layout';
+@use '../../colors';
+@use '../../tipography';
+@use '../../header';
+@use '../../footer';
+@use '../../hero';
+
+
 .headerExecutive{
     background-image: url(/assets/images/pages/executive/header-ea-hero-executives-m.png.adapt.crop7x2.1920w.png); 
     

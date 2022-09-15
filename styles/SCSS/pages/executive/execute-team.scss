@@ -21,6 +21,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+   
 }
 .singleMember{
     display: flex;
@@ -28,7 +29,12 @@
     font-size: 20px;
    align-items: center;
    font-family: 'ElectronicsArtsText',Verdana,Helvetica, Arial,sans-serif;
-   margin: 24px 40px;
+   margin: 40px 10px;
+   margin-bottom: 100px;
+   width: 350px;
+   height: 350px
+
+
 }
 .sectionMembers{
     display: flex;
@@ -41,20 +47,38 @@
     margin: 40px 0;
 }
 
+
+.imagesExecutive{
+    height: 90%;
+    width: 90%;
+}
+
 @media screen and (max-width:1455px)and(min-width:1024px) {
     .headerExecutive{
     height: 40vw;
     }
+    .singleMember{
+    
+        width: 30%;
+        height: 30%;
+        margin-bottom: 50px;
+  
+}
 }
 @media screen and (max-width:1023px)and(min-width:768px) {
     .headerExecutive{
         height: 50vw;
         }
         .singleMember{
-            font-size: 16px;
+    
+            width: 37%;
+            height: 30%;
+            margin-bottom: 30px;
+      
         
-        
-    }
+            
+        }
+       
 }
     @media screen and (max-width:767px)and(min-width:360px) {
         .headerExecutive{
@@ -62,10 +86,15 @@
             }
             .singleMember{
                 font-size: 16px;
-          
+                width: 90%;
+                height: 45%;
+                margin-bottom: 5px;
             
+                
             }
+           
         }
+
 
     
 

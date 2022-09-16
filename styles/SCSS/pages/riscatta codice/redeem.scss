@@ -1,7 +1,12 @@
-*{
-    padding: 0;
-    margin: 0;
-}
+@use '../../layouts';
+@use '../../basic-layout';
+@use '../../colors';
+@use '../../tipography';
+@use '../../header';
+@use '../../footer';
+@use '../../hero';
+
+
 .upperContainerRedeem{
     background-image: url(/assets/images/pages/redeem/section-background-1920.png.adapt.1920w.png);
     background-repeat: no-repeat;

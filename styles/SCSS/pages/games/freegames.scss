@@ -148,7 +148,7 @@
         overflow: hidden;
 
         .hero-wrapper {
-           
+
 
             .hero-text {
                 max-width: 800px;
@@ -220,7 +220,7 @@
 //CSS DELLA GRIGLIA CARD GAMES
 
 .game-box {
-   
+
 
     .image_overlay {
 
@@ -232,7 +232,7 @@
             flex-direction: column;
             position: absolute;
             text-align: center;
-            
+
 
             color: #a3a3a3;
 
@@ -252,10 +252,10 @@
         .span_games {
             justify-content: center;
             position: relative;
-            opacity:0;
-            transition:0.4s;
-            transform:translateY(20px);
-            display:flex;
+            opacity: 0;
+            transition: 0.4s;
+            transform: translateY(20px);
+            display: flex;
             color: #a3a3a3;
 
             &:hover {
@@ -268,21 +268,22 @@
     }
 
 
-    .image_overlay:hover .span_games{
-        z-index:1;
-        display:unset;
-        transition:0.4s;
-        opacity:1;
+    .image_overlay:hover .span_games {
+        z-index: 1;
+        display: unset;
+        transition: 0.4s;
+        opacity: 1;
     }
-    .image_overlay:hover .second{
+
+    .image_overlay:hover .second {
         transform: translateY(40px);
-        transition:0.5s;
-        opacity:1;
+        transition: 0.5s;
+        opacity: 1;
     }
 
 
 
-    
+
 }
 
 
@@ -405,124 +406,175 @@
 //CSS DELLA NAVBAR INFERIORE
 
 
-.navTab {
+
+.navbar {
     margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    width: 90vw;
     max-width: 90vw;
-
-    .main-content-wrap {
-
-
-
-
-        .navTabGames {
-            display: flex;
-            width: 350px;
-            // border: 2px solid black;
-
-            button {
-                border: transparent;
-                background-color: transparent;
-                cursor: pointer;
-
-
-
-            }
-
-
-            .page_margin {
-                border-top: 2px solid black;
-                border-bottom: 2px solid black;
-            }
-
-            .linkTab {
-                display: flex;
-                align-items: center;
-                position: relative;
-                line-height: 27px;
-                color: #161616;
-                height: 60px;
-
-
-                .content {
-                    padding: 0 15px;
-
-                    font-family: var(--font-family-display-regular);
-                    font-size: var(--font-size-span);
-                    letter-spacing: 0.4px;
-
-
-                    &:hover {
-                        color: rgba(243, 243, 243);
-                        border: rgba(243, 243, 243);
-                    }
+    display: none;
 
 
 
 
 
-                }
+    button {
+        font-family: var(--font-family-display-regular);
+        font-size: var(--font-size-span);
+        letter-spacing: 0.4px;
 
-                .circle_button {
-                    @extend %flexcenter;
-
-                    color: lightgray;
-                    border-radius: 50%;
-                    margin: 10px;
-                    height: 40px;
-                    width: 40px;
-
-                    &:hover {
-                        border: 2px solid lightgray;
-                    }
-
-                }
-            }
+        border: transparent;
+        background-color: transparent;
+        cursor: pointer;
 
 
-            .button_back {
+        .page-button {
+
+            @extend %flexcenter;
+
+            border-radius: 50%;
+            margin: 7px;
+            height: 40px;
+            width: 40px;
+
+            &:hover {
                 border: 2px solid lightgray;
-                color: lightgray;
-                border: 2px solid black;
-                border-radius: 3px 0 0 3px;
-
-                &:hover {
-                    border: 2px solid gray;
-                }
-            }
-
-            .button_next {
-
-                color: lightgray;
-                border: 2px solid black;
-                border-radius: 0 3px 3px 0;
-
-                &:hover {
-
-                    border: 2px solid gray;
-                }
             }
 
 
 
 
-
-            & .linkTab.active {
-
-                .circle_button {
-                    border: 2px solid rgb(88, 88, 88);
-
-                }
+        }
 
 
-                .content {
-                    color: rgb(88, 88, 88);
 
-                }
+
+
+        .back-button,
+        .next-button {
+            @extend %flexcenter;
+
+            // padding: 15px 20px;
+            border: 2px solid;
+            height: 58px;
+            width: 110px;
+            border: 2px solid gray;
+
+
+
+            &:hover {
+                border: 2px solid gray;
+            }
+
+        }
+
+        .back-button {
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next-button {
+            border-radius: 0 3px 3px 0;
+        }
+
+
+
+    }
+
+    .page-collector {
+
+        border-bottom: 2px solid gray;
+        border-top: 2px solid gray;
+
+        & .selectPage.active {
+            .page-button {
+                border: 2px solid gray;
 
 
             }
         }
     }
+
+
+
+
+
+
+}
+
+.selectOption {
+
+    margin-top: 5%;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+
+
+
+
+
+    #back,
+    #next,
+    #select {
+        height: 50px;
+        font-family: var(--font-family-display-regular);
+        font-size: var(--font-size-span);
+        letter-spacing: 0.4px;
+        color: gray;
+        background-color: transparent;
+      
+
+
+    }
+
+    #back,
+    #next {
+        border: 2px solid gray;
+        width: 15%; 
+         cursor: pointer;
+    }
+
+    #next {
+        border: 2px solid gray;
+        width: 20%;
+    }
+
+    #select {
+
+        width: 65%;
+        text-align: center;
+        border-top: 2px solid gray;
+        border-bottom: 2px solid gray;
+        border-left: none;
+        border-right: none;
+        // appearance:none;
+
+       
+    }
+
+
+}
+
+
+
+
+
+
+@media all and(min-width:768px) {
+
+
+    .selectOption {
+        display: none;
+
+
+    }
+
+
+    .navbar {
+        display: flex;
+    }
+
 }

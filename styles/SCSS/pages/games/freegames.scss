@@ -472,10 +472,21 @@
 
         .back-button {
             border-radius: 3px 0 0 3px;
+
+            &:hover {
+                color: gray;
+
+            }
+
         }
 
         .next-button {
             border-radius: 0 3px 3px 0;
+
+            &:hover {
+                color: gray;
+
+            }
         }
 
 
@@ -525,7 +536,7 @@
         letter-spacing: 0.4px;
         color: gray;
         background-color: transparent;
-      
+
 
 
     }
@@ -533,13 +544,13 @@
     #back,
     #next {
         border: 2px solid gray;
-        width: 15%; 
-         cursor: pointer;
+        width: 25vw;
+        cursor: pointer;
     }
 
     #next {
         border: 2px solid gray;
-        width: 20%;
+        width: 30vw;
     }
 
     #select {
@@ -552,7 +563,7 @@
         border-right: none;
         // appearance:none;
 
-       
+
     }
 
 

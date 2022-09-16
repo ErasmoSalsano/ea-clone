@@ -450,21 +450,13 @@ h4 {
 
         h3 {
 
-
             font-size: 26px;
         }
 
-        .wrap_button_games {
-
-
-            .button_games {
-
-                width: 250px;
-
-
-            }
+        .main-content-wrap {
+          margin-bottom: 20px;
+            width: 350px;
         }
-
 
     }
 
@@ -553,9 +545,12 @@ h4 {
 
 
         background-image: url(/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.tablet.1024w.png);
-        background-size: cover;
+      background-size:cover;
+
+       
 
         h3 {
+           
             // width: 800px;
             margin: 0;
             margin-left: 9rem;
@@ -564,8 +559,9 @@ h4 {
         }
 
         .main-content-wrap {
+            margin-bottom: 0;
             margin-right: 10rem;
-            width: 350px;
+           
         }
 
 

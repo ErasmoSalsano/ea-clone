@@ -73,7 +73,86 @@ try {
 } catch (error) {
     error;
 }
+//Management metaTag
 
+if(document){
+    let pageTitle = document.title;
+    let pageDescription = document.querySelector('meta[name="description"]');
+    let navigationScript = document.createElement('div');
+    let scriptRoutes = document.createElement('script')
+    let footerScript = document.createElement('div');
+    
+    document.body.prepend(navigationScript);
+    navigationScript.setAttribute('id', 'header-wrap');
+
+    document.body.insertBefore(footerScript, document.querySelector('script'));
+    footerScript.setAttribute('id', 'footer-wrap')
+    
+    document.querySelector('script')
+    document.body.appendChild(scriptRoutes);
+    scriptRoutes.innerHTML = `
+        importHtml("header-wrap", "/partials/header.html");
+        importHtml("footer-wrap", "/partials/footer.html");
+    `
+    document.head.insertAdjacentHTML('beforeend',`
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="${pageDescription}">
+    <meta property="og:url" content="#">
+    <meta property="og:site_name" content="${pageTitle}">
+    <meta property="og:image" content="https://media.contentapi.ea.com/content/dam/eacom/images/2021/03/ea-featured-tile-generic-electronic-arts.png.adapt.crop191x100.1200w.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="author" content="Electronic Arts">
+    <link rel="shortcut icon" href="https://signin.ea.com/p/favicon.ico" type="image/x-icon">`)
+
+// gestione dei link vuoti o non assegnati
+
+let notAssignedUrl = document.querySelectorAll('[href="#"], [href=""]');
+notAssignedUrl.forEach(voidLink =>{
+    voidLink.href = '/pages/manteinance/mantenaince.html'
+    });
+}
+
+//button add cards
+
+const bt = document.querySelector('.btn');
+const container= document.querySelector('.container');
+let count = 0;
+
+bt.addEventListener('click', e => {
+    e.preventDefault();
+
+    for (i=count; i<count + 3;i++){
+        let image = card[i].image
+        let title = card[i].title
+        let desc = card[i].desc
+        let cat = card[i].category
+        let date = card[i].date
+        let link = card[i].link
+        
+        let html = document.createElement("a")
+        html.setAttribute("href", `${link}`)
+        html.className = "article-card";
+        html.innerHTML  = ` 
+                        <img title="" src="${image}"/>
+                        <div class="article-text">
+                            <div>
+                                <span>${cat}</span>
+                                <span class="normal">${date}</span>
+                            </div>
+                            <h3>${title}</h3>
+                            <p>${desc}</p>
+                        </div>
+                    `
+        container.appendChild(html);
+    }
+    count=i;
+    if(count === card.length){
+        document.querySelector('.btn')
+        bt.setAttribute('style', 'display:none')
+    }
+});
 /* Comportamento user-space */
 
 var scrollBefore = 0;

@@ -25,6 +25,35 @@
     }
 }
 
+@keyframes open-user-content{ /* animazione apertura account/help */
+    /* 0%{height: 0;
+    padding: 0;}
+    100%{height: 25rem;} */
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    50%{
+        opacity: .1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes close-user{ /* animazione apertura user board */
+    /* 0%{height: 0;
+    padding: 0;}
+    100%{height: 25rem;} */
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100);
+    }
+}
+
 @keyframes slide-in-left { /* animazione apertura nav e giochi */
     0% {transform: translateX(-100%);}
     100% {transform: translateX(0);}
@@ -34,11 +63,26 @@
 
 .user-space{    /* Contenitore zona utente */
     height: 2.5rem;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    flex-wrap: wrap;
     background-color: var(--color-ea-dark);
+
+    .user-bar-wrap{
+        height: 2.5rem;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        background-color: inherit;
+        position: relative;
+        z-index: 2;
+
+        & > :nth-child(-n+3){ /* Dimensiona e distanzia i bottoni */
+            height: 2.5rem;
+            width: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 1.25rem;
+        }
+    }
 
     /* Da usare quando ci sarà javascript per questa sezione */
     /* .user-bar{
@@ -59,19 +103,14 @@
     } */
 
 
-    & > :nth-child(-n+3){ /* Dimensiona e distanzia i bottoni */
-        height: 2.5rem;
-        width: 2.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 1.25rem;
-    }
+    
     
 }
 
 .user-account-icon,
 .user-help-icon{
+
+    pointer-events: all;
 
     svg{
         height: 1.125rem;
@@ -106,11 +145,9 @@
 
 /* Condizioni apertura user board (temporanee) */
 
-.user-account-icon:hover~.user-board,
-.user-help-icon:hover~.user-board,
-.user-board:hover{  
+.user-board[open]{  
     display: flex;
-    animation: open-user 1.25s  ease-in;
+    animation: close-user .3s  ease-out;
 }
 
 .user-board{
@@ -120,7 +157,7 @@
     position: relative;
     flex: 0 0  100%;
 
-    display: none;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
 
@@ -134,9 +171,12 @@
     padding: 3.5rem 0;
     justify-content: center;
 
-    z-index: 2;
+    z-index: 1;
 
-    a{
+    animation: close-user .3s  ease-out;
+    animation-delay: 1s;
+
+    .boardAnchor{
         color: #ff1e3c;
     }
 
@@ -147,6 +187,7 @@
     .board-link{
         min-width: 13.438rem;
         max-width: 19rem;
+        height: fit-content;
 
         line-height: 1.35;
 
@@ -170,11 +211,17 @@
 
     .board-help,
     .board-account{
-        height: inherit;
+        display: none;
+        height: 100%;
         width: 100%;
         position: absolute;
 
         flex: 1;
+
+        &[open]{  
+            display: flex;
+            animation: open-user-content .5s  ease-in-out;
+        }
     }
 
     .board-icon{
@@ -197,8 +244,9 @@
         grid-auto-rows: 1fr;
         grid-template-columns: repeat(auto-fit, minmax(13.438rem, 16.5rem));
         row-gap: 1rem;
-        column-gap: 2rem;
+        column-gap: 1.5rem;
         justify-content: center;
+        align-items: center;
     }
 
     .board-footer{
@@ -214,6 +262,7 @@
     right: 2rem;
     height: .813rem;
     width: .813rem;
+    z-index: 1;
 
     svg{
         transform: rotate(45deg);
@@ -258,6 +307,10 @@ header{
     pointer-events: all;
     cursor: pointer;
     margin-left: .2rem;
+
+    svg{
+        pointer-events: none;
+    }
 
     &:hover{
         .header-menu-icon{
@@ -393,17 +446,23 @@ header{
 /* **** POPUP MENU **** */
 
 .popup-menu-wrap{
+    display: none;
     height: calc(100vh - 2.5rem);
     max-height: calc(100vh - 2.5rem);
     width: max(320px, 100%);
     background-color: rgba(#202020, .8); /* Deve diventare un'animazione */
     position: absolute;
     top: 0;
+
+    &[open]{
+        display: block;
+    }
 }
 
 /* Popup Navbar */
 
 .popup-navbar-wrap{
+    display: none;
     width: 320px;
     height: inherit;
     background-color: var(--color-white);
@@ -413,8 +472,11 @@ header{
     animation-fill-mode: forwards;
 
     z-index: 1;
-    display: flex;
     flex-direction: column;
+
+    &[open]{
+        display: flex;
+    }
 
     .top-nav{
         padding: 0 0.875rem;
@@ -557,11 +619,16 @@ header{
 /* Popup games */
 
 .popup-games-wrap{
+    display: none;
     width: 100%;
     height: 100%;
     padding: 0 2rem;
     background-color: var(--color-white);
     overflow: auto;
+
+    &[open]{
+        display: block;
+    }
 
     .top-nav{
         height: fit-content;
@@ -721,21 +788,21 @@ header{
 
 /* display control (da togliere in futuro) */
 
-.user-board {
+/* .user-board {
     display: none;
-}
+} */
 
 /* .board-account{
     display: none;
 } */
 
-div.board-help {
+/* div.board-help {
     display: none;
-}
+} */
   
-.popup-menu-wrap {
+/* .popup-menu-wrap {
     display: none;
-}
+} */
 
 /* .popup-navbar-wrap{
     display: none;

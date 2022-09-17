@@ -176,9 +176,18 @@ html {
 
 
             .block {
+                display: flex;
+                flex-direction: column;
 
                 .span_games {
+                   justify-content: center;
+                    opacity:0;
+                    transition:0.5s;
+                    transform:translateY(0px);
+                    display:flex;
                     color: #a3a3a3;
+                    text-align: center;
+                    
 
                     &:hover {
                         color: white;
@@ -190,23 +199,49 @@ html {
 
         }
 
+        .image_overlay:hover .span_games{
+            z-index:1;
+            display:unset;
+            transition:0.4s;
+            opacity:1;
+        }
+        .image_overlay:hover .second{
+            transform: translateY(20px);
+            transition:0.5s;
+            opacity:1;
+        }
+        .image_overlay:hover .third{
+            transform: translateY(40px);
+            transition:0.5s;
+            opacity:1;
+        }
 
 
-        .image_overlay:hover .block {
+
+        .image_overlay:hover .spangames {
            
+            z-index:1;
+            display:unset;
+           
+            opacity:1;
 
 
 
 
 
-            .second {
-                transform: translateY(20px);
-                transition: .4s ease;
+
+          
+
+            .image_overlay:hover .second{
+                transform: translateY(40px);
+              
+                opacity:1;
             }
 
-            .third {
-                transform: translateY(40px);
-                transition: .4s ease;
+            .image_overlay:hover .third{
+                transform: translateY(60px);
+              
+                opacity:1;
             }
 
 

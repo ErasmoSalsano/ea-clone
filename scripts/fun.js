@@ -116,43 +116,49 @@ notAssignedUrl.forEach(voidLink =>{
 
 //button add cards
 
-const bt = document.querySelector('.btn');
+const bt = document.querySelectorAll('.btn');
 const container= document.querySelector('.container');
 let count = 0;
-
-bt.addEventListener('click', e => {
-    e.preventDefault();
-
-    for (i=count; i<count + 3;i++){
-        let image = card[i].image
-        let title = card[i].title
-        let desc = card[i].desc
-        let cat = card[i].category
-        let date = card[i].date
-        let link = card[i].link
+if(bt){
+    bt.forEach(bt =>{
+        bt.addEventListener('click', e => {
+            e.preventDefault();
         
-        let html = document.createElement("a")
-        html.setAttribute("href", `${link}`)
-        html.className = "article-card";
-        html.innerHTML  = ` 
-                        <img title="" src="${image}"/>
-                        <div class="article-text">
-                            <div>
-                                <span>${cat}</span>
-                                <span class="normal">${date}</span>
-                            </div>
-                            <h3>${title}</h3>
-                            <p>${desc}</p>
-                        </div>
-                    `
-        container.appendChild(html);
-    }
-    count=i;
-    if(count === card.length){
-        document.querySelector('.btn')
-        bt.setAttribute('style', 'display:none')
-    }
-});
+            for (i=count; i<count + 3;i++){
+                let image = card[i].image
+                let title = card[i].title
+                let desc = card[i].desc
+                let cat = card[i].category
+                let date = card[i].date
+                let link = card[i].link
+                
+                let html = document.createElement("a")
+                html.setAttribute("href", `${link}`)
+                html.className = "article-card";
+                html.innerHTML  = ` 
+                                <img title="" src="${image}"/>
+                                <div class="article-text">
+                                    <div>
+                                        <span>${cat}</span>
+                                        <span class="normal">${date}</span>
+                                    </div>
+                                    <h3>${title}</h3>
+                                    <p>${desc}</p>
+                                </div>
+                            `
+                container.appendChild(html);
+            }
+            count=i;
+            if(count === card.length){
+                document.querySelector('.btn')
+                bt.setAttribute('style', 'display:none')
+            }
+        });
+        
+        }
+    )
+}
+
 /* Comportamento user-space */
 
 var scrollBefore = 0;

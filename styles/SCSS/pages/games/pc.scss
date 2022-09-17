@@ -92,9 +92,6 @@
     .image_overlay::before{
         background:rgba(13, 16, 66, 0.9);
     }
-    span{
-        color:aliceblue;
-    }
 }
 
 
@@ -199,7 +196,9 @@ h3 {
     position:absolute;
     top:45%;
     text-align: center;  
-    color: #a3a3a3;
+    .span_games{
+        color: #a3a3a3; 
+    }
 
     :hover{
     color:white;

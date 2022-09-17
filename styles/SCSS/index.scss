@@ -23,7 +23,10 @@
 
     .upper-hero1 {
         position: relative;
-        @extend %flexcenter;
+        // @extend %flexcenter;
+        display: flex;
+        align-items: center;
+        justify-content: end;
         flex-direction: column;
         height: 100%;
         width: 100%;
@@ -31,20 +34,24 @@
 
         picture {
 
+            margin-bottom: -5px;
             width: 100%;
 
             source {
+
+
                 width: 100%;
             }
 
             img {
-           max-height: 98vh;
+
+                height: 80vh;
                 width: 100%;
-                
+
             }
         }
 
-     
+
 
 
 
@@ -63,10 +70,11 @@
 
 
         .hero1-buttons {
-          
+
             width: 90vw;
             position: absolute;
-            top: 46%;
+            // top: 46%;
+
             @extend %flexcenter;
             flex-direction: column;
 
@@ -77,7 +85,7 @@
             .upper-hero1-logo {
 
 
-                
+
                 max-width: 80vw;
 
             }
@@ -95,16 +103,27 @@
                 }
             }
 
-           
+
 
             .hero1-button_trailer {
 
                 .hero1-button_trailer_content {
-
                     display: flex;
                     flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
                     color: white;
                     border-color: white;
+
+
+                    p {
+                        .fa-solid {
+
+
+                            padding-left: 10px;
+                        }
+                    }
+
 
                 }
             }
@@ -186,7 +205,7 @@
             overflow: hidden;
 
             picture {
-
+                margin-bottom: -5px;
                 width: 100%;
 
                 source {
@@ -218,7 +237,7 @@
             .hero2-buttons {
                 width: 90vw;
                 position: absolute;
-                top: 30%;
+                // top: 30%;
                 @extend %flexcenter;
                 justify-content: flex-start;
                 align-items: flex-start;
@@ -303,7 +322,7 @@
             .upper-hero2 {
                 .hero2-buttons {
                     .hero2-button_subscribe {
-                        width: 200px;
+                        width: 350px;
                         justify-content: flex-start;
 
 
@@ -377,7 +396,9 @@
                 }
 
                 .hero2-buttons {
-                    top: 5vh;
+                    // top: 5vh;
+                    margin-left: 2vw;
+
                 }
             }
         }
@@ -487,8 +508,9 @@
 
 
                 .hero2-buttons {
+                    margin-left: 0;
                     width: 85vw;
-                    top: 10vh;
+                    // top: 10vh;
                     // left: 6vh;
                 }
 
@@ -550,7 +572,7 @@
         .upper-hero1 {
 
             .hero1-buttons {
-                right: 13vw;
+                right: 16vw;
 
                 .upper-hero1-logo {
                     width: 500px;
@@ -568,9 +590,14 @@
             }
 
             picture {
+                margin-bottom: 0;
                 height: 60vh;
 
+                img {
+                    object-fit: fill;
+                    width: 100%;
 
+                }
 
             }
         }
@@ -595,7 +622,7 @@
 
                 .hero2-buttons {
                     width: 80vw;
-                    // left: 13vw;
+                    left: 11vw;
 
                 }
 
@@ -671,7 +698,6 @@ html {
     .span_games {
         color: white;
     }
-
 }
 
 .image_overlay::before {
@@ -712,6 +738,8 @@ html {
         width: 75vw;
     }
 }
+
+
 
 // FINE --> Sezione Giochi 
 

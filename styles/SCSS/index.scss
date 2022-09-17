@@ -853,3 +853,34 @@ html {
         width: 30%;
     }
 }
+
+//arrows for scrollbar
+
+.navTab .navTabArticles {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+.main-content-wrap{
+    .buttons{
+        width: 2em;
+        color: rgba(22, 22, 22, 0.5);
+        border: none;
+        background-color:transparent;
+        padding: 0;
+        cursor: pointer; 
+        .left-btn{
+            display:none;
+          }
+      }
+}
+
+@media all and(min-width: 865px){
+    .main-wrap{
+        .main-content-wrap{
+            .buttons i{
+                display:none;
+            }
+        }
+    }  
+}

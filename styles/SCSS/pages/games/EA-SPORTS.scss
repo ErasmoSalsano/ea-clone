@@ -10,6 +10,7 @@
 
 body,
 html {
+
     background-color: #f3f3f3;
 
 }
@@ -250,17 +251,16 @@ h4 {
     z-index: 1;
 
 
+    .title-game {
+        h3 {
 
-    h3 {
 
-
-        width: 600px;
-        font-size: var(--font-size-section-title);
-        color: black;
-
+            font-size: var(--font-size-section-title);
+            color: black;
 
 
 
+        }
     }
 
 }
@@ -301,12 +301,13 @@ h4 {
     @extend %flexcenter;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 
 
 
     .EASPORTS-thirdwrap-title {
-background-color: white;
-width: 100%;
+        background-color: white;
+        width: 100%;
 
         h3 {
             color: black;
@@ -330,7 +331,7 @@ width: 100%;
     height: 20%;
     @extend %flexcenter;
     flex-direction: column;
-   
+
     background-color: white;
 
     h3 {
@@ -423,7 +424,7 @@ width: 100%;
         .insertion-logo {
             width: 100px;
             height: 80px;
-          
+
             flex-direction: row;
 
         }
@@ -437,7 +438,7 @@ width: 100%;
         gap: 1.25rem;
     }
 
-  
+
 
     .EASPORTS-insertion2 {
 
@@ -449,21 +450,13 @@ width: 100%;
 
         h3 {
 
-
             font-size: 26px;
         }
 
-        .wrap_button_games {
-
-
-            .button_games {
-
-                width: 250px;
-
-
-            }
+        .main-content-wrap {
+          margin-bottom: 20px;
+            width: 350px;
         }
-
 
     }
 
@@ -546,15 +539,18 @@ width: 100%;
     }
 
     .EASPORTS-insertion2 {
-            width: 100%;
+        width: 100%;
         flex-direction: row;
         justify-content: space-between;
 
 
         background-image: url(/assets/images/EASPORTSpage/ea-sports-pc-join-us-xl.png.tablet.1024w.png);
-        background-size: cover;
+      background-size:cover;
+
+       
 
         h3 {
+           
             // width: 800px;
             margin: 0;
             margin-left: 9rem;
@@ -563,8 +559,9 @@ width: 100%;
         }
 
         .main-content-wrap {
+            margin-bottom: 0;
             margin-right: 10rem;
-            width: 350px;
+           
         }
 
 

@@ -126,3 +126,39 @@ function togglePopupMenuWrap(){
     se si deve chiudere: chiudere tutto
         */
 }
+
+
+
+/* Funzione x scroll */
+
+// button all'inizio e alla fine , all'infuori di navTabArticles:
+
+// <div class="main-content-wrap" style="padding:0" ;>
+// <button class="left-btn buttons" id="left-Btn" onclick="toScroll(-1)"><i class="material-icons">arrow_back_ios</i></button>
+// <div class="navTabArticles">
+//     ...
+// </div>
+// <button class="left-btn buttons" id="left-Btn" onclick="toScroll(-1)"><i class="material-icons">arrow_forward_ios</i></button>
+// </div>
+
+const btnleft = document.querySelector("#left-Btn");
+const btnright = document.querySelector("#right-Btn");
+const scrollCont = document.querySelector(".navTabArticles");
+
+let scrollAmount = 170;
+
+function toScroll(val){   
+scrollCont.scrollLeft += (val*scrollAmount)
+
+if(scrollCont.scrollLeft > 0){
+    btnleft.style.display = "block";
+}else{
+    btnleft.style.display = "none";
+}
+
+if(scrollCont.scrollLeft > 250 ){   
+    btnright.style.display = "none";
+}else{
+    btnright.style.display = "block";
+}  
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Giochi per PC e videogiochi per computer da scaricare</title>
     <link rel="stylesheet" href="/styles/CSS/pages/games/pc.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 </head>
@@ -106,6 +106,7 @@
 
 <div class="main-wrap navTab">
     <div class="main-content-wrap" style="padding:0" ;>
+        <button class="left-btn buttons" id="left-Btn" onclick="toScroll(-1)"><i class="material-icons">arrow_back_ios</i></button>
         <div class="navTabArticles">
             <button class="linkTab" onclick="openTab(event, 'Ultimi giochi')" id="Open">
                 <div class="content">
@@ -150,6 +151,7 @@
                 <div class="animation"></div>
             </button>
         </div>
+        <button class="right-btn buttons" id="right-Btn" onclick="toScroll(1)"><i class="material-icons">arrow_forward_ios</i></button>
     </div>
 </div>
 
@@ -160,9 +162,6 @@
         <div class="title-game">
             <h3>Ultimi Giochi</h3>
         </div>
-        <!-- <div class="wrap_button_games">
-            <a class="first-button_games" href="#">Filter games<i class="material-icons">tune</i></a>
-        </div> -->
         <div class="main-wrap">
             <div class="main-content-wrap">
                 <div class="content-details-first">
@@ -172,7 +171,7 @@
                 </div>
             </div>
         </div>
-        <div class="grid-games tabContent" id="Ultimi giochi">
+         <div class="grid-games tabContent" id="Ultimi giochi" grid-style> <!--class=tabContent id="Ultimi giochi" -->
             <div class="game-box">
                 <img class="game-image"
                     src="/assets/images/game/eas-fifa22-gen5-ue-keyart-horz-f23logo-1x1.jpg.adapt.crop1x1.767p.jpg"
@@ -295,7 +294,7 @@
             </div>
         </div>
     <!-- EA SPORTS -->
-        <!-- <div class="grid-games tabContent" id="EA SPORTS">
+        <div class="grid-games tabContent" id="EA SPORTS" grid-style>
             <div class="game-box">
                 <img class="game-image"
                     src="/assets/images/game/eas-fifa22-gen5-ue-keyart-horz-f23logo-1x1.jpg.adapt.crop1x1.767p.jpg"
@@ -416,38 +415,45 @@
                     </div>
                 </div>
             </div>
-        </div> -->
-        
-        <div class="wrap_button_games">
-            <div class="temporary-button_games">
-                <a class="left" href="#">Precedente</a>
-                <!-- <a class="middle" href="">1<i class="material-icons">unfold_more</i></a> -->
-                <select class="middle" id="dropdown-foot">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                </select>
-                <a class="right" href="#">Successivo</a>
-            </div>
         </div>
     </div>
 </div>
+        
+<!-- navbar per lo scorrimento delle  pagine, compare da tablet in poi -->
+
+<div class="navbar">
+    <button id="back" onclick="backPage()">
+        <div class="back-button"> Indietro </div>
+    </button>
+    <div class="page-collector">
+        <button class="selectPage" onclick="myCurrentPage(event,'griglia1')" id="1">
+            <div class="page-button"> 1 </div>
+        </button>
+        <button id="2" class="selectPage" onclick="myCurrentPage(event,'griglia2')">
+            <div class="page-button"> 2</div>
+        </button>
+        <button id="3" class="selectPage" onclick="myCurrentPage(event,'griglia3')">
+            <div class="page-button"> 3</div>
+        </button>
+    </div>
+    <button id="next" onclick="nextPage()">
+        <div class="next-button">Successivo</div>
+    </button>
+</div>
+
+
+<!-- script per la selezione della pagina, compare solo da mobile -->
+
+<div class="selectOption">
+    <button onclick="selectBackPage()" class="" id="back">Indietro</button>
+    <select id="select">
+        <option value="1" onclick="optionPage()" class="optionPage"> 1</option>
+        <option value="2" onclick="optionPage()" class="optionPage">2</option>
+        <option value="3" onclick="optionPage()" class="optionPage">3</option>
+    </select>
+    <button onclick="selectNextPage()" class="" id="next">Successivo</button>
+</div>
+
 
 <!-- div playpro -->
 

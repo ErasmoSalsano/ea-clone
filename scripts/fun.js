@@ -58,14 +58,23 @@ CONTENUTI:
 
 function openTab(azione, topic) {
     let i, tabcontent, tablinks;
-
     tabcontent = document.getElementsByClassName("tabContent");
     for(i= 0;  i < tabcontent.length; i++ ) tabcontent[i].style.display = "none";
 
     tablinks = document.getElementsByClassName("linkTab");
     for(i = 0; i < tablinks.length; i++) tablinks[i].className = tablinks[i].className.replace(" active", "");
+    console.log(tablinks);
 
-    document.getElementById(topic).style.display = "flex";
+    const element = document.getElementById(topic);
+    console.log(element);
+
+    if( element.hasAttribute('grid-style')){
+        element.style.display = "grid";
+    }
+    else{
+        element.style.display = "flex";
+    }
+
     azione.currentTarget.className += " active";
 }
 try {
@@ -210,4 +219,40 @@ function togglePopupMenuWrap(){
         -aprire la nav o i giochi in base alla larghezza
     se si deve chiudere: chiudere tutto
         */
+}
+
+
+
+/* Funzione x scroll */
+
+// button all'inizio e alla fine , all'infuori di navTabArticles:
+
+// <div class="main-content-wrap" style="padding:0" ;>
+// <button class="left-btn buttons" id="left-Btn" onclick="toScroll(-1)"><i class="material-icons">arrow_back_ios</i></button>
+// <div class="navTabArticles">
+//     ...
+// </div>
+// <button class="left-btn buttons" id="left-Btn" onclick="toScroll(-1)"><i class="material-icons">arrow_forward_ios</i></button>
+// </div>
+
+const btnleft = document.querySelector("#left-Btn");
+const btnright = document.querySelector("#right-Btn");
+const scrollCont = document.querySelector(".navTabArticles");
+
+let scrollAmount = 170;
+
+function toScroll(val){   
+scrollCont.scrollLeft += (val*scrollAmount)
+
+if(scrollCont.scrollLeft > 0){
+    btnleft.style.display = "block";
+}else{
+    btnleft.style.display = "none";
+}
+
+if(scrollCont.scrollLeft > 250 ){   
+    btnright.style.display = "none";
+}else{
+    btnright.style.display = "block";
+}  
 }

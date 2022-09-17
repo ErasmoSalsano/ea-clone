@@ -93,6 +93,8 @@
             transition:0.4s;
             transform:translateY(0px);
             display:flex;
+            justify-content: center;
+            text-align: center;
         }
     }
     .image_overlay:hover .span_games{
@@ -160,6 +162,9 @@ a:not(:last-child){
     }
     .hero-container-page{
         height:270px;
+    }
+    .hero-container-page .hero-wrapper .hero-text h1::after{
+        width: 20%;
     }
 }
 

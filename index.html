@@ -23,7 +23,8 @@
     <meta name="author" content="Electronic Arts">
 
     <title>Home Page Electronic Arts - Sito EA non ufficiale</title>
-    <link rel="stylesheet" href="/styles/CSS/index.css">
+    <link rel="stylesheet" href="./styles/CSS/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 </head>
 
 <body>
@@ -227,6 +228,7 @@
     </div>
     <div class="main-wrap navTab">
         <div class="main-content-wrap" style="padding:0" ;>
+            <button class="left-btn buttons" id="left-Btn" onclick="toScroll(-1)"><i class="material-icons">arrow_back_ios</i></button>
             <div class="navTabArticles">
                 <button class="linkTab" onclick="openTab(event, 'Notizie Ea')" id="Open">
                     <div class="content">
@@ -277,6 +279,7 @@
                     <div class="animation"></div>
                 </button>
             </div>
+            <button class="right-btn buttons" id="right-Btn" onclick="toScroll(1)"><i class="material-icons">arrow_forward_ios</i></button>
         </div>
     </div>
     <div class="content-navTab">
@@ -886,8 +889,8 @@
 
     <script src="scripts/fun.js" ;></script>
     <script>
-        importHtml("header-wrap", "/partials/header.html");
-        importHtml("footer-wrap", "/partials/footer.html");
+        importHtml("header-wrap", "./partials/header.html");
+        importHtml("footer-wrap", "./partials/footer.html");
     </script>
 </body>
 

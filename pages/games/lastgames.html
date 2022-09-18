@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/CSS/pages/games/lastgames.css">
-    <title>Last Games</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <title>Ultimi giochi - Sito non ufficiale EA</title>
 </head>
 
 <body>
 
+ <!-- SEZIONE HERO  -->
 
-
-    <body>
+    
         <main>
             <div class="hero-container">
                 <picture>
@@ -32,12 +33,14 @@
                 </div>
             </div>
         </main>
-    </body>
-    </html>
+  
+ 
 
+    <!-- NAVBAR PER LA SELEZIONE DELLE PAGINE -->
 
     <div class="main-wrap navTab">
         <div class="main-content-wrap" style="padding:0" ;>
+            <button class="left-btn buttons" id="left-Btn" onclick="toScroll(-1)"><i class="material-icons">arrow_back_ios</i></button>
             <div class="navTabArticles">
                 <button class="linkTab" onclick="openTab(event, 'Nuovi Giochi')" id="Open">
                     <div class="content">
@@ -88,11 +91,12 @@
                     <div class="animation"></div>
                 </button>
             </div>
+            <button class="right-btn buttons" id="right-Btn" onclick="toScroll(1)"><i class="material-icons">arrow_forward_ios</i></button>
         </div>
     </div>
 
 
-
+  <!-- SEZIONE GRIGLIA CARDS E TITLE -->
 
     <div class="content-navTab">
         <div class="main-wrap">
@@ -473,7 +477,7 @@
 
 
    
- 
+ <!-- BUTTON INFERIORE -->
 
     <div class="main-wrap">
         <div class="main-content-wrap">

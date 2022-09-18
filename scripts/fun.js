@@ -5,7 +5,7 @@ Valori:
 posizionarlo in fondo al body, nel suo tag script: <script>importHtml(".header-wrap", "/partials/header.html"); ecc ecc</script></body> */
 
 function importHtml(id, filename){
-    console.log(`div id: ${id}, filename: ${filename}`);
+    // console.log(`div id: ${id}, filename: ${filename}`);
 
     let xhttp;
     let element = document.getElementById(id);
@@ -63,10 +63,10 @@ function openTab(azione, topic) {
 
     tablinks = document.getElementsByClassName("linkTab");
     for(i = 0; i < tablinks.length; i++) tablinks[i].className = tablinks[i].className.replace(" active", "");
-    console.log(tablinks);
+    // console.log(tablinks);
 
     const element = document.getElementById(topic);
-    console.log(element);
+    // console.log(element);
 
     if( element.hasAttribute('grid-style')){
         element.style.display = "grid";

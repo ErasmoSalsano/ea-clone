@@ -35,6 +35,10 @@
         }
     }
 }
+.main-wrap{
+    align-items: center;
+    flex-direction: column;
+}
 .navTab{
     background-color: #003181;
     .navTabArticles{
@@ -124,7 +128,6 @@
         height: 400px;
 }
     .main-wrap{
-        flex-direction: column;
         .container{
             width: 1120px;
         }

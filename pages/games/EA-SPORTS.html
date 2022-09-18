@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/CSS/pages/games/EA-SPORTS.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <title>EA SPORTS - Editore dei videogiochi FIFA,Madden NFL,NHL,UFC,PGA TOUR e F1</title>
 
 
@@ -13,13 +14,14 @@
 </head>
 
 <body>
-    <div id="header-wrap"></div>
 
 
     <div class="EASPORTS-big-wrap">
 
 
         <!-- // sezione con la prima griglia giochi e il video in background -->
+
+
         <div class="EASPORTS-firstwrap">
 
 
@@ -266,6 +268,8 @@
 
         <div class="main-wrap navTab">
             <div class="main-content-wrap" style="padding:0" ;>
+                <button class="left-btn buttons" id="left-Btn" onclick="toScroll(-1)"><i
+                        class="material-icons">arrow_back_ios</i></button>
                 <div class="navTabArticles">
                     <button class="linkTab" onclick="openTab(event, 'FIFA')" id="Open">
                         <div class="content">
@@ -322,6 +326,8 @@
                         <div class="animation"></div>
                     </button>
                 </div>
+                <button class="right-btn buttons" id="right-Btn" onclick="toScroll(1)"><i
+                        class="material-icons">arrow_forward_ios</i></button>
             </div>
         </div>
 
@@ -963,13 +969,7 @@
     </div>
     </div>
 
-    <div id="footer-wrap"></div>
-
     <script src="/scripts/fun.js" ;></script>
-    <script>
-        importHtml("header-wrap", "/partials/header.html");
-        importHtml("footer-wrap", "/partials/footer.html");
-    </script>
 
 
 </body>

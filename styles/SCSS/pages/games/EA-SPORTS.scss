@@ -333,6 +333,47 @@ h4 {
 
     }
 
+
+    .navTab .navTabArticles {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+
+    .main-wrap {
+
+        .main-content-wrap {
+            .buttons {
+                width: 2em;
+                color: rgba(56, 44, 229, 0.9);
+                border: none;
+                background-color: transparent;
+                padding: 0;
+                cursor: pointer;
+
+
+
+            }
+
+            .left-btn {
+                display: none;
+            }
+
+        }
+
+    }
+
+    @media all and(min-width: 900px) {
+        .main-wrap {
+            .main-content-wrap {
+                .buttons i {
+                    display: none;
+                }
+            }
+        }
+    }
+
+
 }
 
 // inserzione finale per lavorare con EA
@@ -621,7 +662,7 @@ h4 {
         }
 
         .insertion-logo {
-        
+
 
             padding-right: calc((100vw - 1120px)/2);
             gap: 20px;

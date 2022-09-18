@@ -7,7 +7,11 @@ import { initPopupMenu } from './utils/header/headerPopup.js'
 
 window.addEventListener('load', () => {
     // User Space
-    initUserSpace();
+    setTimeout(()=>{
+        initUserSpace();
+    }, 300);
     initHeaderNav();
     initPopupMenu();
-})
+
+   
+});

@@ -188,16 +188,19 @@
     
     padding: 3.5rem 0;
     justify-content: center;
-
     z-index: 1;
 
     transform: translateY(-100%);
-    animation: close-user .3s  ease-in-out;
+    
+    &[closed]{
+        animation: close-user .3s  ease-in-out;
+    }
 
     &[open]{  
         animation: open-user .3s  ease-in-out;
         animation-fill-mode: forwards;
     }
+    
 
     .boardAnchor{
         color: #ff1e3c;
@@ -430,6 +433,9 @@ header{
             }
 
             &[open]{
+
+                padding-bottom: 1rem;
+
                 & > summary{
                     color: var(--color-ea-orange);
                 }

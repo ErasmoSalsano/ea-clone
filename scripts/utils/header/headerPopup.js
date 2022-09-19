@@ -17,74 +17,25 @@ export const initPopupMenu = () => {
     const popNav = document.querySelector('.popup-navbar-wrap');
     const popGames = document.querySelector('.popup-games-wrap');
 
-    // console.log(gamesClose, menuIcon, popMenu, popNav, popGames);
+    // Close on popMenu click condition
+    let takeClick = true;
 
-    menuIcon.addEventListener('click', (event) => {
-        // event.preventDefault();
-        // console.log(menuIcon.offsetWidth, window.innerWidth);
-        
-        openElement(popMenu);
-        headerWrap.classList.remove('user-close'); //La barra dell'user deve esserci
-
-
-        if(window.innerWidth < 1032){
-            popGames.style.display ='none';
-            openElement(popNav);
-
-            // popNav.animate([
-            //     // keyframes
-            //     {transform: 'translateX(-100%)'},
-            //     {transform: 'translateX(0)'}
-            //   ], {
-            //     // timing options
-            //     duration: 500,
-            //     iterations: 1,
-            //   });
-
-            // @keyframes slide-in-left { /* animazione apertura nav e giochi */
-            //     0% {transform: translateX(-100%);}
-            //     100% {transform: translateX(0);}
-            // }
-
-            // @keyframes slide-out-left { /* animazione apertura nav e giochi */
-            //     0% {transform: translateX(0);}
-            //     100% {transform: translateX(-100%);}
-            // }
-        }
-        else{
-            popNav.style.display ='none';
-            openElement(popGames);
-
-            // popGames.animate([
-            //     // keyframes
-            //     {transform: 'translateX(-100%)'},
-            //     {transform: 'translateX(0)'}
-            //   ], {
-            //     // timing options
-            //     duration: 500,
-            //     iterations: 1,
-            //   });
-        }
-
-        document.body.style.overflow = 'hidden';
-        // body.setAttribute('scroll', 'auto');
+    popNav.addEventListener('mouseover', () => {
+        takeClick = false;
+    })
+    popNav.addEventListener('mouseout', () => {
+        takeClick = true;
     })
 
-    navClose.addEventListener('click', () => {
-        closeElement(popNav);
-        closeElement(popGames);
-        setTimeout(() => {
-            closeElement(popMenu);
-            popGames.style.display ='block';
-        }, 500);
-        // popNav.style.display ='block';
-        
-
-        document.body.style.overflow = 'auto';
-        // body.setAttribute('scroll', 'auto');
+    popGames.addEventListener('mouseover', () => {
+        takeClick = false;
+    })
+    popGames.addEventListener('mouseout', () => {
+        takeClick = true;
     })
 
-    gamesClose.addEventListener('click', () => {
+    // Close all
+    const closeAll = () => {
         closeElement(popNav);
         closeElement(popGames);
         setTimeout(() => {
@@ -96,6 +47,44 @@ export const initPopupMenu = () => {
 
         document.body.style.overflow = 'auto';
         // body.setAttribute('scroll', 'auto');
+    }
+
+    // Open based on window's width
+    menuIcon.addEventListener('click', (event) => {
+        // event.preventDefault();
+        // console.log(menuIcon.offsetWidth, window.innerWidth);
+
+        document.body.style.overflow = 'hidden';
+        // body.setAttribute('scroll', 'auto');
+        openElement(popMenu);
+        setTimeout(()=>{
+            headerWrap.classList.remove('user-close');
+        }, 10) //La barra dell'user deve esserci
+
+        
+        if(window.innerWidth < 1032){
+            popGames.style.display ='none';
+            openElement(popNav);
+        }
+        else{
+            popNav.style.display ='none';
+            openElement(popGames);
+        }
+    })
+
+    // Close on click
+    navClose.addEventListener('click', () => {
+        closeAll();
+    })
+
+    gamesClose.addEventListener('click', () => {
+        closeAll();
+    })
+
+    popMenu.addEventListener('click', () => {
+        if(takeClick){
+            closeAll();
+        }
     })
 
 }

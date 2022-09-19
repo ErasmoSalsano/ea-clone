@@ -4,22 +4,22 @@ let innerSlider=document.querySelector('.cards-gap');
 let pressed = false;
 let startX;
 let x;
-window.addEventListener('resize', ()=>{
-    let sliderHeight=innerSlider.clientHeight ;
-    sliderContainer.style.height=sliderHeight + 'px';
-    console.log(sliderHeight)
-    console.log(sliderContainer)
-    console.log(innerSlider)
+// window.addEventListener('resize', ()=>{
+//     let sliderHeight=innerSlider.clientHeight ;
+//     sliderContainer.style.height=sliderHeight + 'px';
+//     console.log(sliderHeight)
+//     console.log(sliderContainer)
+//     console.log(innerSlider)
 
-})
-window.addEventListener('load', ()=>{
-    let sliderHeight=innerSlider.clientHeight ;
-    sliderContainer.style.height=sliderHeight + 'px';
-    console.log(sliderHeight)
-    console.log(sliderContainer)
-    console.log(innerSlider)
+// })
+// window.addEventListener('load', ()=>{
+//     let sliderHeight=innerSlider.clientHeight ;
+//     sliderContainer.style.height=sliderHeight + 'px';
+//     console.log(sliderHeight)
+//     console.log(sliderContainer)
+//     console.log(innerSlider)
 
-})
+// })
 
 
 sliderContainer.addEventListener('mousedown',(e)=>{

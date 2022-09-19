@@ -21,7 +21,7 @@ export const initUserSpace = () => {
 
     let scrollBefore = 0;
 
-    document.addEventListener('scroll',function(e){
+    const scrollCheck = (e) => {
         const scrolled = window.scrollY;
         let elem = document.querySelector("#header-wrap");
 
@@ -35,59 +35,52 @@ export const initUserSpace = () => {
             }
         }
         scrollBefore = scrolled;
-    })
+    }
 
-    // Open/Close Account
+    document.addEventListener('scroll', scrollCheck);
 
-    accountIcon.addEventListener('click', (event) => {
+    //Open/Close Inner Board
+
+    const openCloseInner = (first, second) => {
         // event.preventDefault();
         if (userBoard.hasAttribute('open')){
-            if (boardAcc.hasAttribute('open')){
-                closeElement(boardAcc);
+            if (first.hasAttribute('open')){
+                closeElement(first);
                 closeElement(userBoard);
 
                 body.style.overflow = 'auto';
                 // body.setAttribute('scroll', 'auto');
+
+                setTimeout(()=>{
+                    document.addEventListener('scroll', scrollCheck);
+                }, 10);
             }
             else {
-                closeElement(boardHelp);
-                openElement(boardAcc);
+                closeElement(second);
+                openElement(first);
             }
         }
         else{
             openElement(userBoard);
-            openElement(boardAcc);
+            openElement(first);
+
+            document.removeEventListener('scroll', scrollCheck);
 
             body.style.overflow = 'hidden';
             // body.setAttribute('scroll', 'no');
         }
+    }
+
+    // Open/Close Account
+
+    accountIcon.addEventListener('click', (event) => {
+        openCloseInner(boardAcc, boardHelp);
     })
 
     // Open/Close Help
 
     helpIcon.addEventListener('click', (event) => {
-        // console.log('clicked Help Icon');
-        // event.preventDefault();
-        if (userBoard.hasAttribute('open')){
-            if (boardHelp.hasAttribute('open')){
-                closeElement(boardHelp);
-                closeElement(userBoard);
-
-                body.style.overflow = 'auto';
-                // body.setAttribute('scroll', 'auto');
-            }
-            else {
-                closeElement(boardAcc);
-                openElement(boardHelp);
-            }
-        }
-        else{
-            openElement(userBoard);
-            openElement(boardHelp);
-
-            body.style.overflow = 'hidden';
-            // body.setAttribute('scroll', 'no');
-        }
+        openCloseInner(boardHelp, boardAcc);
     })
 
     // Close User board
@@ -100,5 +93,9 @@ export const initUserSpace = () => {
 
         body.style.overflow = 'auto';
         // body.setAttribute('scroll', 'auto');
+
+        setTimeout(()=>{
+            document.addEventListener('scroll', scrollCheck);
+        }, 10);
     })
 }

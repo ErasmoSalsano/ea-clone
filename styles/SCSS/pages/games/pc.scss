@@ -64,6 +64,9 @@ body{
 }
 
 .game-box{
+    .enormous-logo{
+        max-height: 5%;
+    }
     .game-image-default{
         height:100%;
         width:100%;
@@ -140,8 +143,8 @@ h2 {
         cursor: pointer; 
         .left-btn{
             display:none;
-          }
-      }
+        }
+    }
 }
 
 @media all and(min-width: 900px){

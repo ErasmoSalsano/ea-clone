@@ -134,12 +134,21 @@ if (document.title === 'Home Page Electronic Arts - Sito EA non ufficiale') {
     window.addEventListener('load', () => {
         document.querySelector('#Open').click()
     });
-}
-if (document.title === 'Inside EA') {
+}if (document.title === 'Inside EA') {
 
     window.addEventListener('DOMContentLoaded', () => {
         const navTab = document.querySelector('.navTab');
         navTab.insertAdjacentElement('afterend', articleInsideEA)
+        openTab();
+    });
+    window.addEventListener('load', () => {
+        document.querySelector('#Open').click()
+    });
+}if (document.title === 'EA SPORTS - Editore dei videogiochi FIFA,Madden NFL,NHL,UFC,PGA TOUR e F1') {
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const navTab = document.querySelector('.navTab');
+        navTab.insertAdjacentElement('afterend', articleEaSports)
         openTab();
     });
     window.addEventListener('load', () => {

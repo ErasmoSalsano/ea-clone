@@ -134,12 +134,21 @@ if (document.title === 'Home Page Electronic Arts - Sito EA non ufficiale') {
     window.addEventListener('load', () => {
         document.querySelector('#Open').click()
     });
-}
-if (document.title === 'Inside EA') {
+}if (document.title === 'Inside EA') {
 
     window.addEventListener('DOMContentLoaded', () => {
         const navTab = document.querySelector('.navTab');
         navTab.insertAdjacentElement('afterend', articleInsideEA)
+        openTab();
+    });
+    window.addEventListener('load', () => {
+        document.querySelector('#Open').click()
+    });
+}if (document.title === 'EA SPORTS - Editore dei videogiochi FIFA,Madden NFL,NHL,UFC,PGA TOUR e F1') {
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const navTab = document.querySelector('.navTab');
+        navTab.insertAdjacentElement('afterend', articleEaSports)
         openTab();
     });
     window.addEventListener('load', () => {
@@ -211,20 +220,47 @@ const btnleft = document.querySelector("#left-Btn");
 const btnright = document.querySelector("#right-Btn");
 const scrollCont = document.querySelector(".navTabArticles");
 
-let scrollAmount = 170;
+let scrollAmount = 280;
 
-function toScroll(val) {
-    scrollCont.scrollLeft += (val * scrollAmount)
+function toScroll(val){   
+scrollCont.scrollLeft += (val*scrollAmount)  
+}
 
-    if (scrollCont.scrollLeft > 0) {
+scrollCont.addEventListener('scroll', function() {
+    if(scrollCont.scrollLeft > 0){
         btnleft.style.display = "block";
-    } else {
+    }else{
         btnleft.style.display = "none";
     }
-
-    if (scrollCont.scrollLeft > 250) {
-        btnright.style.display = "none";
-    } else {
+    
+    if(scrollCont.scrollLeft + scrollCont.clientWidth < scrollCont.scrollWidth){    
         btnright.style.display = "block";
+    }else{
+        btnright.style.display = "none";
     }
-}
+});
+
+
+    //  When the user clicks on the button, toggle between hiding and showing the dropdown content */
+                        function myFunction2() {
+                          document.getElementById("dropup2").classList.toggle("show2");
+                    
+                        }
+                    
+                        function myFunction() {
+                            document.getElementById("dropup").classList.toggle("show");
+                          }
+                       
+                        
+                        // // Close the dropdown menu if the user clicks outside of it
+                        window.onclick = function(event) {
+                            if (!event.target.matches('#button1foot')) {
+                                document.getElementById("dropup").classList.remove('show');
+                            }
+                                if (!event.target.matches('#button2foot')) {
+                                    document.getElementById("dropup2").classList.remove('show2');
+                            }
+                        }
+                    
+                 
+                

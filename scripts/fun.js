@@ -126,3 +126,28 @@ function togglePopupMenuWrap(){
     se si deve chiudere: chiudere tutto
         */
 }
+
+
+    //  When the user clicks on the button, toggle between hiding and showing the dropdown content */
+                        function myFunction2() {
+                          document.getElementById("dropup2").classList.toggle("show2");
+                    
+                        }
+                    
+                        function myFunction() {
+                            document.getElementById("dropup").classList.toggle("show");
+                          }
+                       
+                        
+                        // // Close the dropdown menu if the user clicks outside of it
+                        window.onclick = function(event) {
+                            if (!event.target.matches('#button1foot')) {
+                                document.getElementById("dropup").classList.remove('show');
+                            }
+                                if (!event.target.matches('#button2foot')) {
+                                    document.getElementById("dropup2").classList.remove('show2');
+                            }
+                        }
+                    
+                 
+                

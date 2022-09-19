@@ -239,20 +239,22 @@ const btnleft = document.querySelector("#left-Btn");
 const btnright = document.querySelector("#right-Btn");
 const scrollCont = document.querySelector(".navTabArticles");
 
-let scrollAmount = 170;
+let scrollAmount = 280;
 
 function toScroll(val){   
-scrollCont.scrollLeft += (val*scrollAmount)
-
-if(scrollCont.scrollLeft > 0){
-    btnleft.style.display = "block";
-}else{
-    btnleft.style.display = "none";
+scrollCont.scrollLeft += (val*scrollAmount)  
 }
 
-if(scrollCont.scrollLeft > 250 ){   
-    btnright.style.display = "none";
-}else{
-    btnright.style.display = "block";
-}  
-}
+scrollCont.addEventListener('scroll', function() {
+    if(scrollCont.scrollLeft > 0){
+        btnleft.style.display = "block";
+    }else{
+        btnleft.style.display = "none";
+    }
+    
+    if(scrollCont.scrollLeft + scrollCont.clientWidth < scrollCont.scrollWidth){    
+        btnright.style.display = "block";
+    }else{
+        btnright.style.display = "none";
+    }
+});

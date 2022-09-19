@@ -245,7 +245,9 @@
         fill: #4f4f4f;
     }
     .left{
-        rotate: 180deg;
+        svg{
+            rotate: 180deg;
+        }
     }
 
 }

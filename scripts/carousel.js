@@ -46,16 +46,16 @@ sliderContainer.addEventListener("mousemove", (e) => {
 });
 
 //setting the movement of the dragged element
-const checkBoundary=()=>{
-    let outer=sliderContainer.getBoundingClientRect();
-    let inner=innerSlider.getBoundingClientRect();
-    if(parseInt(innerSlider.style.left) > 0){
-        innerSlider.style.left='0px';
-    }
-    if(inner.right< outer.right){
-        innerSlider.style.left=`-${inner.width - outer.width}px`;
-    }
-};
+// const checkBoundary=()=>{
+//     let outer=sliderContainer.getBoundingClientRect();
+//     let inner=innerSlider.getBoundingClientRect();
+//     if(parseInt(innerSlider.style.left) > 0){
+//         innerSlider.style.left='0px';
+//     }
+//     if(inner.right< outer.right){
+//         innerSlider.style.left=`-${inner.width - outer.width}px`;
+//     }
+// };
 //carousel sliding with button click
 // const card=innerSlider.getElementsByClassName('card');
 // const leftBtn=document.querySelector('.left')

@@ -213,7 +213,6 @@ const scrollCont = document.querySelector(".navTabArticles");
 
 let scrollAmount = 280;
 
-<<<<<<< HEAD
 function toScroll(val){   
 scrollCont.scrollLeft += (val*scrollAmount)  
 }
@@ -231,20 +230,3 @@ scrollCont.addEventListener('scroll', function() {
         btnright.style.display = "none";
     }
 });
-=======
-function toScroll(val) {
-    scrollCont.scrollLeft += (val * scrollAmount)
-
-    if (scrollCont.scrollLeft > 0) {
-        btnleft.style.display = "block";
-    } else {
-        btnleft.style.display = "none";
-    }
-
-    if (scrollCont.scrollLeft > 250) {
-        btnright.style.display = "none";
-    } else {
-        btnright.style.display = "block";
-    }
-}
->>>>>>> develop

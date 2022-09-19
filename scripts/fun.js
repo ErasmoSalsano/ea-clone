@@ -238,6 +238,7 @@ function togglePopupMenuWrap(){
 const btnleft = document.querySelector("#left-Btn");
 const btnright = document.querySelector("#right-Btn");
 const scrollCont = document.querySelector(".navTabArticles");
+console.log(scrollCont);
 
 let scrollAmount = 170;
 

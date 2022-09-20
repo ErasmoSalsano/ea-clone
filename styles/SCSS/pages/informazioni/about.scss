@@ -190,8 +190,10 @@
             display: none;
           }
         .cards-gap{
+           position: absolute;
             display: flex;
             width: 120%;
+            height: fit-content;
             .card{
                 @include layouts.card(62%);
                 flex: 0 0 auto;
@@ -234,6 +236,7 @@
             background-color: #878787;
             border-radius: 25px;
             transform: translateX(0px);
+           
         }
     }
     .left,

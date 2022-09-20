@@ -33,19 +33,19 @@
         overflow: hidden;
 
         picture {
-
-            margin-bottom: -5px;
+            object-fit: contain;
+            margin-bottom: -7px;
             width: 100%;
 
             source {
 
-
+                object-fit: contain;
                 width: 100%;
             }
 
             img {
-
-                height: 100vh;
+                object-fit: contain;
+                height: 100%;
                 width: 100%;
 
             }
@@ -62,7 +62,7 @@
 
 
         .hero1-buttons {
-height:50%;
+            height: 50%;
             width: 90vw;
             position: absolute;
             @extend %flexcenter;
@@ -321,20 +321,74 @@ height:50%;
 
 }
 
-@media screen and(max-width:540px) and(max-height:740px) {
+//INIZIO --> MQ HERO HOMEPAGE
+
+
+@media screen and(max-width:360px) and(max-height:915px) {
 
     .hero_wrap {
         .upper-hero1 {
 
 
             .hero1-buttons {
+            margin-bottom: 10px;
+                height: 100%;
 
 
 
                 span {
-                    // padding: 10px;
+                    font-size: 15px;
+                    padding: 15px;
+                    margin-bottom: -5px;
+                    margin-top: -25px;
+                }
+
+                .hero1-button_playNow {
+                    margin-top: -10px;
+                    height: 30px;
+                     padding-bottom:15px;
+                    .hero1-button_playNow_content {
+                    height: 30px;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                }
+
+                .hero1-button_trailer {
+                    height: 30px;
+                   
+                    // margin-bottom: 50px;
+                    // display: none;
+                    .hero1-button_trailer_content{
+                        height: 30px;
+                        justify-content: center;
+                        align-items: center;
+                    
+                    }
+                }
+
+            }
+        }
+    }
+
+
+}
+
+@media screen and(max-width:540px) and(max-height:915px) {
+
+    .hero_wrap {
+        .upper-hero1 {
+
+
+            .hero1-buttons {
+                height: 55%;
+
+
+
+                span {
+                    // padding: 15px;
                     margin-bottom: 5px;
-                    // margin-top: -25px;
+                    margin-top: -25px;
                 }
 
                 .hero1-button_playNow {
@@ -342,7 +396,7 @@ height:50%;
                 }
 
                 .hero1-button_trailer {
-                    // margin-bottom: -20px;
+                    margin-bottom: -20px;
                 }
 
             }
@@ -353,7 +407,13 @@ height:50%;
 }
 
 
-//INIZIO --> MQ HERO HOMEPAGE
+
+
+
+
+
+
+
 
 @media screen and(min-width:639px) {
 
@@ -573,6 +633,7 @@ height:50%;
                     justify-content: space-between;
 
                     span {
+                        padding-top: 0;
                         left: 6vh;
                         width: 40vw;
                         text-align: left;
@@ -904,28 +965,29 @@ html {
 .navTab .navTabArticles {
     overflow-x: hidden;
     scroll-behavior: smooth;
-  }
+}
 
-.main-content-wrap{
-    .buttons{
+.main-content-wrap {
+    .buttons {
         width: 2em;
         color: rgba(22, 22, 22, 0.5);
         border: none;
-        background-color:transparent;
+        background-color: transparent;
         padding: 0;
-        cursor: pointer; 
-        .left-btn{
-            display:none;
-          }
-      }
+        cursor: pointer;
+
+        .left-btn {
+            display: none;
+        }
+    }
 }
 
-@media all and(min-width: 865px){
-    .main-wrap{
-        .main-content-wrap{
-            .buttons i{
-                display:none;
+@media all and(min-width: 865px) {
+    .main-wrap {
+        .main-content-wrap {
+            .buttons i {
+                display: none;
             }
         }
-    }  
+    }
 }

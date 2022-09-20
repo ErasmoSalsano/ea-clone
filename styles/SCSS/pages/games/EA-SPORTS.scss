@@ -577,7 +577,7 @@ h4 {
 
         .insertion-logo {
             margin-bottom: 0;
-            margin-right: 350px;
+            margin-right: 170px;
 
             padding-right: calc((100vw - 1120px)/2);
             gap: 20px;
@@ -601,11 +601,6 @@ h4 {
             width: 200px;
         }
 
-    }
-    .EASPORTS-secondwrap {
-        .content-wrap {
-            width: 70vw;
-        }
     }
 
     .EASPORTS-insertion2 {
@@ -636,17 +631,18 @@ h4 {
 
 
     }
+    .EASPORTS-secondwrap {
 
-    .EASPORTS-thirdwrap{
-    .main-wrap{
-    
-    
-    width: 100vw; 
-}
+        .content-wrap {
+            width: 70vw;
+        }
     }
 
-
+  
 }
+
+
+
 
 @media all and (min-width: 1456px) {
 
@@ -699,6 +695,7 @@ h4 {
     }
 
     .EASPORTS-secondwrap {
+
         .content-wrap {
             width: 60vw;
         }
